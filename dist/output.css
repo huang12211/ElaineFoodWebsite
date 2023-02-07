@@ -575,6 +575,14 @@ video {
   display: none;
 }
 
+.h-16 {
+  height: 4rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
 .h-64 {
   height: 16rem;
 }
@@ -587,10 +595,6 @@ video {
   height: 11rem;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .h-56 {
   height: 14rem;
 }
@@ -599,16 +603,36 @@ video {
   height: 9rem;
 }
 
-.h-20 {
-  height: 5rem;
+.h-52 {
+  height: 13rem;
 }
 
-.h-16 {
-  height: 4rem;
+.h-72 {
+  height: 18rem;
 }
 
-.w-44 {
-  width: 11rem;
+.h-60 {
+  height: 15rem;
+}
+
+.max-h-64 {
+  max-height: 16rem;
+}
+
+.max-h-72 {
+  max-height: 18rem;
+}
+
+.max-h-60 {
+  max-height: 15rem;
+}
+
+.max-w-64 {
+  max-width: 16rem;
+}
+
+.max-w-56 {
+  max-width: 14rem;
 }
 
 .flex-none {
@@ -627,6 +651,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.items-start {
+  align-items: flex-start;
 }
 
 .items-end {
@@ -677,6 +705,24 @@ video {
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
+.space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2rem * var(--tw-space-x-reverse));
+  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-10 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-14 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(3.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(3.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .overflow-x-scroll {
   overflow-x: scroll;
 }
@@ -705,16 +751,16 @@ video {
      object-fit: cover;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
 .p-6 {
   padding: 1.5rem;
 }
 
 .p-1 {
   padding: 0.25rem;
-}
-
-.p-4 {
-  padding: 1rem;
 }
 
 .p-2 {
@@ -731,16 +777,21 @@ video {
   padding-right: 0.5rem;
 }
 
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
 
-.pt-2 {
-  padding-top: 0.5rem;
-}
-
 .pt-0 {
   padding-top: 0px;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
 }
 
 .pl-20 {
@@ -812,6 +863,10 @@ h5{
     display: none;
   }
 
+  .md\:h-20 {
+    height: 5rem;
+  }
+
   .md\:h-80 {
     height: 20rem;
   }
@@ -822,10 +877,6 @@ h5{
 
   .md\:h-32 {
     height: 8rem;
-  }
-
-  .md\:h-20 {
-    height: 5rem;
   }
 
   .md\:justify-start {

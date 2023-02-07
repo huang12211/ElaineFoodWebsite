@@ -30,6 +30,7 @@ module.exports = {
       '128': '36rem',
     },
 
+     
 
     extend: {
       colors: {
@@ -38,6 +39,17 @@ module.exports = {
       },
       backgroundImage: {
         'kitchen-counter': "url('https://elainefoodwebsite.ehuang3.repl.co/media/Generic%20Images/FeaturedRecipeBackground.png')",
+      },
+      maxWidth: {
+        '36': '9rem',
+        '40': '10rem',
+        '44': '11rem',
+        '48': '12rem',
+        '52': '13rem',
+        '56': '14rem',
+        '60': '15rem',
+        '64': '16rem',
+        '72': '18rem',
       },
     },
   },
