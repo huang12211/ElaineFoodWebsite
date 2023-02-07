@@ -4,25 +4,198 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content=width=device-width, initial-scale=1.0">
-  <link href="frontend/dist/output.css" rel="stylesheet">
+  <link href="./dist/output.css" rel="stylesheet" />
+</head>
 
-  <div class="topnav">
+
+<body>
+  <!--   Top bar nav that only changes according to the device that we want -->
+  <nav class="relative container mx-auto p-6">
+    <div class="justify-center items-end md:flex md:justify-start md:space-x-6">
+      <!--       Logo -->
+      <div class="w-20 md:w-36">
+        <img src="./media/Generic Images/Logo.png" alt="">
+      </div>
+      <!--       TopNav Menu Items -->
+      <div class="hidden md:flex md:space-x-6 md:px-6">
+        <a href="index.html" class="hover:text-orange-600">Home</a>
+        <a href="frontend/pages/searchRecipes.html" class="hover:text-orange-600">Search Recipes</a>
+        <a href="frontend/pages/recipeCategories.html" class="hover:text-orange-600">Recipe
+          Categories</a>
+        <a href="frontend/pages/contact.html" class="hover:text-orange-600">Contact</a>
+        <!--       <a href="frontend/pages/about.html">About</a></li> -->
+      </div>
+      <!--Hamburger Menu to replace TopNav Menu Items -->
+      <div class="md:hidden">
+
+      </div>
+    </div>
+  </nav>
+
+  <!--   <div class="topnav">
     <ul>
       <li><a class="active" href="index.html">Home</a></li>
       <li><a href="frontend/pages/searchRecipes.html">Search Recipes</a></li>
       <li><a href="frontend/pages/recipeCategories.html">Recipe Categories</a></li>
-      <li><a href="frontend/pages/contact.html">Contact</a></li>
-<!--       <li><a href="frontend/pages/about.html">About</a></li> -->
-    </ul>
-  </div>
+      <li><a href="frontend/pages/contact.html">Contact</a></li> -->
+  <!--       <li><a href="frontend/pages/about.html">About</a></li> -->
+  <!--     </ul>
+  </div> -->
 
-</head>
+  <!--   Home Page Content  -->
+  <section id="Home Page Content">
+    <div class="container mx-auto px-6">
+      <div class="bg-slate-30">
 
-<body>
-  <h1>
-    <img src="frontend/media/Generic%20Images/FeaturedRecipeBackground.png" alt="FeaturedRecipeBackground" height=300>
-  </h1>
+        <a href="./pages/Recipes/blueberryMuffins.html">
+          <div class="bg-local flex justify-center h-64 md:h-80 space-y-2 p-6"
+            style="background-image: url('https://elainefoodwebsite.ehuang3.repl.co/media/Generic%20Images/FeaturedRecipeBackground.png'); background-position:center; background-size:cover">
+            <!--           <div class="bg-local bg-yellow-300 flex items-center justify-center h-80 p-6"
+            style="background-image: kitchen-counter"> -->
+            <div class="h-44 pb-2 md:w-6/12 md:h-56">
+              <img class="object-cover w-full h-full" src="./media/foodImgs/Blueberry Muffins.png" alt="">
+              <div class="bg-white p-1 md:p-2">
+                <h3>Blueberry Muffins</h3>
+                <h4> XXXX plays</h4>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
 
+
+      <div class="p-4">
+        <h2> Newest Recipes:</h2>
+      </div>
+
+      <!--       <div class="flex flex-row items-end justify-start space-x-2 md:space-x-2 md:h-32 h-overflow-x-auto"> -->
+      <div class="not-prose">
+        <div></div>
+        <div class="overflow-x-scroll flex">
+          <!-- Recipe A -->
+          <div class="flex-none inline-block p-2">
+            <div class="flex flex-col items-center justify-center gap-3">
+              <a href="./pages/Recipes/onionPancakes.html">
+                <div class="w-56 h-56">
+                  <img class="object-cover w-full h-full" src="./media/foodImgs/Onion Pancakes.png" alt="" />
+                </div>
+
+                <h3 class="center px-2"> Onion Pancakes</h3>
+              </a>
+            </div>
+          </div>
+
+          <!-- Recipe B -->
+          <div class="flex-none inline-block w-64 h-64 p-2">
+            <div class="flex flex-col items-center justify-center gap-3">
+              <a href="./pages/Recipes/chocolateChipCookies.html">
+                <div class="w-36 h-36">
+                  <img class="object-cover w-full h-full" src="./media/foodImgs/Chocolate Chip Cookies.png" alt="" />
+                </div>
+
+                <!--           </div> -->
+                <h3 class="center"> Chocolate Chip Cookies</h3>
+              </a>
+            </div>
+          </div>
+
+          <!-- Recipe C -->
+          <div class="flex-none inline-block w-64 h-64 p-2">
+            <div class="flex flex-col items-center justify-center gap-3">
+              <a href="./pages/Recipes/onionPancakes.html">
+                <div class="w-36 h-36">
+                  <img class="object-cover w-full h-full" src="./media/foodImgs/Onion Pancakes.png" alt="" />
+                </div>
+
+                <h3 class="center px-2"> Onion Pancakes</h3>
+              </a>
+            </div>
+          </div>
+
+          <!-- Recipe D -->
+          <div class="flex-none inline-block w-64 h-64 p-2">
+            <div class="flex flex-col items-center justify-center gap-3">
+              <a href="./pages/Recipes/onionPancakes.html">
+                <div class="w-36 h-36">
+                  <img class="object-cover w-full h-full" src="./media/foodImgs/Onion Pancakes.png" alt="" />
+                </div>
+
+                <h3 class="center px-2"> Onion Pancakes</h3>
+              </a>
+            </div>
+          </div>
+
+          <!-- Recipe E -->
+          <div class="flex-none inline-block w-64 h-64 p-2">
+            <div class="flex flex-col items-center justify-center gap-3">
+              <a href="./pages/Recipes/chocolateChipCookies.html">
+                <div class="w-36 h-36">
+                  <img class="object-cover w-full h-full " src="./media/foodImgs/Chocolate Chip Cookies.png" alt="" />
+                </div>
+                <h3 class="center"> Chocolate Chip Cookies</h3>
+              </a>
+            </div>
+          </div>
+
+          <!-- Recipe F -->
+          <div class="flex-none inline-block w-64 h-64 p-2">
+            <div class="flex flex-col items-center justify-center gap-3">
+              <a href="./pages/Recipes/chocolateChipCookies.html">
+                <div class="w-36 h-36">
+                  <img class="object-cover w-full h-full " src="./media/foodImgs/Chocolate Chip Cookies.png" alt="" />
+                </div>
+                <h3 class="center"> Chocolate Chip Cookies</h3>
+              </a>
+            </div>
+          </div>
+
+          <!-- Recipe G -->
+          <div class="flex-none inline-block w-64 h-64 p-2">
+            <div class="flex flex-col items-center justify-center gap-3">
+              <a href="./pages/Recipes/chocolateChipCookies.html">
+                <div class="w-36 h-36">
+                  <img class="object-cover w-full h-full " src="./media/foodImgs/Chocolate Chip Cookies.png" alt="" />
+                </div>
+                <h3 class="center"> Chocolate Chip Cookies</h3>
+              </a>
+            </div>
+          </div>
+          <div></div>
+
+
+        </div>
+      </div>
+
+
+
+      <div class="p-2">
+        <div class="w-44 h-44">
+          <a href="./pages/Recipes/onionPancakes.html">
+            <img class="object-cover w-full h-full" src="./media/foodImgs/Onion Pancakes.png" alt="">
+
+            <h3 class="center px-2"> Onion Pancakes</h3>
+          </a>
+        </div>
+
+
+        <div class="h-44 pb-2 md:w-6/12 md:h-56">
+          <img class="object-cover w-full h-full" src="./media/foodImgs/Blueberry Muffins.png" alt="">
+          <div class="bg-white p-1 md:p-2">
+            <h3>Blueberry Muffins</h3>
+            <h4> XXXX plays</h4>
+          </div>
+        </div>
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"></script>
 </body>
 
 </html>
