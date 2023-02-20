@@ -128,36 +128,60 @@
       <!-- the follow display is for desktop-only views  -->
       <!-- -------------------------------------------  -->
       <div class="hidden md:block md:not-prose">
-        <div></div>
         <div class="overflow-x-scroll flex space-x-2">
           <!-- Recipe A -->
           <div class="flex-none inline-block p-2">
-            <div class="flex flex-col items-start justify-center gap-3 w-48 h-52 max-w-48 max-h-52">
+            <div class="flex flex-col items-start justify-center gap-3 w-48 h-56 max-w-48 max-h-56">
               <a href=" ./pages/Recipes/onionPancakes.html">
                 <div class="w-48 h-48">
                   <img class="object-cover w-full h-full" src="./media/foodImgs/Onion Pancakes.png" alt="" />
                 </div>
-                <h3 class="px-1"> Onion Pancakes</h3>
+
+                <div class="flex justify-between items-center space-x-2 py-2">
+                  <div>
+                    <h3 class="px-1"> Onion Pancakes</h3>
+                  </div>
+
+                  <!-- Book mark icon to add to Grocer List -->
+                  <!--                   <div class="flex-none w-8 h-8 mx-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+                    </svg>
+                  </div> -->
+                </div>
               </a>
             </div>
           </div>
 
           <!-- Recipe B -->
-          <div class="flex-none inline-block w-64 h-64 p-2">
+          <div class="flex-none inline-block p-2">
             <div class="flex flex-col items-start justify-center gap-3 w-48 h-52 max-w-48 max-h-52">
               <a href="./pages/Recipes/chocolateChipCookies.html">
                 <div class="w-48 h-48">
                   <img class="object-cover w-full h-full" src="./media/foodImgs/Chocolate Chip Cookies.png" alt="" />
                 </div>
+                <div class="flex justify-between items-center space-x-2 py-2">
+                  <div>
+                    <h3 class="px-1"> Chocolate Chip Cookies</h3>
+                  </div>
 
-                <!--           </div> -->
-                <h3 class="center"> Chocolate Chip Cookies</h3>
+                  <!-- Book mark icon to add to Grocer List -->
+                  <!--                   <div class="flex-none w-8 h-8 mx-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+                    </svg>
+                  </div> -->
+                </div>
               </a>
             </div>
           </div>
 
           <!-- Recipe C -->
-          <div class="flex-none inline-block w-64 h-64 p-2">
+          <div class="flex-none inline-block p-2">
             <div class="flex flex-col items-start justify-center gap-3 w-48 h-52 max-w-48 max-h-52">
               <a href="./pages/Recipes/onionPancakes.html">
                 <div class="w-48 h-48">
@@ -171,7 +195,7 @@
           </div>
 
           <!-- Recipe D -->
-          <div class="flex-none inline-block w-64 h-64 p-2">
+          <div class="flex-none inline-block p-2">
             <div class="flex flex-col items-start justify-center gap-3 w-48 h-52 max-w-48 max-h-52">
               <a href="./pages/Recipes/onionPancakes.html">
                 <div class="w-48 h-48">
@@ -184,7 +208,7 @@
           </div>
 
           <!-- Recipe E -->
-          <div class="flex-none inline-block w-64 h-64 p-2">
+          <div class="flex-none inline-block p-2">
             <div class="flex flex-col items-start justify-center gap-3 w-48 h-52 max-w-48 max-h-52">
               <a href="./pages/Recipes/chocolateChipCookies.html">
                 <div class="w-48 h-48">
@@ -196,7 +220,7 @@
           </div>
 
           <!-- Recipe F -->
-          <div class="flex-none inline-block w-64 h-64 p-2">
+          <div class="flex-none inline-block p-2">
             <div class="flex flex-col items-start justify-center gap-3 w-48 h-52 max-w-48 max-h-52">
               <a href="./pages/Recipes/chocolateChipCookies.html">
                 <div class="w-48 h-48">
@@ -228,22 +252,40 @@
       <!-- the follow display is for mobile-only views  -->
       <!-- To Do: populated with actual recipes and arrange in grid  -->
       <!-- -------------------------------------------  -->
-      <div class="flex items-end justify-between space-x-6 p-2 md:hidden">
-        <div class="w-64 h-72 max-w-64 max-h-72">
+      <div class="grid grid-cols-2 items-start gap-6 m-2 md:hidden">
+        <div>
           <a href="./pages/Recipes/onionPancakes.html">
-            <div class="w-64 h-64">
-              <img class="object-cover w-full h-full" src="./media/foodImgs/Onion Pancakes.png" alt="">
+            <div>
+              <img class="object-cover w-full h-44" src="./media/foodImgs/Onion Pancakes.png" alt="">
             </div>
             <h3 class="center px-1"> Onion Pancakes</h3>
           </a>
         </div>
 
-        <div class="w-64 h-72 max-w-64 max-h-72">
+        <div>
           <a href="./pages/Recipes/chocolateChipCookies.html">
-            <div class="w-64 h-64">
-              <img class="object-cover w-full h-full " src="./media/foodImgs/Chocolate Chip Cookies.png" alt="" />
+            <div>
+              <img class="object-cover w-full h-44" src="./media/foodImgs/Chocolate Chip Cookies.png" alt="" />
             </div>
             <h3 class="center px-1"> Chocolate Chip Cookies</h3>
+          </a>
+        </div>
+
+        <div>
+          <a href="./pages/Recipes/onionPancakes.html">
+            <div>
+              <img class="object-cover w-full h-44" src="./media/foodImgs/Chocolate Raspberry Mousse Cake.jpg" alt="">
+            </div>
+            <h3 class="center px-1"> Chocolate Raspberry Mousse Cake</h3>
+          </a>
+        </div>
+
+        <div>
+          <a href="./pages/Recipes/chocolateChipCookies.html">
+            <div>
+              <img class="object-cover w-full h-44" src="./media/foodImgs/Apple Frangipane Tart.jpg" alt="" />
+            </div>
+            <h3 class="center px-1"> Apple Frangipane Tart</h3>
           </a>
         </div>
       </div>
@@ -363,20 +405,20 @@
       <!-- the follow display is for mobile-only views  -->
       <!-- To Do: populated with actual recipes and arrange in grid  -->
       <!-- -------------------------------------------  -->
-      <div class="flex items-end justify-between space-x-6 p-2 sm:hidden md:hidden">
-        <div class="w-64 h-72 max-w-64 max-h-72">
+      <div class="grid grid-cols-2 items-start gap-6 m-2 md:hidden">
+        <div>
           <a href="./pages/Recipes/onionPancakes.html">
-            <div class="w-64 h-64">
-              <img class="object-cover w-full h-full" src="./media/foodImgs/Onion Pancakes.png" alt="">
+            <div>
+              <img class="object-cover w-full h-44" src="./media/foodImgs/Onion Pancakes.png" alt="">
             </div>
             <h3 class="center px-1"> Onion Pancakes</h3>
           </a>
         </div>
 
-        <div class="w-64 h-72 max-w-64 max-h-72">
+        <div>
           <a href="./pages/Recipes/chocolateChipCookies.html">
-            <div class="w-64 h-64">
-              <img class="object-cover w-full h-full " src="./media/foodImgs/Chocolate Chip Cookies.png" alt="" />
+            <div>
+              <img class="object-cover w-full h-44" src="./media/foodImgs/Chocolate Chip Cookies.png" alt="" />
             </div>
             <h3 class="center px-1"> Chocolate Chip Cookies</h3>
           </a>
