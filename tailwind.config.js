@@ -115,6 +115,10 @@ module.exports = {
         '64': '16rem',
         '72': '18rem',
       },
+
+      blur: {
+        'xs': '2px',
+      },
     },
   },
   plugins: [],
