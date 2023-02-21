@@ -34,7 +34,9 @@
         </div>
         <!--       Logo -->
         <div>
-          <img class="object-cover h-12" src="../media/Generic Images/Logo.png" alt="">
+          <a href="../index.html">
+            <img class="object-cover h-12" src="../media/Generic Images/Logo.png" alt="">
+          </a>
         </div>
 
         <!-- Permanently Accessible Tools in the Toolbar -->
@@ -64,11 +66,13 @@
       <div class="hidden md:flex md:justify-start md:space-x-6 md:h-20">
         <!--       Logo -->
         <div class="px-2">
-          <img class="object-cover h-20" src="../media/Generic Images/Logo.png" alt="">
+          <a href="../index.html">
+            <img class="object-cover h-20" src="../media/Generic Images/Logo.png" alt="">
+          </a>
         </div>
         <!--       TopNav Menu Items -->
         <div class="flex items-end space-x-6 px-6">
-          <a href="../index.html" class="hover:text-orange-600">Home</a>
+          <!--           <a href="../index.html" class="hover:text-orange-600">Home</a> -->
           <a href="searchRecipes.html" class="hover:text-orange-600">Search Recipes</a>
           <a href="recipeCategories.html" class="hover:text-orange-600">Recipe Categories</a>
           <a href="contact.html" class="hover:text-orange-600">Contact</a>
@@ -108,7 +112,26 @@
                 <h3 class="text-right"> Recipe #:</h3>
                 <h3 class="text-right"> Ingredients:</h3>
               </div>
-              <div></div>
+              <div>
+                <ul class="flex-col justify-center space-y-10 py-6">
+                  <li>
+                    <label for="keywords"></label>
+                    <input type="text" id="keywords" name="user_name" class="w-80" />
+                  </li>
+                  <li>
+                    <label for="category"></label>
+                    <input type="text" id="category" name="user_name" class="w-80" />
+                  </li>
+                  <li>
+                    <label for="recipeNum"></label>
+                    <input type="text" id="recipeNum" name="user_name" class="w-80" />
+                  </li>
+                  <li>
+                    <label for="ingredients"></label>
+                    <input type="text" id="ingredients" name="user_name" class="w-80" />
+                  </li>
+                </ul>
+              </div>
               <div></div>
             </div>
           </div>
