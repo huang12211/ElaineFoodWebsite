@@ -85,23 +85,45 @@
   <main>
     <div class="mx-auto px-6">
       <div class="p-1"></div>
-      <div class="p-2">
-        <h1>Search Recipes</h1>
-      </div>
+
 
       <!-- -------------------------------------------  -->
       <!-- Search Recipes Tool                          -->
       <!-- -------------------------------------------  -->
       <section id="Search Recipes Tool">
-        <div class="blur-xs h-80">
-          <img class="object-cover w-full h-80" src="../media/Generic Images/SearchBackground.png">
+        <div class="relative">
+          <img class="object-cover w-full h-96 blur opacity-75 saturate-50"
+            src="../media/Generic Images/SearchBackground.png">
+          <div class="absolute inset-x-0 top-0 z-index-10 bg-slate-200 blur-lg h-12 px-4">
+          </div>
+          <div class="absolute top-0 z-index-20 py-2 px-4">
+            <h1>Search Recipes</h1>
+          </div>
+
+          <div class="absolute inset-x-0 bottom-0 grid grid-cols-3 justify-center h-10">
+            <div></div>
+            <div class="flex place-content-center items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+              </svg>
+            </div>
+            <div class="flex place-content-end items-center px-4">
+              <button class="roundButton bg-blue-300 hover:bg-blue-700 text-white ">Search</button>
+            </div>
+          </div>
         </div>
+
       </section>
 
+
+      <!-- -------------------------------------------  -->
+      <!-- Search Recipes Results                       -->
+      <!-- -------------------------------------------  -->
       <section id="Search Recipes Results">
-        <!-- -------------------------------------------  -->
-        <!-- Search Recipes Results                       -->
-        <!-- -------------------------------------------  -->
+        <div class="p-6">
+          <h2> Results: </h2>
+        </div>
       </section>
     </div>
   </main>
