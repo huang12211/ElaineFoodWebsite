@@ -54,6 +54,14 @@ a{
   }
 }
 
+.desktopRecipeCard{
+  flex:none;
+  display: inline-block;
+  width: 15rem;
+  height: 15rem;
+  padding: 0.5rem;
+}
+
 
 /*Desktop Recipe Category Cards*/
 .desktopCategoryCard{
