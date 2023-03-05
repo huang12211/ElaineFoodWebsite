@@ -29,9 +29,10 @@ a{
 }
 .featuredRecipeBg{
   background-attachment: local;
-  display:flex;
+/*   display:flex; */
   justify-content: center;
-  height: 16rem;
+  height: 20 rem;
+  max-height: 60%;
   margin-top: 0.5rem;
   padding:1.5rem;
   background-image: url('https://elainefoodwebsite.ehuang3.repl.co/media/Generic%20Images/FeaturedRecipeBackground.png'); 
@@ -42,9 +43,10 @@ a{
 @media (min-width: 768px) {
   .featuredRecipeBg{
     background-attachment: local;
-    display:flex;
+/*     display:flex; */
     justify-content: center;
-    height: 20rem;
+    height: 24rem;
+    max-height: 25%;
     margin-top: 0.5rem;
     padding:1.5rem;
     background-image: url('https://elainefoodwebsite.ehuang3.repl.co/media/Generic%20Images/FeaturedRecipeBackground.png'); 
@@ -52,14 +54,6 @@ a{
     background-size:cover;
     backdrop-filter: blur(2px);
   }
-}
-
-.desktopRecipeCard{
-  flex:none;
-  display: inline-block;
-  width: 15rem;
-  height: 15rem;
-  padding: 0.5rem;
 }
 
 

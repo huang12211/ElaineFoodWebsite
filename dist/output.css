@@ -634,8 +634,8 @@ video {
   height: 5rem;
 }
 
-.h-4\/5 {
-  height: 80%;
+.h-1\/5 {
+  height: 20%;
 }
 
 .h-full {
@@ -670,6 +670,10 @@ video {
   height: 24rem;
 }
 
+.max-h-96 {
+  max-height: 24rem;
+}
+
 .max-h-52 {
   max-height: 13rem;
 }
@@ -702,12 +706,28 @@ video {
   width: 100vw;
 }
 
+.w-4\/12 {
+  width: 33.333333%;
+}
+
+.w-1\/5 {
+  width: 20%;
+}
+
 .max-w-48 {
   max-width: 12rem;
 }
 
+.max-w-xs {
+  max-width: 20rem;
+}
+
 .flex-none {
   flex: none;
+}
+
+.basis-4\/6 {
+  flex-basis: 66.666667%;
 }
 
 .appearance-none {
@@ -820,10 +840,6 @@ video {
   overflow-x: scroll;
 }
 
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -888,10 +904,6 @@ video {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-.pb-2 {
-  padding-bottom: 0.5rem;
 }
 
 .pt-0 {
@@ -985,9 +997,10 @@ a{
 
 .featuredRecipeBg{
   background-attachment: local;
-  display:flex;
+  /*   display:flex; */
   justify-content: center;
-  height: 16rem;
+  height: 20 rem;
+  max-height: 60%;
   margin-top: 0.5rem;
   padding:1.5rem;
   background-image: url('https://elainefoodwebsite.ehuang3.repl.co/media/Generic%20Images/FeaturedRecipeBackground.png');
@@ -1000,9 +1013,10 @@ a{
 @media (min-width: 768px) {
   .featuredRecipeBg{
     background-attachment: local;
-    display:flex;
+    /*     display:flex; */
     justify-content: center;
-    height: 20rem;
+    height: 24rem;
+    max-height: 25%;
     margin-top: 0.5rem;
     padding:1.5rem;
     background-image: url('https://elainefoodwebsite.ehuang3.repl.co/media/Generic%20Images/FeaturedRecipeBackground.png');
@@ -1011,14 +1025,6 @@ a{
     -webkit-backdrop-filter: blur(2px);
             backdrop-filter: blur(2px);
   }
-}
-
-.desktopRecipeCard{
-  flex:none;
-  display: inline-block;
-  width: 15rem;
-  height: 15rem;
-  padding: 0.5rem;
 }
 
 /*Desktop Recipe Category Cards*/
@@ -1098,16 +1104,32 @@ a{
     height: 5rem;
   }
 
-  .md\:h-4\/5 {
-    height: 80%;
+  .md\:max-h-96 {
+    max-height: 24rem;
   }
 
-  .md\:w-6\/12 {
-    width: 50%;
+  .md\:max-h-72 {
+    max-height: 18rem;
+  }
+
+  .md\:max-h-64 {
+    max-height: 16rem;
+  }
+
+  .md\:w-4\/12 {
+    width: 33.333333%;
+  }
+
+  .md\:max-w-xl {
+    max-width: 36rem;
   }
 
   .md\:max-w-2xl {
     max-width: 42rem;
+  }
+
+  .md\:max-w-md {
+    max-width: 28rem;
   }
 
   .md\:justify-start {
