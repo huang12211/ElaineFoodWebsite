@@ -106,29 +106,34 @@
 
           <div class="absolute left-0 top-14 z-index-20 w-screen px-4">
             <div class="grid grid-cols-3">
-              <div class="flex-col justify-center space-y-10 p-6">
+              <div class="flex-col justify-center space-y-6 px-6">
                 <h3 class="text-right"> Keywords:</h3>
                 <h3 class="text-right"> Category:</h3>
                 <h3 class="text-right"> Recipe #:</h3>
                 <h3 class="text-right"> Ingredients:</h3>
               </div>
               <div>
-                <ul class="flex-col justify-center space-y-10 py-6">
+                <ul class="flex-col justify-center space-y-6">
                   <li>
                     <label for="keywords"></label>
-                    <input type="text" id="keywords" name="user_name" class="w-80" />
+                    <input type="text" id="keywords" name="user_name" class="w-full" />
                   </li>
                   <li>
                     <label for="category"></label>
-                    <input type="text" id="category" name="user_name" class="w-80" />
+                    <input type="text" id="category" name="user_name" class="w-full" />
                   </li>
                   <li>
                     <label for="recipeNum"></label>
-                    <input type="text" id="recipeNum" name="user_name" class="w-80" />
+                    <input type="text" id="recipeNum" name="user_name" class="w-full" />
                   </li>
                   <li>
                     <label for="ingredients"></label>
-                    <input type="text" id="ingredients" name="user_name" class="w-80" />
+                    <input type="text" id="ingredients" name="user_name" class="w-full" />
+                  </li>
+                  <li class="flex place-content-center">
+                    <!--                     <div class="flex place-content-center items-center px-4"> -->
+                    <button class="roundButton bg-blue-300 hover:bg-blue-700 text-white ">Search</button>
+                    <!--                     </div> -->
                   </li>
                 </ul>
               </div>
@@ -137,16 +142,18 @@
           </div>
 
 
-          <div class="absolute inset-x-0 bottom-0 grid grid-cols-3 justify-center h-10">
-            <div></div>
-            <div class="flex place-content-center items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-              </svg>
-            </div>
-            <div class="flex place-content-end items-center px-4">
+          <div class="absolute inset-x-0 bottom-0 w-screen h-10 px-4">
+            <div class="grid grid-cols-3 justify-center">
+              <div></div>
+              <div class="flex place-content-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+                </svg>
+              </div>
+              <!--             <div class="flex place-content-end items-center px-4">
               <button class="roundButton bg-blue-300 hover:bg-blue-700 text-white ">Search</button>
+            </div> -->
             </div>
           </div>
         </div>
