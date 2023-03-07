@@ -39,6 +39,7 @@ a{
   background-position:center; 
   background-size:cover;
   backdrop-filter: blur(2px);
+  z-index: 0;
 }
 @media (min-width: 768px) {
   .featuredRecipeBg{
@@ -53,6 +54,7 @@ a{
     background-position:center; 
     background-size:cover;
     backdrop-filter: blur(2px);
+    z-index: 0;
   }
 }
 
@@ -92,3 +94,41 @@ a{
   text-align: center;
   width: 8rem;
 }
+
+.dropdownButton{
+  position:relative;
+}
+
+/*The dropdownMenu is hidden by default*/
+.dropdownButton .dropdownMenu{
+  display: hidden;
+  position: absolute;
+  top: 1.5rem;
+  left: 0px;
+  min-width: 9rem;
+  padding-top: 0.5rem;
+  background-color: white;
+  border-radius: 0.125rem;
+  z-index: 9;
+}
+
+.dropdownMenu li{
+  display:none;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/*Show the dropdown menu on hover*/
+.dropdownButton:hover .dropdownMenu{
+  display:block;
+}
+
+.dropdownButton:hover .dropdownMenu li{
+  display:block;
+}
+
+.dropdownMenu li:hover{
+  background-color: orange;
+}
+ 

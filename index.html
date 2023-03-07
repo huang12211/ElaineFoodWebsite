@@ -74,12 +74,35 @@
         <!--       TopNav Menu Items -->
         <div class="flex items-end space-x-6 px-6">
           <!--           <a href="index.html" class="hover:text-orange-600">Home</a> -->
-          <a href="./pages/searchRecipes.html" class="hover:text-orange-600">Search Recipes</a>
-          <a href="./pages/recipeCategories.html" class="hover:text-orange-600">Recipe
-            Categories</a>
-          <a href="./pages/contact.html" class="hover:text-orange-600">Contact</a>
-          <!--       <a href="frontend/pages/about.html">About</a></li> -->
+          <div>
+            <a href="./pages/searchRecipes.html" class="hover:text-orange-600">Search Recipes</a>
+          </div>
+          <div>
+            <div class="dropdownButton">
+              <a href="#!" class="hover:text-orange-600">Recipe
+                Categories</a>
+              <!--  Dropdown Categories Menu on Hover -->
+              <div class="dropdownMenu">
+                <ul>
+                  <li><a href="./pages/recipeCategories.html"> Appetizers </a></li>
+                  <li><a href="./pages/recipeCategories.html"> Mains </a></li>
+                  <li><a href="./pages/recipeCategories.html"> Sides </a></li>
+                  <li><a href="./pages/recipeCategories.html"> Desserts </a></li>
+                  <li><a href="./pages/recipeCategories.html"> Drinks </a></li>
+                  <li><a href="./pages/recipeCategories.html"> Breakfast </a></li>
+                  <li><a href="./pages/recipeCategories.html"> Celebrations </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div>
+            <a href="./pages/contact.html" class="hover:text-orange-600">Contact</a>
+            <!--       <a href="frontend/pages/about.html">About</a></li> -->
+          </div>
         </div>
+
+
+
       </div>
     </nav>
   </header>
@@ -102,12 +125,12 @@
       <section id="featuredRecipe" class="bg-slate-30">
 
         <a href="./pages/Recipes/blueberryMuffins.html">
-          <div class="featuredRecipeBg">
+          <div class="featuredRecipeBg relative">
             <div class="basis-4/6 max-h-96">
-              <div class="max-w-xs md:w-4/12 md:max-w-2xl md:max-h-64">
+              <div class="max-w-xs md:w-4/12 md:max-w-2xl md:max-h-64 z-10">
                 <img class="object-cover w-full h-full" src="./media/foodImgs/Blueberry Muffins.png" alt="">
               </div>
-              <div class="bg-white p-1 md:p-2">
+              <div class="bg-white p-1 md:p-2 z-20">
                 <h3>Blueberry Muffins</h3>
                 <h4> XXXX plays</h4>
               </div>
