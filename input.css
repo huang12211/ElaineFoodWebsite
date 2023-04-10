@@ -172,6 +172,15 @@ ol{
   font-size: medium;
 }
 
+.updateButton{
+  font-size: small;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 9999px;
+  width: 4rem;
+  background-color: slategray;
+}
+
 input[type=checkbox]:checked + label.strikethrough{
   text-decoration: line-through;
 }
