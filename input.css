@@ -21,11 +21,17 @@ h4{
   font-weight: 600;
 }
 h5{
-  font-size: x-small;
-  font-family: 400;
+  font-size: smaller;
+  font-weight: 400;
 }
 a{
   cursor: pointer;
+}
+ol{
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; 
+  font-size: small;
 }
 
 .featuredRecipeBg{
@@ -132,4 +138,44 @@ a{
 .dropdownMenu li:hover{
   background-color: orange;
 }
- 
+
+.mobileVideoContainer{
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  
+}
+.mobileVideo{
+  width: 100%;
+  max-width: 35rem;
+  height: calc(100vw*0.56);
+  /*padding-bottom: 56.25%;*/
+}
+
+@media (min-width: 768px) {
+  .mobileVideo{
+    width: 35rem;
+    height: 20rem;
+  }
+}
+
+ .servingSize{
+   padding-left: 1rem;
+   padding-right: 1rem;
+   padding-bottom: 0.5rem;
+ }
+
+#serving{
+  width: 2rem;
+  border-radius: 20%;
+  text-align: center;
+  font-size: medium;
+}
+
+input[type=checkbox]:checked + label.strikethrough{
+  text-decoration: line-through;
+}
+.ingredientListItem{
+  padding-left: 1rem;
+  font-size: small;
+}
