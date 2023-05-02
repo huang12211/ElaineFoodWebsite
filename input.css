@@ -172,7 +172,7 @@ ol{
   font-size: medium;
 }
 
-.updateButton{
+#updateButton{
   font-size: small;
   font-weight: bold;
   text-align: center;
