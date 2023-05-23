@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content=width=device-width, initial-scale=1.0">
+  <link href="../../dist/output.css" rel="stylesheet">
+</head>
+
+
+<body>
+  <header>
+    <!-- -------------------------------------------  -->
+    <!--                                              -->
+    <!-- Top Bar                                      -->
+    <!--                                              -->
+    <!-- -------------------------------------------  -->
+    <nav class="mx-auto p-4">
+      <!-- -------------------------------------------  -->
+      <!-- Top Bar for Mobile                           -->
+      <!-- -------------------------------------------  -->
+      <div class="grid grid-cols-3 justify-items-center items-end h-12 md:hidden">
+        <!--Hamburger Menu to replace TopNav Menu Items -->
+        <div class="flex justify-self-start justify-items-center items-end space-x-4 px-2">
+          <div id="myNav" class="flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black"
+              class="w-10 h-10">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </div>
+          <div class="flex-none w-10 h-10">
+            <!-- placeholder -->
+          </div>
+        </div>
+        <!--       Logo -->
+        <div>
+          <a href="../../index.html">
+            <img class="object-cover h-12" src="../../media/Generic Images/Logo.png" alt="">
+          </a>
+        </div>
+
+        <!-- Permanently Accessible Tools in the Toolbar -->
+        <div class="flex justify-self-end justify-items-center items-end space-x-6 px-2">
+          <!-- Search Icon -->
+          <div class="flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
+          </div>
+          <!-- Checkout Icon -->
+          <div class="flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- --------------------------------------------   -->
+      <!-- the follow Top Bar is for desktop-only views   -->
+      <!-- --------------------------------------------   -->
+      <div class="hidden md:flex md:justify-start md:space-x-6 md:h-20">
+        <!--       Logo -->
+        <div class="px-2">
+          <a href="../../index.html">
+            <img class="object-cover h-20" src="../../media/Generic Images/Logo.png" alt="">
+          </a>
+        </div>
+        <!--       TopNav Menu Items -->
+        <div class="flex items-end space-x-6 px-6">
+          <!--           <a href="../index.html" class="hover:text-orange-600">Home</a> -->
+          <a href="../searchRecipes.html" class="hover:text-orange-600">Search Recipes</a>
+          <a href="../recipeCategories.html" class="hover:text-orange-600">Recipe Categories</a>
+          <a href="../contact.html" class="hover:text-orange-600">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ------------------------- -->
+  <!--                           -->
+  <!-- Individual Recipe Pages   -->
+  <!--                           -->
+  <!-- ------------------------- -->
+  <main>
+    <div class="mx-auto px-6">
+      <div class="p-1"></div>
+
+      <!-- -------------------------------------------  -->
+      <!-- Recipes Details Section Desktop              -->
+      <!-- -------------------------------------------  -->
+      <section id="Recipe">
+        <div class="relative">
+          <div class="flex justify-start items-center space-x-2">
+            <div class="flex-none pb-2">
+              <h1>Grammy Vint's Rhubarb Cream Crumble</h1>
+            </div>
+            <!-- Bookmark icon to add to Grocer List -->
+            <div class="flex-none w-8 h-8 mx-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Video -->
+          <!-- <div class="mobileVideoContainer">
+            <iframe class="mobileVideo" src="https://www.youtube.com/embed/5nqvAk0vGao" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div> -->
+
+          <!-- Ingredients List -->
+          <div class="my-auto p-4 bg-slate-300 md:w-2/3">
+            <form>
+              <div>
+                <h2>Ingredients:</h2>
+              </div>
+              <div class="servingSize">
+                <label>for</label>
+                <input type="number" id="serving" name="servingSize" value="8" min="8" max="800" step="8">
+              </div>
+              <div class="px-2">
+
+                <div>
+                  <h4 class="font-semibold">Filling:</h4>
+                </div>
+                <div class="ingredientListItem">
+                  <input type="checkbox" id="ingr1" name="ingr1" value="1.75" />
+                  <label for="ingr1" class="strikethrough">3 cups Rhubarb</label>
+                </div>
+                <div class="ingredientListItem">
+                  <input type="checkbox" id="ingr2" name="ingr2" value="3" />
+                  <label for="ingr2" class="strikethrough">2 eggs</label>
+                </div>
+                <div class="ingredientListItem">
+                  <input type="checkbox" id="ingr3" name="ingr3" value="1" />
+                  <label for="ingr3" class="strikethrough">2 tbsp Butter (melted)</label>
+                </div>
+                <div class="ingredientListItem">
+                  <input type="checkbox" id="ingr4" name="ingr4" value="1/2" />
+                  <label for="ingr4" class="strikethrough">1 cup sugar</label>
+                </div>
+                <div class="ingredientListItem">
+                  <input type="checkbox" id="ingr5" name="ingr5" value="3" />
+                  <label for="ingr5" class="strikethrough">3 tbsp Flour</label>
+                </div>
+                <div>
+                  <h4 class="font-semibold pt-2">Crumble:</h4>
+                </div>
+                <div class="ingredientListItem">
+                  <input type="checkbox" id="ingr6" name="ingr6" />
+                  <label for="ingr6" class="strikethrough">1/2 cup Flour</label>
+                </div>
+                <div class="ingredientListItem">
+                  <input type="checkbox" id="ingr7" name="ingr7" />
+                  <label for="ingr7" class="strikethrough">3/4 cup Quick oats</label>
+                </div>
+                <div class="ingredientListItem">
+                  <input type="checkbox" id="ingr8" name="ingr8" />
+                  <label for="ingr8" class="strikethrough">3/4 cup Brown Sugar</label>
+                </div>
+                <div class="ingredientListItem">
+                  <input type="checkbox" id="ingr9" name="ingr9" />
+                  <label for="ingr9" class="strikethrough">1 tsp Baking Powder</label>
+                </div>
+                <div class="ingredientListItem">
+                  <input type="checkbox" id="ingr10" name="ingr10" />
+                  <label for="ingr10" class="strikethrough">1/3 cup Cold Butter</label>
+                </div>
+                <div class="ingredientListItem">
+                  <input type="checkbox" id="ingr11" name="ingr11" />
+                  <label for="ingr11" class="strikethrough">1/4 cup of walnuts or almonds (optional)</label>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Instructions Section -->
+          <div class="pl-4 pt-4 pb-4 md:w-2/3">
+            <div class="pb-2">
+              <h2>Instructions:</h2>
+            </div>
+            <ol>
+              <li>Preheat oven to 400*F. Grease a 9" caserole dish and set aside.</li>
+              <li>In a large bowl, mix the filling ingredients together until well combined. Pour the mixture into your
+                casserole dish.</li>
+              <li>In the same large bowl, mix the crumble ingredients together except for the butter. Cut the cold
+                butter up into cubes using a knife and add it to the large bowl. For some added texture, crush up some
+                walnuts or almonds. Mix the ingredients so that the pebbles of butter and nuts are evenly distributed
+                within the mixture.</li>
+              <li>Scatter the crumble mixture all over the top of the filling, and place the casserole dish in the oven
+                for 40 to 45 minutes or until golden brown and crispy on top!</li>
+            </ol>
+          </div>
+
+        </div>
+      </section>
+    </div>
+    </div>
+  </main>
+</body>
+
+</html>
