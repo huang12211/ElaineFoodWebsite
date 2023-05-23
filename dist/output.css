@@ -1187,6 +1187,7 @@ ol{
   font-size: medium;
 }
 
+<<<<<<< HEAD
 #updateButton{
   font-size: small;
   font-weight: bold;
@@ -1196,6 +1197,8 @@ ol{
   background-color: slategray;
 }
 
+=======
+>>>>>>> origin/recipeFocus
 input[type=checkbox]:checked + label.strikethrough{
   text-decoration: line-through;
 }
