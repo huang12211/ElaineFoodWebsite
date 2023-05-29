@@ -32,6 +32,11 @@ module.exports = {
       colors: {
         'paleYellow': '#FFD77D',
         'darkYellow': '#FEC23A',
+        'freshGreen': '#5BBC3B',
+      },
+
+      backgroundColors:{
+        'freshGreen': '#5BBC3B',
       },
 
       backgroundImage: {

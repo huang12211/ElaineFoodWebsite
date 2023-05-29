@@ -862,9 +862,14 @@ video {
   background-color: rgb(255 251 235 / var(--tw-bg-opacity));
 }
 
-.bg-green-300 {
+.bg-freshGreen {
   --tw-bg-opacity: 1;
-  background-color: rgb(134 239 172 / var(--tw-bg-opacity));
+  background-color: rgb(91 188 59 / var(--tw-bg-opacity));
+}
+
+.bg-green-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 253 244 / var(--tw-bg-opacity));
 }
 
 .bg-blue-300 {
@@ -875,11 +880,6 @@ video {
 .bg-slate-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
-}
-
-.bg-green-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(240 253 244 / var(--tw-bg-opacity));
 }
 
 .object-cover {
@@ -913,6 +913,11 @@ video {
   padding-right: 1.5rem;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -926,11 +931,6 @@ video {
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .pb-2 {
@@ -1285,9 +1285,9 @@ input[type=checkbox]:checked + label.strikethrough{
     background-color: rgb(253 230 138 / var(--tw-bg-opacity));
   }
 
-  .md\:bg-green-300 {
+  .md\:bg-freshGreen {
     --tw-bg-opacity: 1;
-    background-color: rgb(134 239 172 / var(--tw-bg-opacity));
+    background-color: rgb(91 188 59 / var(--tw-bg-opacity));
   }
 
   .md\:p-2 {
