@@ -11,13 +11,35 @@ function DecimToFrac(decimal) {
     //convert all numbers after the decimal point into a fraction. 
     denominator = Math.pow(10, remainder.toString().length - 2);
     numerator = remainder * denominator;
+    console.log("numerator is " + numerator + " and denominator is " + denominator);
+    tempNum = numerator;
+    tempDenom = denominator;
+    
     //find the greatest common denominator
-    gcd = numerator % denominator;
-    var fracNum = numerator/gcd + "";
-    var fracDenom = denominator/gcd +"";
-    // console.log("fraction is " + fracNum + "/" + fracDenom);
+    do {
+      gcd = tempNum % tempDenom;
+      console.log("gcd is " + gcd);
+      // console.log("fraction is " + fracNum + "/" + fracDenom);
+      tempNum = tempDenom;
+      tempDenom = gcd;
+    } while (gcd != 0);
+    gcd = tempNum;
+    console.log("final gcd is " + gcd);
+
+    //print out the fraction
+    var fracNum = numerator / gcd + "";
+    var fracDenom = denominator / gcd + "";
+    if (wholeNum == 0){
+      fraction = fracNum.concat("/", fracDenom);
+    }
+    else{
+      wholeNum = wholeNum + "";
+      fraction = wholeNum.concat(" ", fracNum, "/", fracDenom);
+    }
   }
-  let fraction = fracNum.concat("/", fracDenom);
+  else {
+    fraction = wholeNum;
+  }
   return fraction;
 }
 
@@ -39,10 +61,10 @@ function FracToDecim(fraction) {
 
 //Testing above functions
 //to Delete once working. 
-console.log(FracToDecim("5 1/4"));
-console.log(FracToDecim("1/3"));
-console.log(DecimToFrac(5.25));
-console.log(DecimToFrac(3));
+console.log("Converting 5 1/4 to Decimal gives: " + FracToDecim("5 1/4"));
+console.log("Converting 1/3 to Decimal gives: " + FracToDecim("1/3"));
+console.log("Converting 5.25 to Fraction gives: " + DecimToFrac(5.25));
+console.log("Converting 0.3 to Fraction gives: " + DecimToFrac(0.3));
 //********************************************
 
 function reCalcServSize(event) {
