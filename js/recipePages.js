@@ -4,24 +4,21 @@ let iniServSize = prevServSize.value;
 console.log("initial servince size is " + iniServSize);
 
 //This method takes in an int and returns the decimal as a fraction as type string 
-function DecimToFrac(decimal){
+function DecimToFrac(decimal) {
   wholeNum = Math.floor(decimal);
   remainder = decimal - wholeNum;
-  if(remainder != 0){
+  if (remainder != 0) {
     //convert all numbers after the decimal point into a fraction. 
     denominator = Math.pow(10, remainder.toString().length - 2);
     numerator = remainder * denominator;
-    var gcd = function(numerator, denominator) {
-      if (!denominator) return numerator;
-      return gcd(denominator, numerator % denominator);
-    };
+    //find the greatest common denominator
+    gcd = numerator % denominator;
+    var fracNum = numerator/gcd + "";
+    var fracDenom = denominator/gcd +"";
+    // console.log("fraction is " + fracNum + "/" + fracDenom);
   }
-  
-  let wholeText = toString(wholeNum);
-  let remText = toString(remainder);
-  let result = wholeText.concat(remText);
-  console.log("result is "+ result);
-  return result;
+  let fraction = fracNum.concat("/", fracDenom);
+  return fraction;
 }
 
 //This method takes in a string and converts it to decimal of type integer
