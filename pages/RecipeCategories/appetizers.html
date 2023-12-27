@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content=width=device-width, initial-scale=1.0">
-  <link href="../dist/output.css" rel="stylesheet">
-  <title> Contact </title>
+  <link href="../../dist/output.css" rel="stylesheet">
+  <script type="text/javascript" src="../../js/recipePages.js" defer></script>
 </head>
+
 
 <body>
   <header>
@@ -34,7 +35,7 @@
         </div>
         <!--       Logo -->
         <div>
-          <a href="./../index.html">
+          <a href="./../../index.html">
             <img class="object-cover h-12" src="./../../media/Generic Images/Logo.png" alt="">
           </a>
         </div>
@@ -67,7 +68,7 @@
         <div class="flex items-end space-x-6 h-20">
           <!--       Logo -->
           <div class="place-self-start px-2">
-            <a href="./../index.html">
+            <a href="./../../index.html">
               <img class="object-cover h-20" src="./../../media/Generic Images/Logo.png" alt="">
             </a>
           </div>
@@ -76,7 +77,7 @@
           <div class="place-self-start self-end flex items-end space-x-6 px-6">
             <!--           <a href="index.html" class="hover:text-orange-600">Home</a> -->
             <div>
-              <a href="./searchRecipes.html" class="hover:text-orange-600">Search Recipes</a>
+              <a href="./../searchRecipes.html" class="hover:text-orange-600">Search Recipes</a>
             </div>
             <div>
               <div class="dropdownButton">
@@ -84,7 +85,7 @@
                 <!--  Dropdown Categories Menu on Hover -->
                 <div class="dropdownMenu">
                   <ul>
-                    <li><a href="./RecipeCategories/appetizers.html"> Appetizers </a></li>
+                    <li><a href="./appetizers.html"> Appetizers </a></li>
                     <li><a href="./../recipeCategories.html"> Mains </a></li>
                     <li><a href="./../recipeCategories.html"> Sides </a></li>
                     <li><a href="./../recipeCategories.html"> Desserts </a></li>
@@ -96,7 +97,7 @@
               </div>
             </div>
             <div>
-              <a href="./contact.html" class="hover:text-orange-600">Contact</a>
+              <a href="./../contact.html" class="hover:text-orange-600">Contact</a>
               <!--       <a href="frontend/pages/about.html">About</a></li> -->
             </div>
           </div>
@@ -115,16 +116,34 @@
     </nav>
   </header>
 
-
+  <!-- ------------------------- -->
+  <!--                           -->
+  <!-- Individual Recipe Pages   -->
+  <!--                           -->
+  <!-- ------------------------- -->
   <main>
-    <section id="Recipe">
+    <section id="Appetizers">
       <div class="mx-auto px-6">
-        <div class="p-1"></div>
+        <div class="p-2"></div>
 
-        <h1><span>Contact Me</span></h1>
+        <!-- -------------------------------------------  -->
+        <!-- Recipes Details Section Desktop              -->
+        <!-- -------------------------------------------  -->
+        <section id="Recipe">
+          <div class="relative">
+            <div class="flex justify-start items-center space-x-2">
+              <div class="flex-none pb-2">
+                <h1>Appetizers</h1>
+              </div>
+            </div>
+
+          </div>
+        </section>
       </div>
-    </section>
+      </div>
   </main>
+  </div>
+  </section>
 </body>
 
 </html>

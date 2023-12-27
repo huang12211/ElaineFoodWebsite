@@ -1,7 +1,30 @@
 const servingForm = document.getElementById("servingform");
 const prevServSize = document.getElementById("serving");
 let iniServSize = prevServSize.value;
-console.log("initial servince size is " + iniServSize);
+let minServSize = prevServSize.min;
+console.log("initial serving size is " + iniServSize, "min serving size is " + minServSize);
+
+function SimplifyFrac(num, denom) {
+  tempNum = num;
+  tempDenom = denom;
+
+  //find the greatest common denominator
+  do {
+    gcd = tempNum % tempDenom;
+    // console.log("gcd is " + gcd);
+    // console.log("fraction is " + fracNum + "/" + fracDenom);
+    tempNum = tempDenom;
+    tempDenom = gcd;
+  } while (gcd != 0);
+  gcd = tempNum;
+  // console.log("final gcd is " + gcd);
+
+  //print out the fraction
+  var fracNum = num / gcd + "";
+  var fracDenom = denom / gcd + "";
+
+  return [fracNum, fracDenom];
+}
 
 //This method takes in an int and returns the decimal as a fraction as type string 
 function DecimToFrac(decimal) {
@@ -11,28 +34,14 @@ function DecimToFrac(decimal) {
     //convert all numbers after the decimal point into a fraction. 
     denominator = Math.pow(10, remainder.toString().length - 2);
     numerator = remainder * denominator;
-    console.log("numerator is " + numerator + " and denominator is " + denominator);
-    tempNum = numerator;
-    tempDenom = denominator;
-    
-    //find the greatest common denominator
-    do {
-      gcd = tempNum % tempDenom;
-      console.log("gcd is " + gcd);
-      // console.log("fraction is " + fracNum + "/" + fracDenom);
-      tempNum = tempDenom;
-      tempDenom = gcd;
-    } while (gcd != 0);
-    gcd = tempNum;
-    console.log("final gcd is " + gcd);
+    // console.log("numerator is " + numerator + " and denominator is " + denominator);
 
-    //print out the fraction
-    var fracNum = numerator / gcd + "";
-    var fracDenom = denominator / gcd + "";
-    if (wholeNum == 0){
+    [fracNum, fracDenom] = SimplifyFrac(numerator, denominator);
+
+    if (wholeNum == 0) {
       fraction = fracNum.concat("/", fracDenom);
     }
-    else{
+    else {
       wholeNum = wholeNum + "";
       fraction = wholeNum.concat(" ", fracNum, "/", fracDenom);
     }
@@ -46,67 +55,126 @@ function DecimToFrac(decimal) {
 //This method takes in a string and converts it to decimal of type integer
 function FracToDecim(fraction) {
   let wholeNum = 0;
-  if (fraction.includes(" ")) {
-    firstSplit = fraction.split(" ");
-    wholeNum = parseInt(firstSplit[0], 10);
-    fraction = firstSplit[1];
-    result = wholeNum;
+  if (!fraction.includes(" ") && !fraction.includes("/")) {
+    result = fraction;
   }
-  secondSplit = fraction.split("/");
-  console.log(secondSplit);
-  decimal = parseInt(secondSplit[0], 10) / parseInt(secondSplit[1], 10);
-  result = wholeNum + decimal;
+  else {
+    if (fraction.includes(" ")) {
+      firstSplit = fraction.split(" ");
+      wholeNum = parseInt(firstSplit[0], 10);
+      fraction = firstSplit[1];
+      result = wholeNum;
+    }
+    secondSplit = fraction.split("/");
+    console.log(secondSplit);
+    decimal = parseInt(secondSplit[0], 10) / parseInt(secondSplit[1], 10);
+    result = wholeNum + decimal;
+  }
   return result;
 }
 
-//Testing above functions
-//to Delete once working. 
-console.log("Converting 5 1/4 to Decimal gives: " + FracToDecim("5 1/4"));
-console.log("Converting 1/3 to Decimal gives: " + FracToDecim("1/3"));
-console.log("Converting 5.25 to Fraction gives: " + DecimToFrac(5.25));
-console.log("Converting 0.3 to Fraction gives: " + DecimToFrac(0.3));
-//********************************************
 
 function reCalcServSize(event) {
   //debugger
   event.preventDefault();
+
+  //clear the checkboxes
+  let checkboxes = document.getElementById("ingr");
+  checkboxes.checked = false;
+
   desiredServing = document.getElementById("serving").value;
   console.log("the desired serving is " + desiredServing);
 
-  ingrQuants = document.getElementsByClassName("quantity");
+  ingrQuants = document.getElementsByClassName("minQuantity");
+  ingrQuantsOutputs = document.getElementsByClassName("quantity");
   ingrUnits = document.getElementsByClassName("measurementUnit");
-  // console.log(ingrQuants);
-  // console.log(ingrUnits);
+  // console.log("ingrQuants" + ingrQuants);
+  // console.log("inagrUnits" + ingrUnits);
 
-  multiple = desiredServing / iniServSize;
-  console.log("multiple is " + multiple);
+  multiple = desiredServing / minServSize;
+  multipleFrac = DecimToFrac(multiple);
+  console.log("multiple is " + multiple + " mulipleFrac is " + multipleFrac);
 
-  var newIngrQuants = new Array(ingrQuants.length);
+  // var newIngrQuants = new Array(ingrQuants.length); //new ingredient quantities that should be printed
   for (let i = 0; i < ingrQuants.length; i++) {
     ingrQuants[i] = parseInt(ingrQuants[i]);
-    console.log(ingrQuants[i]);
-    //update the HTML text of ingrQuants to the new values
-    // newIngrQuants[i] = ingrQuants[i] * multiple;
-    // console.log("the new IngrQuants[i] is " + newIngrQuants[i]);
-    if (ingrUnits[i] === "cup" || ingrUnits[i] === "tbsp" || ingrUnits[i] === "tsp") {
-      let newWholeNum = Math.floor(ingrQuants[i].value * multiple);
-      let newRemainder = (ingrQuants[i].value * multiple) % 1;
-      console.log("newWholeNum is " + newWholeNum);
-      console.log("newRemainder is " + newRemainder);
-      ingrQuants[i].innerHTML = concat(newWholeNum, " ", newRemainder);
+    console.log("ingrQuants[i] for " + i + " is: " + ingrQuants[i].innerText);
+    var oldValue = ingrQuants[i].innerText;
+
+    if (ingrUnits[i].innerText.includes("cup") ||
+      ingrUnits[i].innerText.includes("tbsp") ||
+      ingrUnits[i].innerText.includes("tsp")) {
+      console.log("value before multiplication is " + oldValue);
+
+      //if the oldvalue is a fraction.
+      if (oldValue.includes("/")) {
+        //identify ingrQuants[i]'s num and denom
+        oldValueNum = 0;
+        if (oldValue.includes(" ")) {
+          var oldQuantsWholeSplit = oldValue.split(" ");
+          oldValueNum = parseInt(oldQuantsWholeSplit[0]);
+          console.log("if whole value is present in oldValueNum, it is " + oldValueNum);
+          oldValue = oldQuantsWholeSplit[1];
+        }
+        oldQuantsSplit = oldValue.split("/");
+        oldValueDenom = parseInt(oldQuantsSplit[1]);
+        oldValueNum = oldValueNum * oldValueDenom + parseInt(oldQuantsSplit[0]);
+        console.log("oldValueNum is " + oldValueNum +
+          " and oldValueDenom is " + oldValueDenom);
+
+        if (multipleFrac != multiple) { //if the multiple is also a fraction.
+          //identify multipleFrac's num and denom
+          multipleFracSplit = multipleFrac.split("/");
+          multipleFracNum = parseInt(multipleFracSplit[0]);
+          multipleFracDenom = parseInt(multipleFracSplit[1]);
+          console.log("multipleFracNum is " + multipleFracNum +
+            " and multipleFracDenom is " + multipleFracDenom);
+          //multiply numerators
+          newValueNum = oldValueNum * multipleFracNum + "";
+
+          //multiply denominators
+          newValueDenom = oldValueDenom * multipleFracDenom + "";
+
+          if (newValueDenom == 1) {
+            newValue = newValueNum;
+          }
+          else {
+            newValue = newValueNum.concat("/", newValueDenom);
+          }
+        }
+        else {
+          newValueNum = oldValueNum * multiple;
+          newValueDenom = oldValueDenom;
+          //reduce fractions
+          [newValueNum, newValueDenom] = SimplifyFrac(newValueNum, newValueDenom);
+          if (newValueDenom == 1) {
+            newValue = newValueNum;
+          }
+          else {
+            newValue = newValueNum.concat("/", newValueDenom);
+          }
+        }
+      }
+      //if the oldvalue is not a fraction.
+      else {
+        newValue = DecimToFrac(oldValue * multiple);
+      }
+
+      console.log("value after multiplication is " + newValue);
+      ingrQuantsOutputs[i].innerHTML = newValue;
     }
     else if (ingrUnits[i] === "") {
+      console.log("ingrUnits[i] is " + "nothing")
 
     }
     else {
+      console.log("ingrUnits[i] for" + i + " is " + ingrUnits[i].innerText);
       console.log("Error: no measurementUnit class was declared for this ingredient");
+      newValue = DecimToFrac(oldValue * multiple);
+      ingrQuantsOutputs[i].innerHTML = newValue;
     }
   }
-
-  //change the text of the checkboxes
-  iniServSize = desiredServing;
-
-
 }
+
 
 servingForm.addEventListener("submit", reCalcServSize);
