@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content=width=device-width, initial-scale=1.0">
+  <link href="../../dist/output.css" rel="stylesheet">
+  <script type="text/javascript" src="../../js/recipePages.js" defer></script>
+</head>
+
+
+<body>
+  <header>
+    <!-- -------------------------------------------  -->
+    <!--                                              -->
+    <!-- Top Bar                                      -->
+    <!--                                              -->
+    <!-- -------------------------------------------  -->
+    <nav class="mx-auto p-4">
+      <!-- -------------------------------------------  -->
+      <!-- Top Bar for Mobile                           -->
+      <!-- -------------------------------------------  -->
+      <div class="grid grid-cols-3 justify-items-center items-end h-12 md:hidden">
+        <!--Hamburger Menu to replace TopNav Menu Items -->
+        <div class="flex justify-self-start justify-items-center items-end space-x-4 px-2">
+          <div id="myNav" class="flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black"
+              class="w-10 h-10">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </div>
+          <div class="flex-none w-10 h-10">
+            <!-- placeholder -->
+          </div>
+        </div>
+        <!--       Logo -->
+        <div>
+          <a href="./../../index.html">
+            <img class="object-cover h-12" src="./../../media/Generic Images/Logo.png" alt="">
+          </a>
+        </div>
+
+        <!-- Permanently Accessible Tools in the Toolbar -->
+        <div class="flex justify-self-end justify-items-center items-end space-x-6 px-2">
+          <!-- Search Icon -->
+          <div class="flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
+          </div>
+          <!-- Checkout Icon -->
+          <div class="flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- --------------------------------------------   -->
+      <!-- the following Top Bar is for desktop-only views   -->
+      <!-- --------------------------------------------   -->
+      <div class="hidden md:flex md:justify-between">
+        <div class="flex items-end space-x-6 h-20">
+          <!--       Logo -->
+          <div class="place-self-start px-2">
+            <a href="./../../index.html">
+              <img class="object-cover h-20" src="./../../media/Generic Images/Logo.png" alt="">
+            </a>
+          </div>
+
+          <!--       TopNav Menu Items -->
+          <div class="place-self-start self-end flex items-end space-x-6 px-6">
+            <!--           <a href="index.html" class="hover:text-orange-600">Home</a> -->
+            <div>
+              <a href="./../searchRecipes.html" class="hover:text-orange-600">Search Recipes</a>
+            </div>
+            <div>
+              <div class="dropdownButton">
+                <a href="#!" class="hover:text-orange-600">Recipes Categories</a>
+                <!--  Dropdown Categories Menu on Hover -->
+                <div class="dropdownMenu">
+                  <ul>
+                    <li><a href="./../RecipeCategories/appetizers.html"> Appetizers </a></li>
+                    <li><a href="./../recipeCategories.html"> Mains </a></li>
+                    <li><a href="./../recipeCategories.html"> Sides </a></li>
+                    <li><a href="./../recipeCategories.html"> Desserts </a></li>
+                    <li><a href="./../recipeCategories.html"> Drinks </a></li>
+                    <li><a href="./../recipeCategories.html"> Breakfast </a></li>
+                    <li><a href="./../recipeCategories.html"> Celebrations </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="./../contact.html" class="hover:text-orange-600">Contact</a>
+              <!--       <a href="frontend/pages/about.html">About</a></li> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Checkout Icon -->
+        <div class="place-self-end self-end flex-none px-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+          </svg>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- ------------------------- -->
+  <!--                           -->
+  <!-- Individual Recipe Pages   -->
+  <!--                           -->
+  <!-- ------------------------- -->
+  <main>
+    <section id="Recipe">
+      <div class="mx-auto px-6">
+        <div class="p-1"></div>
+
+        <!-- -------------------------------------------  -->
+        <!-- Recipes Details Section Desktop              -->
+        <!-- -------------------------------------------  -->
+        <section id="Recipe">
+          <div class="relative">
+            <div class="flex justify-start items-center space-x-2">
+              <div class="flex-none pb-2">
+                <h1>Grammy Vint's Good Bean Salad</h1>
+              </div>
+              <!-- Bookmark icon to add to Grocer List -->
+              <div class="flex-none w-8 h-8 mx-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Video -->
+            <div class="mobileVideoContainer">
+              <iframe class="mobileVideo" src="https://www.youtube.com/embed/_fJ3kOGoGgk" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+
+            <!-- Ingredients Section -->
+            <div class="my-auto p-4 bg-slate-300 md:w-2/3">
+              <form action=# method="GET" id="servingform">
+                <div>
+                  <h2>Ingredients:</h2>
+                </div>
+                <!-- serving size section -->
+                <div class="servingSize">
+                  <label>for</label>
+                  <input type="number" id="serving" name="servingSize" value="24" min="24" max="48" step="6" />
+                  <label for="serving">servings</label>
+                  <input id="updateButton" type="submit" value="Update" class="hidden" />
+                </div>
+
+                <!-- Ingredients List -->
+                <div class="px-2">
+                  <div class="ingredientListItem">
+                    <input type="checkbox" id="ingr" name="ingr1" />
+                    <label for="ingr1" class="strikethrough"><span class="quantity">1</span><span
+                        class="measurementUnit"> 19oz can</span> chkickpeas<span
+                        class="minQuantity hidden">1</span></label>
+                  </div>
+                  <div class="ingredientListItem">
+                    <input type="checkbox" id="ingr2" name="ingr2" />
+                    <label for="ingr2" class="strikethrough"><span class="quantity">1</span><span
+                        class="measurementUnit">
+                        19oz can</span> kidney beans<span class="minQuantity hidden">1</span></label>
+                  </div>
+                  <div class="ingredientListItem">
+                    <input type="checkbox" id="ingr3" name="ingr3" />
+                    <label for="ingr3" class="strikethrough"><span class="quantity">1</span><span
+                        class="measurementUnit">
+                        cup</span> Brown Sugar<span class="minQuantity hidden">1</span></label>
+                  </div>
+                  <div class="ingredientListItem">
+                    <input type="checkbox" id="ingr4" name="ingr4" />
+                    <label for="ingr4" class="strikethrough"><span class="quantity">1</span><span
+                        class="measurementUnit"> 15oz can</span> black beans<span
+                        class="minQuantity hidden">1</span></label>
+                  </div>
+                  <div class="ingredientListItem">
+                    <input type="checkbox" id="ingr5" name="ingr5" />
+                    <label for="ingr5" class="strikethrough"><span class="quantity">1</span><span
+                        class="measurementUnit">
+                        12oz can</span> corn kernels<span class="minQuantity hidden">1</span></label>
+                  </div>
+                  <div class="ingredientListItem">
+                    <input type="checkbox" id="ingr6" name="ingr6" />
+                    <label for="ingr6" class="strikethrough"><span class="quantity">1/2</span><span
+                        class="measurementUnit"> cup</span> of chopped red onion<span
+                        class="minQuantity hidden">1/2</span></label>
+                  </div>
+                  <div class="ingredientListItem">
+                    <input type="checkbox" id="ingr7" name="ingr7" />
+                    <label for="ingr7" class="strikethrough"><span class="quantity">1</span><span
+                        class="measurementUnit"></span> diced sweet red pepper<span
+                        class="minQuantity hidden">1</span></label>
+                  </div>
+                  <div class="ingredientListItem">
+                    <input type="checkbox" id="ingr8" name="ingr8" />
+                    <label for="ingr8" class="strikethrough"><span class="quantity">1/2</span><span
+                        class="measurementUnit"> cup</span> red wine vinegar or apple cider vinegar<span
+                        class="minQuantity hidden">1/2</span></label>
+                  </div>
+                  <div class="ingredientListItem">
+                    <input type="checkbox" id="ingr9" name="ingr9" />
+                    <label for="ingr9" class="strikethrough"><span class="quantity">2</span><span
+                        class="measurementUnit"> tbsp</span> dried basil<span
+                        class="minQuantity hidden">2</span></label>
+                  </div>
+                  <div class="ingredientListItem">
+                    <input type="checkbox" id="ingr10" name="ingr10" />
+                    <label for="ingr10" class="strikethrough"><span class="quantity">1/3</span><span
+                        class="measurementUnit"> cup</span> olive oil<span class="minQuantity hidden">1/3</span></label>
+                  </div>
+                  <div class="ingredientListItem">
+                    <input type="checkbox" id="ingr" name="ingr" />
+                    <label for="ingr" class="strikethrough"><span class="quantity">1</span><span
+                        class="measurementUnit"> tbsp</span> Dijon Mustard<span
+                        class="minQuantity hidden">1</span></label>
+                  </div>
+                  <div class="ingredientListItem">
+                    <input type="checkbox" id="ingr" name="ingr" />
+                    <label for="ingr" class="strikethrough"><span class="quantity">1</span><span
+                        class="measurementUnit"></span> minced clove of garlic<span
+                        class="minQuantity hidden">1</span></label>
+                  </div>
+                  <div class="ingredientListItem">
+                    <input type="checkbox" id="ingr" name="ingr" />
+                    <label for="ingr" class="strikethrough"><span class="quantity">1 1/2</span><span
+                        class="measurementUnit"> tsp</span> salt<span class="minQuantity hidden">1 1/2</span></label>
+                  </div>
+                  <div class="ingredientListItem">
+                    <input type="checkbox" id="ingr" name="ingr" />
+                    <label for="ingr" class="strikethrough"><span class="quantity">1/2</span><span
+                        class="measurementUnit"> tsp</span> hot pepper sauce<span
+                        class="minQuantity hidden">1/2</span></label>
+                  </div>
+                  <div class="ingredientListItem">
+                    <input type="checkbox" id="ingr" name="ingr" />
+                    <label for="ingr" class="strikethrough"><span class="quantity">1/2</span><span
+                        class="measurementUnit"> tsp</span> ground black pepper<span
+                        class="minQuantity hidden">1/2</span></label>
+                  </div>
+                  <div class="ingredientListItem">
+                    <input type="checkbox" id="ingr" name="ingr" />
+                    <label for="ingr" class="strikethrough"><span class="quantity">1/2</span><span
+                        class="measurementUnit"> cup</span> fresh parsley (optional)<span
+                        class="minQuantity hidden">1/2</span></label>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Directions Section -->
+            <div class="pl-4 pt-4 pb-4 md:w-2/3">
+              <div class="pb-2">
+                <h2>Directions:</h2>
+              </div>
+              <ol>
+                <li>In a large bowl, combine chickpeas, kidney beans, black beans, corn ,onion, and red pepper.</li>
+                <li>In a small bowl, whisk together vinegar, basil, olive oil, Dijon mustard, garlic, salt, hot pepper
+                  sauce and pepper.</li>
+                <li>Pour contents of small bowl over contents of big bowl and toss together.</li>
+                <li>Taste and adjust seasoning as necessary.</li>
+                <li>Garnish with chopped parsley.</li>
+                <li>Serve at room temperature. You can throw this together up to one day ahead.</li>
+              </ol>
+            </div>
+
+          </div>
+        </section>
+      </div>
+      </div>
+  </main>
+  </div>
+  </section>
+</body>
+
+</html>
