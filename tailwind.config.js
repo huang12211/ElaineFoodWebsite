@@ -40,9 +40,9 @@ module.exports = {
         'freshGreen': '#CCF4D7',
       },
 
-      backgroundImage: {
-        'kitchen-counter': "url('https://elainefoodwebsite.ehuang3.repl.co/media/Generic%20Images/FeaturedRecipeBackground.png')",
-      },
+      // backgroundImage: {
+      //   'kitchen-counter': "url('https://replit.com/@EHUANG3/ElaineFoodWebsite#media/GenericImages/FeaturedRecipeBackground.png')",
+      // },
 
       width: {
         '8': '2rem',

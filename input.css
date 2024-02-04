@@ -42,7 +42,7 @@ ol{
   max-height: 60%;
   margin-top: 0.5rem;
   padding:1.5rem;
-  background-image: url('https://elainefoodwebsite.ehuang3.repl.co/media/Generic%20Images/FeaturedRecipeBackground.png'); 
+  background-image: url('./media/GenericImages/FeaturedRecipeBackground.png'); 
   background-position:center; 
   background-size:cover;
   backdrop-filter: blur(2px);
@@ -57,7 +57,7 @@ ol{
     max-height: 25%;
     margin-top: 0.5rem;
     padding:1.5rem;
-    background-image: url('https://elainefoodwebsite.ehuang3.repl.co/media/Generic%20Images/FeaturedRecipeBackground.png'); 
+    background-image: url(./media/GenericImages/FeaturedRecipeBackground.png'); 
     background-position:center; 
     background-size:cover;
     backdrop-filter: blur(2px);
