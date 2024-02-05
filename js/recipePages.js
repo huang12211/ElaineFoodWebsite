@@ -93,7 +93,7 @@ function reCalcServSize(event) {
 
   multiple = desiredServing / minServSize;
   multipleFrac = DecimToFrac(multiple);
-  console.log("multiple is " + multiple + " mulipleFrac is " + multipleFrac);
+  console.log("multiple is " + multiple + " multipleFrac is " + multipleFrac);
 
   // var newIngrQuants = new Array(ingrQuants.length); //new ingredient quantities that should be printed
   for (let i = 0; i < ingrQuants.length; i++) {
@@ -109,16 +109,16 @@ function reCalcServSize(event) {
       //if the oldvalue is a fraction.
       if (oldValue.includes("/")) {
         //identify ingrQuants[i]'s num and denom
-        oldValueNum = 0;
-        if (oldValue.includes(" ")) {
+        oldValueWholeNum = 0; //initialize variable
+        if (oldValue.includes(" ")) { //if a whole number exists in the oldvalue
           var oldQuantsWholeSplit = oldValue.split(" ");
-          oldValueNum = parseInt(oldQuantsWholeSplit[0]);
-          console.log("if whole value is present in oldValueNum, it is " + oldValueNum);
+          oldValueWholeNum = parseInt(oldQuantsWholeSplit[0]);
+          console.log("if whole value is present in oldValue, it is " + oldValueWholeNum);
           oldValue = oldQuantsWholeSplit[1];
         }
         oldQuantsSplit = oldValue.split("/");
         oldValueDenom = parseInt(oldQuantsSplit[1]);
-        oldValueNum = oldValueNum * oldValueDenom + parseInt(oldQuantsSplit[0]);
+        oldValueNum = oldValueWholeNum * oldValueDenom + parseInt(oldQuantsSplit[0]);
         console.log("oldValueNum is " + oldValueNum +
           " and oldValueDenom is " + oldValueDenom);
 
@@ -142,13 +142,19 @@ function reCalcServSize(event) {
             newValue = newValueNum.concat("/", newValueDenom);
           }
         }
-        else {
+        else { //if the multiple is not a fraction
           newValueNum = oldValueNum * multiple;
           newValueDenom = oldValueDenom;
           //reduce fractions
           [newValueNum, newValueDenom] = SimplifyFrac(newValueNum, newValueDenom);
-          if (newValueDenom == 1) {
+          if (newValueDenom == 1) { // if the denominator is 1, then the fraction is a whole number
             newValue = newValueNum;
+          }
+          else if (newValueNum > newValueDenom) {
+            remNewValueNum = newValueNum % newValueDenom;
+            newValue1 = Math.floor(newValueNum / newValueDenom);
+            newValue2 = remNewValueNum.toString().concat("/", newValueDenom);
+            newValue = newValue1.toString().concat(" ", newValue2);
           }
           else {
             newValue = newValueNum.concat("/", newValueDenom);
