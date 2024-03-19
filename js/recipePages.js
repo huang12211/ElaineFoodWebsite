@@ -4,21 +4,21 @@ let iniServSize = prevServSize.value;
 let minServSize = prevServSize.min;
 console.log("initial serving size is " + iniServSize, "min serving size is " + minServSize);
 
-function SimplifyFrac(num, denom) {
-  tempNum = num;
-  tempDenom = denom;
-
-  //find the greatest common denominator
+//find the greatest common denominator
+function greatComDenom(tempNum, tempDenom) {
   do {
     gcd = tempNum % tempDenom;
     // console.log("gcd is " + gcd);
-    // console.log("fraction is " + fracNum + "/" + fracDenom);
     tempNum = tempDenom;
     tempDenom = gcd;
   } while (gcd != 0);
   gcd = tempNum;
   // console.log("final gcd is " + gcd);
+  return gcd;
+}
 
+function SimplifyFrac(num, denom) {
+  gcd = greatComDenom(num, denom);
   //print out the fraction
   var fracNum = num / gcd + "";
   var fracDenom = denom / gcd + "";

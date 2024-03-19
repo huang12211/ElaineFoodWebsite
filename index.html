@@ -65,11 +65,11 @@
       <!-- the following Top Bar is for desktop-only views   -->
       <!-- --------------------------------------------   -->
       <div class="hidden md:flex md:justify-between">
-        <div class="flex items-end space-x-6 h-20">
+        <div class="flex items-end space-x-6 h-14">
           <!--       Logo -->
           <div class="place-self-start px-2">
             <a href="index.html">
-              <img class="object-cover h-20" src="./media/GenericImages/Logo.png" alt="">
+              <img class="object-cover h-14" src="./media/GenericImages/Logo.png" alt="">
             </a>
           </div>
 
@@ -86,12 +86,12 @@
                 <div class="dropdownMenu z-50">
                   <ul>
                     <li><a href="./pages/RecipeCategories/appetizers.html"> Appetizers </a></li>
-                    <li><a href="./pages/recipeCategories.html"> Mains </a></li>
-                    <li><a href="./pages/recipeCategories.html"> Sides </a></li>
-                    <li><a href="./pages/recipeCategories.html"> Desserts </a></li>
-                    <li><a href="./pages/recipeCategories.html"> Drinks </a></li>
-                    <li><a href="./pages/recipeCategories.html"> Breakfast </a></li>
-                    <li><a href="./pages/recipeCategories.html"> Celebrations </a></li>
+                    <li><a href="./pages/RecipeCategories/recipeCategories.html"> Mains </a></li>
+                    <li><a href="./pages/RecipeCategories/recipeCategories.html"> Sides </a></li>
+                    <li><a href="./pages/RecipeCategories/recipeCategories.html"> Desserts </a></li>
+                    <li><a href="./pages/RecipeCategories/recipeCategories.html"> Drinks </a></li>
+                    <li><a href="./pages/RecipeCategories/recipeCategories.html"> Breakfast </a></li>
+                    <li><a href="./pages/RecipeCategories/recipeCategories.html"> Celebrations </a></li>
                   </ul>
                 </div>
               </div>
@@ -124,7 +124,7 @@
   <!--                                              -->
   <!-- -------------------------------------------  -->
   <main>
-    <div class="mx-auto px-6">
+    <div class="mx-auto px-6 bg-gray-100">
 
       <!-- -------------------------------------------  -->
       <!--                                              -->
@@ -132,29 +132,31 @@
       <!--                                              -->
       <!-- -------------------------------------------  -->
       <section id="featuredRecipe">
-        <a href="./pages/Recipes/blueberryMuffins.html">
-          <div class="relative h-36 max-h-36 p-2">
-            <img class="object-cover w-full max-h-36 blur-xs opacity-90"
-              src="../media/GenericImages/FeaturedRecipeBackground.png">
-            <!-- <div class="absolute inset-x-0 top-0 h-12 px-4 z-10">
+        <div class="static h-80 p-2">
+          <a href="./pages/Recipes/blueberryMuffins.html">
+            <div class="relative max-h-80">
+              <img class="object-cover w-full max-h-80 blur-xs opacity-90"
+                src="../media/GenericImages/FeaturedRecipeBackground.png">
+              <!-- <div class="absolute inset-x-0 top-0 h-12 px-4 z-10">
             </div> -->
-            <div class="absolute inset-2 grid grid-cols-3">
-              <div>
-              </div>
-              <div class="my-auto">
+              <div class="absolute inset-2 grid grid-cols-3">
                 <div>
-                  <img class="object-cover w-full h-full" src="./media/foodImgs/Blueberry Muffins.png" alt="">
                 </div>
-                <div class="bg-white p-1 md:p-2">
-                  <h3>Blueberry Muffins</h3>
-                  <h4> XXXX plays</h4>
+                <div class="my-auto">
+                  <div>
+                    <img class="object-cover w-full h-full" src="./media/foodImgs/Blueberry Muffins.png" alt="">
+                  </div>
+                  <div class="bg-white p-1 md:p-2">
+                    <h3>Blueberry Muffins</h3>
+                    <h4> XXXX plays</h4>
+                  </div>
                 </div>
-              </div>
-              <div>
+                <div>
+                </div>
               </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </section>
 
       <section id="Recipe Explorer">

@@ -140,14 +140,14 @@ ol{
 }
 
 .mobileVideoContainer{
-  padding-left: 1rem;
+  /* padding-left: 1rem;
   padding-bottom: 1rem;
-  padding-right: 1rem;
-  
+  padding-right: 1rem;  */
+  width: 66.66667%;
 }
 .mobileVideo{
-  width: 100%;
-  max-width: 35rem;
+  width: 66.66667%;
+  /* max-width: 35rem; */
   height: calc(100vw*0.56);
   /*padding-bottom: 56.25%;*/
 }
