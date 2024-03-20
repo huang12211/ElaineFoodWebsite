@@ -34,9 +34,8 @@ ol{
   font-size: small;
 }
 
-.featuredRecipeBg{
+/* .featuredRecipeBg{
   background-attachment: local;
-/*   display:flex; */
   justify-content: center;
   height: 20 rem;
   max-height: 60%;
@@ -51,7 +50,6 @@ ol{
 @media (min-width: 768px) {
   .featuredRecipeBg{
     background-attachment: local;
-/*     display:flex; */
     justify-content: center;
     height: 24rem;
     max-height: 25%;
@@ -63,6 +61,12 @@ ol{
     backdrop-filter: blur(2px);
     z-index: 0;
   }
+} */
+
+.featuredRecipeCard{
+  object-fit: cover;
+  max-height: 18rem;
+  max-width: 100%;
 }
 
 
@@ -147,7 +151,7 @@ ol{
 }
 .mobileVideo{
   width: 66.66667%;
-  /* max-width: 35rem; */
+  max-width: 35rem;
   height: calc(100vw*0.56);
   /*padding-bottom: 56.25%;*/
 }
@@ -172,7 +176,6 @@ ol{
   font-size: medium;
 }
 
-<<<<<<< HEAD
 #updateButton{
   font-size: small;
   font-weight: bold;
@@ -182,8 +185,6 @@ ol{
   background-color: slategray;
 }
 
-=======
->>>>>>> origin/recipeFocus
 input[type=checkbox]:checked + label.strikethrough{
   text-decoration: line-through;
 }
