@@ -7,6 +7,7 @@
     "build": "tailwindcss -i input.css -o ./dist/output.css",
     "watch": "tailwindcss -i input.css -o ./dist/output.css --watch",
     "db:generate": "drizzle-kit generate:sqlite",
+    "db:drop": "drizzle-kit drop",
     "db:instrospect": "drizzle-kit introspect:sqlite",
     "db:push": "drizzle-kit push:sqlite"
   },

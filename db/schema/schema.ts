@@ -1,6 +1,9 @@
 import { sql } from "drizzle-orm";
+import { real } from "drizzle-orm/mysql-core";
 import { text, integer, sqliteTable, uniqueIndex} from "drizzle-orm/sqlite-core";
 
+
+//Create the tables in your relational database
 export const users = sqliteTable('users', {
   id: integer('id', { mode: 'number' }).primaryKey({ autoIncrement: true }),
   textModifiers: text('text_modifiers').notNull().default(sql`CURRENT_TIMESTAMP`),
@@ -10,7 +13,9 @@ export const users = sqliteTable('users', {
 export const recipes = sqliteTable('recipes', {
     id: integer('id').primaryKey(),
     name: text('name').notNull(),
-    description: text('description'),
+    video: text('video').notNull(),
+    rating: integer('rating'),
+    numRatings: integer('numRatings'),
     directions: text('directions'),
   });
 
@@ -31,3 +36,5 @@ export const recipe_ingredient_measUnit = sqliteTable('recipe_ingredient_measUni
   measUnit_id: integer('measUnit_id').references(() => measurementUnits.id), 
   ingredient_id: integer('ingredient_id').references(() => ingredients.id),
 });
+
+//Populate all the databases with all of the recipes
