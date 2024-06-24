@@ -1,7 +1,8 @@
 import { sql } from "drizzle-orm";
 import { real } from "drizzle-orm/mysql-core";
 import { text, integer, sqliteTable, uniqueIndex} from "drizzle-orm/sqlite-core";
-
+import { drizzle, BetterSQLite3Database } from "drizzle-orm/better-sqlite3";
+import Database from "better-sqlite3";
 
 //Create the tables in your relational database
 export const users = sqliteTable('users', {
@@ -9,6 +10,9 @@ export const users = sqliteTable('users', {
   textModifiers: text('text_modifiers').notNull().default(sql`CURRENT_TIMESTAMP`),
   intModifiers: integer('int_modifiers', { mode: 'boolean' }).notNull().default(false),
 });
+
+export type User = typeof users.$inferSelect // return type when queried
+export type InsertUser = typeof users.$inferInsert // insert type
 
 export const recipes = sqliteTable('recipes', {
     id: integer('id').primaryKey(),
@@ -37,4 +41,16 @@ export const recipe_ingredient_measUnit = sqliteTable('recipe_ingredient_measUni
   ingredient_id: integer('ingredient_id').references(() => ingredients.id),
 });
 
-//Populate all the databases with all of the recipes
+
+
+
+
+// //Let's mock the database to make sure it is all working
+const sqlite = new Database('sqlite.db');
+const db = drizzle(sqlite);
+
+// const result: User[] = db.select().from(users).all();
+
+// const insertUser = (data: InsertUser) => {
+//   return db.insert(users).values(data).run()
+// }

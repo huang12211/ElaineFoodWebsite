@@ -1,0 +1,4 @@
+db/drizzle
+node_modules
+dist
+sqlite.db
