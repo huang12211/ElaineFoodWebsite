@@ -15,42 +15,45 @@ export type User = typeof users.$inferSelect // return type when queried
 export type InsertUser = typeof users.$inferInsert // insert type
 
 export const recipes = sqliteTable('recipes', {
-    id: integer('id').primaryKey(),
-    name: text('name').notNull(),
+    //id: integer('id').primaryKey(),
+    name: text('name').primaryKey(),
     video: text('video').notNull(),
     rating: integer('rating'),
     numRatings: integer('numRatings'),
     directions: text('directions'),
   });
 
+export type Recipe = typeof recipes.$inferSelect
+export type InsertRecipe = typeof recipes.$inferInsert
+
 export const ingredients = sqliteTable('ingredients', {
-  id: integer('id').primaryKey(),
-  label: text('name').notNull(),
+  ingr: text('ingr').primaryKey(),
 });
 
+export type Ingredients = typeof recipes.$inferSelect
+export type InsertIngredient = typeof recipes.$inferInsert
+
 export const measurementUnits = sqliteTable('mesurementUnits', {
-  id: integer('id').primaryKey(),
-  label: text('label').notNull(),
+  meas_unit: text('meas_units').primaryKey(),
 });
+
+export type MeasurementUnits = typeof measurementUnits.$inferSelect
+export type InsertMeasurement = typeof measurementUnits.$inferInsert
 
 export const recipe_ingredient_measUnit = sqliteTable('recipe_ingredient_measUnit', {
   id: integer('id').primaryKey(),
-  recipe_id: integer('recipe_id').references(() => recipes.id),
-  amount: integer('amount'),
-  measUnit_id: integer('measUnit_id').references(() => measurementUnits.id), 
-  ingredient_id: integer('ingredient_id').references(() => ingredients.id),
+  recipe_id: text('recipe_id').references(() => recipes.name),
+  component: text('component'),
+  amount: text('amount'),
+  measUnit_id: text('measUnit_id').references(() => measurementUnits.meas_unit), 
+  ingredient_id: text('ingredient_id').references(() => ingredients.ingr),
 });
 
 
-
-
-
-// //Let's mock the database to make sure it is all working
-const sqlite = new Database('sqlite.db');
-const db = drizzle(sqlite);
-
-// const result: User[] = db.select().from(users).all();
-
-// const insertUser = (data: InsertUser) => {
-//   return db.insert(users).values(data).run()
-// }
+// we also want a table that gives us users vs. ratings of each recipe.
+//So that we can later use this information to generate a Recommendation system
+export const users_recipe_reviews = sqliteTable('users_recipe_reviews', {
+  user_id: integer('user_id').references(() => users.id),
+  recipe_id: integer('recipe_id').references(() => recipes.name),
+  rating: integer('rating'),
+});
