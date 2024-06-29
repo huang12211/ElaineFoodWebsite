@@ -11,12 +11,16 @@ Database is controlled using:
     - in summary:
         - npm run db:generate //this generates the script in SQL that once run, will create the Database
         - npm run db:push //this runs the script to create the Database that should appear as "sqlite.db"
+        - npm run db:seed //this runs the script using tsx ( TypeScript Execute) which converts TypeScript to JS.
         - npm run db:stdio //this generates a link to open in the browser that you can use to test run your database
+        - rm sqlite.db //remove this file to kill the database
+        - npm run db:drop // this kills the database
 To Do:
 - investigate using some other framework. 
 - investigate if Vite is needed to use Drizzle
 
-Backend is established 
+Next steps:
+- Establish Backend to interact with the database
 
 
 
