@@ -42,7 +42,7 @@ export type InsertMeasurement = typeof measurementUnits.$inferInsert
 
 export const recipe_ingredient_measUnit = sqliteTable('recipe_ingredient_measUnit', {
   id: integer('id').primaryKey(),
-  recipe_id: text('recipe_id').references(() => recipes.name),
+  recipe_id: text('recipe_id').references(() => recipes.name), 
   component: text('component'),
   amount: text('amount'),
   measUnit_id: text('measUnit_id').references(() => measurementUnits.meas_unit), 

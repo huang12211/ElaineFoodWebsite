@@ -1,4 +1,4 @@
-db/drizzle
+backend/db/drizzle
 node_modules
-dist
+dist/output.css
 sqlite.db
