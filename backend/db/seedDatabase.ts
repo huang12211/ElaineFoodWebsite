@@ -9,9 +9,9 @@ export async function seedDatabase() {
     console.log('Seeding database...')
     // Insert recipes
     await db.insert(recipes).values([
-        {name: 'Blueberry Muffins', video: 'https:///asdjfkslfs', rating: 0, numRatings: 0, directions:'Set to 375 degrees farenheit' }, 
-        {name: 'Onion Pancakes', video: 'https:///onionooons', rating: 0, numRatings: 0, directions:'measure out 100g of flour' },
-        {name: 'Chocolate Chip Cookies', video: 'https://asflls', rating: 0, numRatings: 0, directions: 'chocolate chips'}
+        {name: 'Blueberry Muffins', video: 'https:///asdjfkslfs', avg_rating: 0, numRatings: 0, directions:'Set to 375 degrees farenheit' }, 
+        {name: 'Onion Pancakes', video: 'https:///onionooons', avg_rating: 0, numRatings: 0, directions:'measure out 100g of flour' },
+        {name: 'Chocolate Chip Cookies', video: 'https://asflls', avg_rating: 0, numRatings: 0, directions: 'chocolate chips'}
     ]);
   
     // Insert ingredients

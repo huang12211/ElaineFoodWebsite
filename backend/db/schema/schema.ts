@@ -1,12 +1,14 @@
 import { sql } from "drizzle-orm";
-import { real } from "drizzle-orm/mysql-core";
+// import { real } from "drizzle-orm/mysql-core";
 import { text, integer, sqliteTable, uniqueIndex} from "drizzle-orm/sqlite-core";
 import { drizzle, BetterSQLite3Database } from "drizzle-orm/better-sqlite3";
 import Database from "better-sqlite3";
 
 //Create the tables in your relational database
 export const users = sqliteTable('users', {
-  id: integer('id', { mode: 'number' }).primaryKey({ autoIncrement: true }),
+  // id: integer('id', { mode: 'number' }).primaryKey({ autoIncrement: true }),
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  email: text('email').notNull(),
   textModifiers: text('text_modifiers').notNull().default(sql`CURRENT_TIMESTAMP`),
   intModifiers: integer('int_modifiers', { mode: 'boolean' }).notNull().default(false),
 });
@@ -18,7 +20,7 @@ export const recipes = sqliteTable('recipes', {
     //id: integer('id').primaryKey(),
     name: text('name').primaryKey(),
     video: text('video').notNull(),
-    rating: integer('rating'),
+    avg_rating: integer('avg_rating'),
     numRatings: integer('numRatings'),
     directions: text('directions'),
   });
