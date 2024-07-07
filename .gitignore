@@ -1,4 +1,6 @@
 backend/db/drizzle
 node_modules
-dist/output.css
+frontend/dist
 sqlite.db
+package-lock.json
+backend/server/dist

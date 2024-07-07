@@ -15,6 +15,7 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 //Mount the Routers
+app.use(express.json())
 app.use("/users", userRouter);
 app.use("/recipes", recipesRouter)
 app.use("/ratings", ratingRouter)

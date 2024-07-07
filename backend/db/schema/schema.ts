@@ -56,6 +56,6 @@ export const recipe_ingredient_measUnit = sqliteTable('recipe_ingredient_measUni
 //So that we can later use this information to generate a Recommendation system
 export const users_recipe_reviews = sqliteTable('users_recipe_reviews', {
   user_id: integer('user_id').references(() => users.id),
-  recipe_id: integer('recipe_id').references(() => recipes.name),
+  recipe_name: text('recipe_name').references(() => recipes.name),
   rating: integer('rating'),
 });

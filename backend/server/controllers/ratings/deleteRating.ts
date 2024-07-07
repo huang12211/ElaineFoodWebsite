@@ -7,13 +7,13 @@ import { eq, and } from 'drizzle-orm';
 //Add the ability for a user to delete a rating for a recipe
 const deleteRating = async (req: Request, res: Response) => {
     const user_id = req.params.userId;
-    const recipe_id = req.params.recipeId;
+    const recipe_name = req.params.recipeName;
 
     try{
         await db.delete(users_recipe_reviews).where(and(
             eq(users_recipe_reviews.user_id, Number(user_id)),
-            eq(users_recipe_reviews.recipe_id, Number(recipe_id))
-        ))
+            eq(users_recipe_reviews.recipe_name, recipe_name)
+        ));
         return res.status(200).json({success: true, message: "Rating Deleted Successfully"});
     } catch (error){
         return res.status(500).json({ success: false, data: null, message: "Unable to delete rating"});

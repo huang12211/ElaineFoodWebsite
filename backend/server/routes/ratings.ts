@@ -13,7 +13,7 @@ ratingRouter.get("/", getRatings);
 ratingRouter.get("/:ratingId", getRatingsByRecipe);
 
 //ratingRouter.patch("/:ratingId", updateRating);
-ratingRouter.delete("/users/:userId/recipes/recipeId", deleteRating);
+ratingRouter.delete("/users/:userId/recipes/:recipeName", deleteRating);
 
 
 export default ratingRouter;
