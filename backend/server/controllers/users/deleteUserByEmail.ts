@@ -17,7 +17,7 @@ const deleteUserByEmail = async (req: Request, res: Response) => {
         await db.delete(users).where(eq(users.email, userEmail));
         return res.status(200).json({success: true, data: user, message: "User email found; User Deleted Successfully"});
     } catch (error){
-        return res.status(500).json({ success: false, data: null, message: "Unable to delete user"});
+        return res.status(500).json({ success: false, data: error, message: "Unable to delete user"});
     } 
 };
 

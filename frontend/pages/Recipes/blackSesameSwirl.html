@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../dist/output.css" rel="stylesheet">
+  <script type="text/javascript" src="../../js/recipePages.js" defer></script>
+</head>
+
+
+<body>
+  <header>
+    <!-- -------------------------------------------  -->
+    <!--                                              -->
+    <!-- Top Bar                                      -->
+    <!--                                              -->
+    <!-- -------------------------------------------  -->
+    <nav class="mx-auto p-4">
+      <!-- -------------------------------------------  -->
+      <!-- Top Bar for Mobile                           -->
+      <!-- -------------------------------------------  -->
+      <div class="grid grid-cols-3 justify-items-center items-end h-12 md:hidden">
+        <!--Hamburger Menu to replace TopNav Menu Items -->
+        <div class="flex justify-self-start justify-items-center items-end space-x-4 px-2">
+          <div id="myNav" class="flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black"
+              class="w-10 h-10">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </div>
+          <div class="flex-none w-10 h-10">
+            <!-- placeholder -->
+          </div>
+        </div>
+        <!--       Logo -->
+        <div>
+          <a href="./../../index.html">
+            <img class="object-cover h-12" src="./../../media/GenericImages/Logo.png" alt="">
+          </a>
+        </div>
+
+        <!-- Permanently Accessible Tools in the Toolbar -->
+        <div class="flex justify-self-end justify-items-center items-end space-x-6 px-2">
+          <!-- Search Icon -->
+          <div class="flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
+          </div>
+          <!-- Checkout Icon -->
+          <div class="flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- --------------------------------------------   -->
+      <!-- the following Top Bar is for desktop-only views   -->
+      <!-- --------------------------------------------   -->
+      <div class="hidden md:flex md:justify-between md:drop-shadow">
+        <div class="flex items-end space-x-6 h-14">
+          <!--       Logo -->
+          <div class="place-self-start px-2">
+            <a href="./../../index.html">
+              <img class="object-cover h-14" src="./../../media/GenericImages/Logo.png" alt="">
+            </a>
+          </div>
+
+          <!--       TopNav Menu Items -->
+          <div class="place-self-start self-end flex items-end space-x-6 px-6">
+            <!--           <a href="index.html" class="hover:text-orange-600">Home</a> -->
+            <div>
+              <a href="./../searchRecipes.html" class="hover:text-orange-600">Search Recipes</a>
+            </div>
+            <div>
+              <div class="dropdownButton">
+                <a href="#!" class="hover:text-orange-600">Recipes Categories</a>
+                <!--  Dropdown Categories Menu on Hover -->
+                <div class="dropdownMenu z-50">
+                  <ul>
+                    <li><a href="./../RecipeCategories/appetizers.html"> Appetizers </a></li>
+                    <li><a href="./../RecipeCategories/recipeCategories.html"> Mains </a></li>
+                    <li><a href="./../RecipeCategories/recipeCategories.html"> Sides </a></li>
+                    <li><a href="./../RecipeCategories/recipeCategories.html"> Desserts </a></li>
+                    <li><a href="./../RecipeCategories/recipeCategories.html"> Drinks </a></li>
+                    <li><a href="./../RecipeCategories/recipeCategories.html"> Breakfast </a></li>
+                    <li><a href="./../RecipeCategories/recipeCategories.html"> Celebrations </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="./../contact.html" class="hover:text-orange-600">Contact</a>
+              <!--       <a href="frontend/pages/about.html">About</a></li> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Checkout Icon -->
+        <div class="place-self-end self-end flex-none px-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+          </svg>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- ------------------------- -->
+  <!--                           -->
+  <!-- Individual Recipe Pages   -->
+  <!--                           -->
+  <!-- ------------------------- -->
+  <main>
+    <section id="Recipe">
+      <div class=" mx-auto px-6 bg-gray-100">
+        <div class="p-1"></div>
+
+        <!-- -------------------------------------------  -->
+        <!-- Recipes Details Section Desktop              -->
+        <!-- -------------------------------------------  -->
+        <section id="Recipe">
+          <div class="relative">
+            <div class="flex justify-start items-center space-x-2">
+              <div class="flex-none pb-2">
+                <h1>Black Sesame Swirl</h1>
+              </div>
+              <!-- Bookmark icon to add to Grocer List -->
+              <div class="flex-none w-8 h-8 mx-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Ratings & Plays Header -->
+            <div>
+              <div class="flex justify-start items-center space-x-4">
+                <div class="flex">
+                  <div class="place-self-start">
+                    <svg xmlns=" http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                    </svg>
+                  </div>
+                  <div class="place-self-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                    </svg>
+                  </div>
+                  <div class="place-self-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                    </svg>
+                  </div>
+                  <div class="place-self-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                    </svg>
+                  </div>
+                  <div class="place-self-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <p><span class="numbOfViews">XXXXXX</span> plays</p>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Video -->
+            <div class="mobileVideoContainer p-4 z-60">
+              <iframe class="mobileVideo" src="https://www.youtube.com/embed/_fJ3kOGoGgk" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+
+            <!-- ------------------ -->
+            <!-- Body of the Recipe -->
+            <!-- ------------------ -->
+            <div class="p-4 md:grid md:grid-cols-3 md:gap-4">
+
+              <!-- Ingredients Section -->
+              <div class=" my-auto p-4 bg-slate-300 md:col-start-1 md:col-span-1">
+                <form action=# method=" GET" id="servingform">
+                  <div>
+                    <h2>Ingredients:</h2>
+                  </div>
+                  <!-- serving size section -->
+                  <div class="servingSize">
+                    <label>for</label>
+                    <input type="number" id="serving" name="servingSize" value="9" min="9" max="81" step="9" />
+                    <label for="serving">servings</label>
+                    <input id="updateButton" type="submit" value="Update" class="hidden" />
+                  </div>
+
+                  <!-- Ingredients List -->
+                  <div class="px-2">
+                    <div>
+                        <h3>Dough:</h3>
+                    </div>
+                    <div class="ingredientListItem">
+                      <input type="checkbox" id="ingr" name="ingr1" />
+                      <label for="ingr1" class="strikethrough"><span class="quantity">3/4</span><span
+                          class="measurementUnit"> cup</span> warm Milk<span
+                          class="minQuantity hidden">3/4</span></label>
+                    </div>
+                    <div class="ingredientListItem">
+                      <input type="checkbox" id="ingr2" name="ingr2" />
+                      <label for="ingr2" class="strikethrough"><span class="quantity">2 1/4</span><span
+                          class="measurementUnit">
+                          tsps</span> yeast<span class="minQuantity hidden">2 1/4</span></label>
+                    </div>
+                    <div class="ingredientListItem">
+                      <input type="checkbox" id="ingr3" name="ingr3" />
+                      <label for="ingr3" class="strikethrough"><span class="quantity">1/4</span><span
+                          class="measurementUnit">
+                          cup</span> Granulated Sugar<span class="minQuantity hidden">1/4</span></label>
+                    </div>
+                    <div class="ingredientListItem">
+                      <input type="checkbox" id="ingr4" name="ingr4" />
+                      <label for="ingr4" class="strikethrough"><span class="quantity">1</span><span
+                          class="measurementUnit"></span> Egg and 1 Egg Yolk<span class="minQuantity hidden">1</span></label>
+                    </div>
+                    <div class="ingredientListItem">
+                      <input type="checkbox" id="ingr5" name="ingr5" />
+                      <label for="ingr5" class="strikethrough"><span class="quantity">1/4</span><span
+                          class="measurementUnit">
+                          cup</span> Unsalted Butter<span class="minQuantity hidden">1/4</span></label>
+                    </div>
+                    <div class="ingredientListItem">
+                      <input type="checkbox" id="ingr6" name="ingr6" />
+                      <label for="ingr6" class="strikethrough"><span class="quantity">2 3/4</span><span
+                          class="measurementUnit"> cup</span> Flour<span class="minQuantity hidden">2 3/4</span></label>
+                    </div>
+                    <div class="ingredientListItem">
+                      <input type="checkbox" id="ingr7" name="ingr7" />
+                      <label for="ingr7" class="strikethrough"><span class="quantity">1/2</span><span
+                          class="measurementUnit">
+                          tsp</span> Salt<span class="minQuantity hidden">1/2</span></label>
+                    </div>
+                    <div>
+                        <h3>Paste:</h3>
+                    </div>
+                    <div class="ingredientListItem">
+                      <input type="checkbox" id="ingr8" name="ingr8" />
+                      <label for="ingr8" class="strikethrough"><span class="quantity">1/2</span><span
+                          class="measurementUnit"> cup</span> of Black Sesame Seeds<span class="minQuantity hidden">1/4</span></label>
+                    </div>
+                    <div class="ingredientListItem">
+                      <input type="checkbox" id="ingr9" name="ingr9" />
+                      <label for="ingr9" class="strikethrough"><span class="quantity">1/4</span><span
+                          class="measurementUnit">
+                          cup</span> Honey or Maple Syrup<span class="minQuantity hidden">1/8</span></label>
+                    </div>
+                    <div>
+                        <h3>Filling:</h3>
+                    </div>
+                    <div class="ingredientListItem">
+                      <input type="checkbox" id="ingr10" name="ingr10" />
+                      <label for="ingr10" class="strikethrough"><span class="quantity">1/4</span><span
+                          class="measurementUnit"> cup</span> Unsalted Butter<span class="minQuantity hidden">1/4</span></label>
+                    </div>
+                    <div class="ingredientListItem">
+                      <input type="checkbox" id="ingr11" name="ingr11" />
+                      <label for="ingr11" class="strikethrough"><span class="quantity">1/2</span><span
+                          class="measurementUnit">
+                          cup</span> Black Sesame Paste<span class="minQuantity hidden">1/4</span></label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+
+              <!-- Directions Section -->
+              <div class="pl-4 pt-4 pb-4 md:row-start-1 md:row-span-1 md:col-start-2 md:col-span-2">
+                <div class="pb-2">
+                  <h2>Directions:</h2>
+                </div>
+                <ol>
+                  <li>Preheat the oven to 375*F.</li>
+                  <li>In a mixer, cream the butter and sugar until light.</li>
+                  <li>Add the eggs, vanilla and milk. Mix until well-combined.</li>
+                  <li>Add the flour, salt and baking powder. Mix until well-combined.</li>
+                  <li>Fold-in the blueberries.</li>
+                  <li>Grease a standard muffin tin and fill with batter.</li>
+                  <li>Bake at 375*F for 30-35 mins</li>
+                  <li>Remove muffins from tin and leave them to cool for at least 30 mins. Store the muffins uncovered
+                    or else the muffins will be too moist on the second day.</li>
+                </ol>
+              </div>
+            </div>
+
+          </div>
+          <div class="h-2"></div>
+        </section>
+      </div>
+      </div>
+  </main>
+  </div>
+  </section>
+</body>
+
+</html>
