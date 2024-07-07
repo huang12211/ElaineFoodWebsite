@@ -7,7 +7,7 @@ import { users } from '../../../db/schema/schema';
 //Add the ability for a user to rate a recipe 
 const createUser = async (req: Request, res: Response) => {
     const { email }: { email: string } = req.body;
-    console.log("email is: ", email);
+    //console.log("email is: ", email);
 
     if (!email || email == null){
         return res.status(400).json({success: false, data: null, message: "email is required"});

@@ -8,7 +8,7 @@ import Database from "better-sqlite3";
 export const users = sqliteTable('users', {
   // id: integer('id', { mode: 'number' }).primaryKey({ autoIncrement: true }),
   id: integer('id').primaryKey({ autoIncrement: true }),
-  email: text('email').notNull(),
+  email: text('email').notNull().unique(),
   textModifiers: text('text_modifiers').notNull().default(sql`CURRENT_TIMESTAMP`),
   intModifiers: integer('int_modifiers', { mode: 'boolean' }).notNull().default(false),
 });
