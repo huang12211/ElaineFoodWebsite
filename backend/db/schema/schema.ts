@@ -23,6 +23,7 @@ export const recipes = sqliteTable('recipes', {
     avg_rating: integer('avg_rating'),
     numRatings: integer('numRatings'),
     directions: text('directions'),
+    tags: text('tags'),
   });
 
 export type Recipe = typeof recipes.$inferSelect

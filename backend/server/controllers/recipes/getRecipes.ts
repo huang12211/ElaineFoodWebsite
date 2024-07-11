@@ -6,10 +6,11 @@ import { recipes } from '../../../db/schema/schema';
 //Add the ability for a user to rate a recipe 
 const getRecipes = async (req: Request, res: Response) => {
     try{
-        const allRecipes = await db.select().from(recipes);
+        const allRecipes = await db.select({field1: recipes.name}).from(recipes);
+        // console.log(allRecipes);
         return res.status(200).json({success: true, data: allRecipes});
     } catch (error){
-        return res.status(500).json({ success: false, data: null, message: "Unable to get all recipes"});
+        return res.status(500).json({ success: false, data: error, message: "Unable to get all recipes"});
     } 
 };
 

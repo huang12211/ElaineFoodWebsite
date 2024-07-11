@@ -4,3 +4,5 @@ frontend/dist
 sqlite.db
 package-lock.json
 backend/server/dist
+SQLtest.sql
+sqlite3.exe

@@ -14,6 +14,7 @@ Database is controlled using:
     - npm run db:push //this runs the script to create the Database that should appear as "sqlite.db"
     - npm run db:seed //this runs the script using tsx ( TypeScript Execute) which converts TypeScript to JS.
     - npm run db:studio //this generates a link to open in the browser that you can use to make sure you're seeding your database correctly/setup your database correctly without having to setup the server that will host the database
+    - sqlite3 sqlite.db // this can be used to test sql queries before going through a server. 
     - rm sqlite.db //remove this file to kill the database
     - npm run db:drop // this kills the database
 
@@ -31,6 +32,10 @@ The server commands are as follows:
 
 Current Step:
 - Establish Backend to interact with the database using express framework first to see if it will work. 
+- Implement the Search page to be able to search through the recipes in the database to:
+    - find all recipes with a certain ingredient
+    - find all recipes tagged as desserts, main, side, drink, appetizer, etc. 
+    - 
 
 Next steps:
 - Install validation and error handling of our API to ensure that the data we receive from clients is valid and that we provide meaningful error messages: (refer to source: https://dev.to/wizdomtek/typescript-express-building-robust-apis-with-nodejs-1fln)
