@@ -19,6 +19,7 @@ export type InsertUser = typeof users.$inferInsert // insert type
 export const recipes = sqliteTable('recipes', {
     //id: integer('id').primaryKey(),
     name: text('name').primaryKey(),
+    image_src: text('image_src').notNull(),
     video: text('video').notNull(),
     avg_rating: integer('avg_rating'),
     numRatings: integer('numRatings'),
@@ -58,5 +59,6 @@ export const recipe_ingredient_measUnit = sqliteTable('recipe_ingredient_measUni
 export const users_recipe_reviews = sqliteTable('users_recipe_reviews', {
   user_id: integer('user_id').references(() => users.id),
   recipe_name: text('recipe_name').references(() => recipes.name),
+  bookmarked: integer('bookmarked', { mode: 'boolean' }).notNull().default(false),
   rating: integer('rating'),
 });
