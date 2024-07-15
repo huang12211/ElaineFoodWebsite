@@ -21,9 +21,10 @@ export async function seedDatabase() {
     // Insert recipes
     //------------------------------------------------//
     await db.insert(recipes).values([
-        {name: 'Blueberry Muffins', video: 'https:///asdjfkslfs', avg_rating: 0, numRatings: 0, directions:'Set to 375 degrees farenheit' }, 
-        {name: 'Onion Pancakes', video: 'https:///onionooons', avg_rating: 0, numRatings: 0, directions:'measure out 100g of flour' },
-        {name: 'Chocolate Chip Cookies', video: 'https://asflls', avg_rating: 0, numRatings: 0, directions: 'chocolate chips'}
+        {name: 'Fluffy Blueberry Muffins', image_src: './../../frontend/media/foodImgs/Blueberry Muffins.png', video: 'https:///asdjfkslfs', avg_rating: 0, numRatings: 0, directions:'Set to 375 degrees farenheit', tags: 'American, Dessert, Breakfast' }, 
+        {name: 'Onion Pancakes', image_src: './../../frontend/media/foodImgs/Onion Pancakes.png', video: 'https:///onionooons', avg_rating: 0, numRatings: 0, directions:'measure out 100g of flour' },
+        {name: 'Chocolate Chip Cookies', image_src: './../../frontend/media/foodImgs/Cocolate Chip Cookies.png', video: 'https://asflls', avg_rating: 0, numRatings: 0, directions: 'chocolate chips'},
+        {name: 'Chocolate Chip Muffins', image_src: './../../frontend/media/foodImgs/ChocolateMuffins.png', video: 'https:///asdjfkslfs', avg_rating: 0, numRatings: 0, directions:'Set to 375 degrees farenheit', tags: 'American, Dessert, Breakfast' }
     ]);
     
     //------------------------------------------------//
@@ -47,16 +48,16 @@ export async function seedDatabase() {
     //------------------------------------------------//
     //Blueberry Muffins
     await db.insert(recipe_ingredient_measUnit).values([
-        {recipe_id: 'Blueberry Muffins', amount: '1/3', measUnit_id: 'cup(s)', ingredient_id: 'Unsalted Butter'},
-        {recipe_id: 'Blueberry Muffins', amount: '2', measUnit_id: 'tbsp(s)', ingredient_id: 'Vegetable Oil'},
-        {recipe_id: 'Blueberry Muffins', amount: '1', measUnit_id: 'cup(s)', ingredient_id: 'Brown Sugar'},
-        {recipe_id: 'Blueberry Muffins', amount: '2', ingredient_id: 'Egg(s)'},
-        {recipe_id: 'Blueberry Muffins', amount: '1', measUnit_id: 'tsp(s)', ingredient_id: 'Vanilla Extract'},
-        {recipe_id: 'Blueberry Muffins', amount: '1/2', measUnit_id: 'cup(s)', ingredient_id: 'Milk'},
-        {recipe_id: 'Blueberry Muffins', amount: '2', measUnit_id: 'cup(s)', ingredient_id: 'Flour'},
-        {recipe_id: 'Blueberry Muffins', amount: '1/2', measUnit_id: 'tsp(s)', ingredient_id: 'Salt'},
-        {recipe_id: 'Blueberry Muffins', amount: '2', measUnit_id: 'tsp(s)', ingredient_id: 'Baking Powder'},
-        {recipe_id: 'Blueberry Muffins', amount: '2', measUnit_id: 'cup(s)', ingredient_id: 'Blueberries'}
+        {recipe_id: 'Fluffy Blueberry Muffins', amount: '1/3', measUnit_id: 'cup(s)', ingredient_id: 'Unsalted Butter'},
+        {recipe_id: 'Fluffy Blueberry Muffins', amount: '2', measUnit_id: 'tbsp(s)', ingredient_id: 'Vegetable Oil'},
+        {recipe_id: 'Fluffy Blueberry Muffins', amount: '1', measUnit_id: 'cup(s)', ingredient_id: 'Brown Sugar'},
+        {recipe_id: 'Fluffy Blueberry Muffins', amount: '2', ingredient_id: 'Egg(s)'},
+        {recipe_id: 'Fluffy Blueberry Muffins', amount: '1', measUnit_id: 'tsp(s)', ingredient_id: 'Vanilla Extract'},
+        {recipe_id: 'Fluffy Blueberry Muffins', amount: '1/2', measUnit_id: 'cup(s)', ingredient_id: 'Milk'},
+        {recipe_id: 'Fluffy Blueberry Muffins', amount: '2', measUnit_id: 'cup(s)', ingredient_id: 'Flour'},
+        {recipe_id: 'Fluffy Blueberry Muffins', amount: '1/2', measUnit_id: 'tsp(s)', ingredient_id: 'Salt'},
+        {recipe_id: 'Fluffy Blueberry Muffins', amount: '2', measUnit_id: 'tsp(s)', ingredient_id: 'Baking Powder'},
+        {recipe_id: 'Fluffy Blueberry Muffins', amount: '2', measUnit_id: 'cup(s)', ingredient_id: 'Blueberries'}
     ]);
 
     //Onion Pancakes
@@ -81,14 +82,28 @@ export async function seedDatabase() {
         {recipe_id: 'Chocolate Chip Cookies', amount: '2', measUnit_id: 'cup(s)', ingredient_id: 'Semisweet Chocolate Chips'}
     ]);
 
+    //Chocolate Chip Muffins
+    await db.insert(recipe_ingredient_measUnit).values([
+        {recipe_id: 'Chocolate Chip Muffins', amount: '1/3', measUnit_id: 'cup(s)', ingredient_id: 'Unsalted Butter'},
+        {recipe_id: 'Chocolate Chip Muffins', amount: '2', measUnit_id: 'tbsp(s)', ingredient_id: 'Vegetable Oil'},
+        {recipe_id: 'Chocolate Chip Muffins', amount: '1', measUnit_id: 'cup(s)', ingredient_id: 'Brown Sugar'},
+        {recipe_id: 'Chocolate Chip Muffins', amount: '2', ingredient_id: 'Egg(s)'},
+        {recipe_id: 'Chocolate Chip Muffins', amount: '1', measUnit_id: 'tsp(s)', ingredient_id: 'Vanilla Extract'},
+        {recipe_id: 'Chocolate Chip Muffins', amount: '1/2', measUnit_id: 'cup(s)', ingredient_id: 'Milk'},
+        {recipe_id: 'Chocolate Chip Muffins', amount: '2', measUnit_id: 'cup(s)', ingredient_id: 'Flour'},
+        {recipe_id: 'Chocolate Chip Muffins', amount: '1/2', measUnit_id: 'tsp(s)', ingredient_id: 'Salt'},
+        {recipe_id: 'Chocolate Chip Muffins', amount: '2', measUnit_id: 'tsp(s)', ingredient_id: 'Baking Powder'},
+        {recipe_id: 'Chocolate Chip Muffins', amount: '2', measUnit_id: 'cup(s)', ingredient_id: 'Semisweet Chocolate Chips'}
+    ]);
+
     //------------------------------------------------//
     //Insert users_recipe_reviews                     //
     //------------------------------------------------//
     await db.insert(users_recipe_reviews).values([
         {user_id: 1, recipe_name: 'Chocolate Chip Cookies', rating: 5},
         {user_id: 1, recipe_name: 'Onion Pancakes', rating: 2},
-        {user_id: 1, recipe_name: 'Blueberry Muffins', rating: 2},
-        {user_id: 2, recipe_name: 'Blueberry Muffins', rating: 3},
+        {user_id: 1, recipe_name: 'Fluffy Blueberry Muffins', rating: 2},
+        {user_id: 2, recipe_name: 'Fluffy Blueberry Muffins', rating: 3},
         {user_id: 2, recipe_name: 'Onion Pancakes', rating: 4},
         {user_id: 2, recipe_name: 'Chocolate Chip Cookies', rating: 4}
     ]);

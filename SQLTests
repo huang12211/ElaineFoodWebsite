@@ -1,0 +1,3 @@
+SELECT name
+from recipes
+WHERE name LIKE '%Onion%';
