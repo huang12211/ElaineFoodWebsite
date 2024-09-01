@@ -1,0 +1,22 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const createUser_1 = __importDefault(require("../controllers/users/createUser"));
+const getUsers_1 = __importDefault(require("../controllers/users/getUsers"));
+const getUserById_1 = __importDefault(require("../controllers/users/getUserById"));
+const getUserByEmail_1 = __importDefault(require("../controllers/users/getUserByEmail"));
+const updateUserEmail_1 = __importDefault(require("../controllers/users/updateUserEmail"));
+const deleteUserById_1 = __importDefault(require("../controllers/users/deleteUserById"));
+const deleteUserByEmail_1 = __importDefault(require("../controllers/users/deleteUserByEmail"));
+const userRouter = (0, express_1.Router)();
+userRouter.post("/", createUser_1.default);
+userRouter.get("/", getUsers_1.default);
+userRouter.get("/:userId", getUserById_1.default);
+userRouter.get("/email/:userEmail", getUserByEmail_1.default);
+userRouter.patch("/:userId", updateUserEmail_1.default);
+userRouter.delete("/:userId", deleteUserById_1.default);
+userRouter.delete("/email/:userEmail", deleteUserByEmail_1.default);
+exports.default = userRouter;

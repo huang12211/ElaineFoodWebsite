@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../dist/output.css" rel="stylesheet">
+  <script type="module" src="./../js/searchRecipes.js" defer></script>
   <title> Search Recipes</title>
 </head>
 
@@ -34,7 +35,7 @@
         </div>
         <!--       Logo -->
         <div>
-          <a href="./../index.html">
+          <a href="./../../index.html">
             <img class="object-cover h-12" src="./../media/GenericImages/Logo.png" alt="">
           </a>
         </div>
@@ -67,7 +68,7 @@
         <div class="flex items-end space-x-6 h-14">
           <!--       Logo -->
           <div class="place-self-start px-2">
-            <a href="./../index.html">
+            <a href="./../../index.html">
               <img class="object-cover h-14" src="./../media/GenericImages/Logo.png" alt="">
             </a>
           </div>
@@ -143,23 +144,18 @@
               <div class="flex-col justify-center space-y-6 px-6">
                 <h3 class="text-right"> Keywords:</h3>
                 <h3 class="text-right"> Category:</h3>
-                <h3 class="text-right"> Recipe #:</h3>
                 <h3 class="text-right"> Ingredients:</h3>
               </div>
               <div>
-                <form action="#" method="POST">
+                <form action="#" method="GET" id="recipeSearchForm">
                   <ul class="flex-col justify-center space-y-6">
                     <li>
                       <label for="keywords"></label>
                       <input type="text" id="keywords" name="keywords" class="w-full" />
                     </li>
                     <li>
-                      <label for="category"></label>
-                      <input type="text" id="category" name="categories" class="w-full" />
-                    </li>
-                    <li>
-                      <label for="recipeNum"></label>
-                      <input type="text" id="recipeNum" name="recipeNum" class="w-full" />
+                      <label for="categories"></label>
+                      <input type="text" id="categories" name="categories" class="w-full" />
                     </li>
                     <li>
                       <label for="ingredients"></label>
@@ -202,6 +198,17 @@
       <section id="Search Recipes Results">
         <div class="p-6">
           <h2> Results: </h2>
+        </div>
+
+        <!-- Desktop-only views-->
+        <div class="hidden md:block md:not-prose">
+          <div class="overflow-x-auto overflow-y-hidden flex flex-nowrap pb-2 px-4 space-x-4" id="recipeCardList">
+          </div>
+        </div>
+
+        <!-- Mobile -only views -->
+        <div class="grid grid-cols-2 items-start gap-6 m-2 md:hidden" id="recipeCardList">
+
         </div>
       </section>
     </div>

@@ -16,7 +16,7 @@ const getRecipesByIngredient = async (req: Request, res: Response) => {
 
     try{
         const readableQuery = db
-            .select({field1: recipe_ingredient_measUnit.recipe_id,
+            .select({recipe: recipe_ingredient_measUnit.recipe_id,
                 count: sql<number>`count(${recipe_ingredient_measUnit.recipe_id})`})
             .from(recipe_ingredient_measUnit)
             .where(inArray(sql`lower(${recipe_ingredient_measUnit.ingredient_id})`, ingrList))
@@ -26,7 +26,7 @@ const getRecipesByIngredient = async (req: Request, res: Response) => {
         console.log('SQL where query is: ', readableQuery);
 
         const recipeResults = await db
-            .select({field1: recipe_ingredient_measUnit.recipe_id,
+            .select({recipe: recipe_ingredient_measUnit.recipe_id,
                 count: sql<number>`count(${recipe_ingredient_measUnit.recipe_id})`})
             .from(recipe_ingredient_measUnit)
             .where(inArray(sql`lower(${recipe_ingredient_measUnit.ingredient_id})`, ingrList))

@@ -12,9 +12,9 @@
     "db:push": "drizzle-kit push:sqlite --config=./backend/db/drizzle.config.ts",
     "db:seed": "tsx backend/db/seedDatabase.ts",
     "db:studio": "drizzle-kit studio --config=./backend/db/drizzle.config.ts",
-    "svr:start": "ts-node backend/server/index.ts",
+    "svr:start": "tsx backend/server/index.ts",
     "svr:build": "tsc",
-    "svr:serve": "node backend/dist/index.js"
+    "svr:serve": "node --experimental-specifier-resolution=node backend/dist/server/index.js"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.10",
@@ -23,7 +23,8 @@
     "autoprefixer": "^10.4.19",
     "drizzle-kit": "^0.20.14",
     "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "tsx": "^4.16.2"
   },
   "dependencies": {
     "better-sqlite3": "^9.6.0",
@@ -32,7 +33,6 @@
     "node": "^20.15.0",
     "tailwind": "^4.0.0",
     "ts-node": "^10.9.2",
-    "tsx": "^4.15.7",
     "typescript": "^5.5.2"
   }
 }

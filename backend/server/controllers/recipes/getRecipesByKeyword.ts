@@ -1,9 +1,7 @@
 import { Request, Response } from 'express';
 import { db } from '../../../db/db';
 import { recipes } from '../../../db/schema/schema';
-import { sql, eq, inArray, and, like } from 'drizzle-orm';
-import { SQLiteSelect } from 'drizzle-orm/sqlite-core';
-import { SQLiteSyncDialect, QueryBuilder } from 'drizzle-orm/sqlite-core';
+import { sql } from 'drizzle-orm';
 
 
 
@@ -15,7 +13,7 @@ const getRecipesByKeyword = async (req: Request, res: Response) => {
 
 
     
-    if (keywordList == null){
+    if (keywordList == null || keywordList.length == 0){
         return res.status(500).json({ success: false, data: null, message: "Keyword list is empty"});
     }
 

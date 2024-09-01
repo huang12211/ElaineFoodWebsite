@@ -2,12 +2,15 @@
     "compilerOptions": {
         "target": "ES6",
         "module": "CommonJS",
-        "outDir": "./backend/server/dist",
+        "outDir": "./backend/dist",
         "strict": true,
         "esModuleInterop": true,
         "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true
+        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "Node",
+        "skipDefaultLibCheck": true,
     },
-    "include":["backend/server/**/*.ts"],
-    "exclude": ["node_modules"]
+    "include": [
+        "backend/server/**/*.ts"
+    ],
 }

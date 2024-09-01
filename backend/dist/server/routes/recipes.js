@@ -1,0 +1,25 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+//import createRecipe from "../controllers/users/createUser";
+const getRecipes_1 = __importDefault(require("../controllers/recipes/getRecipes"));
+const getRecipesByIngredient_1 = __importDefault(require("../controllers/recipes/getRecipesByIngredient"));
+const getRecipesByKeyword_1 = __importDefault(require("../controllers/recipes/getRecipesByKeyword"));
+const getRecipesByName_1 = __importDefault(require("../controllers/recipes/getRecipesByName"));
+const getRecipesByTag_1 = __importDefault(require("../controllers/recipes/getRecipesByTag"));
+// import updateUser from "../controllers/users/updateUser";
+// import deleteUser from "../controllers/users/deleteUser";
+const recipesRouter = (0, express_1.Router)();
+//router.post("/", createUser);
+recipesRouter.get("/", getRecipes_1.default);
+recipesRouter.get("/searchIngr", getRecipesByIngredient_1.default);
+recipesRouter.get("/searchKeyword", getRecipesByKeyword_1.default);
+recipesRouter.get("/searchName", getRecipesByName_1.default);
+recipesRouter.get("/searchTag", getRecipesByTag_1.default);
+// router.get("/:userId", getUser);
+// router.patch("/:userId", updateUser);
+// router.delete("/:userId", deleteUser);
+exports.default = recipesRouter;

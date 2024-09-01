@@ -1,3 +1,4 @@
 SELECT name
 from recipes
-WHERE name LIKE '%Onion%';
+WHERE lower(name) LIKE '%Chocolate%' 
+AND lower(name) LIKE '%Chip%';

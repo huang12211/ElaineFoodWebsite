@@ -4,7 +4,7 @@ import { users } from '../../../db/schema/schema';
 import { eq } from "drizzle-orm";
 
 const updateUserEmail = async (req: Request, res: Response) => {
-  const { email }: { email: string } = req.body;
+  const { email }: { email: string } =  req.body;
   const userId = req.params.userId;
 
   try {
