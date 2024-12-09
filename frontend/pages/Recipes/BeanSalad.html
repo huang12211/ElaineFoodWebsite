@@ -36,7 +36,7 @@
         <!--       Logo -->
         <div>
           <a href="./../../../index.html">
-            <img class="object-cover h-12" src="./../../media/Generic Images/Logo.png" alt="">
+            <img class="object-cover h-12" src="./../../media/GenericImages/Logo.png" alt="">
           </a>
         </div>
 
@@ -65,53 +65,48 @@
       <!-- the following Top Bar is for desktop-only views   -->
       <!-- --------------------------------------------   -->
       <div class="hidden md:flex md:justify-between">
-        <div class="flex items-end space-x-6 h-20">
+        <div class="flex items-end space-x-6 lg:space-x-10 h-14">
           <!--       Logo -->
-          <div class="place-self-start px-2">
-            <a href="./../../index.html">
-              <img class="object-cover h-20" src="./../../media/Generic Images/Logo.png" alt="">
+          <div class="navButton place-self-start px-2">
+            <a href="./../../../index.html">
+              <img class="object-cover h-14" src="./../../media/GenericImages/Logo.png" alt="">
             </a>
           </div>
 
           <!--       TopNav Menu Items -->
-          <div class="place-self-start self-end flex items-end space-x-6 px-6">
-            <!--           <a href="index.html" class="hover:text-orange-600">Home</a> -->
-            <div>
-              <a href="./../searchRecipes.html" class="hover:text-orange-600">Search Recipes</a>
+          <div class="place-self-start self-end flex items-end space-x-6 lg:space-x-10">
+            <div class="navButton">
+              <a href="./../searchRecipes.html">Search Recipes</a>
             </div>
-            <div>
-              <div class="dropdownButton">
-                <a href="#!" class="hover:text-orange-600">Recipes Categories</a>
-                <!--  Dropdown Categories Menu on Hover -->
-                <div class="dropdownMenu">
-                  <ul>
-                    <li><a href="./../RecipeCategories/appetizers.html"> Appetizers </a></li>
-                    <li><a href="./../recipeCategories.html"> Mains </a></li>
-                    <li><a href="./../recipeCategories.html"> Sides </a></li>
-                    <li><a href="./../recipeCategories.html"> Desserts </a></li>
-                    <li><a href="./../recipeCategories.html"> Drinks </a></li>
-                    <li><a href="./../recipeCategories.html"> Breakfast </a></li>
-                    <li><a href="./../recipeCategories.html"> Celebrations </a></li>
-                  </ul>
-                </div>
+            <div class="dropdownButton navButton">
+              <a href="#!">Recipes Categories</a>
+              <!--  Dropdown Categories Menu on Hover -->
+              <div class="dropdownMenu">
+                <ul>
+                  <li><a href="./../RecipeCategories/appetizers.html"> Appetizers </a></li>
+                  <li><a href="./../RecipeCategories/recipeCategories.html"> Mains </a></li>
+                  <li><a href="./../RecipeCategories/recipeCategories.html"> Sides </a></li>
+                  <li><a href="./../RecipeCategories/recipeCategories.html"> Desserts </a></li>
+                  <li><a href="./../RecipeCategories/recipeCategories.html"> Drinks </a></li>
+                  <li><a href="./../RecipeCategories/recipeCategories.html"> Breakfast </a></li>
+                  <li><a href="./../RecipeCategories/recipeCategories.html"> Celebrations </a></li>
+                </ul>
               </div>
             </div>
-            <div>
-              <a href="./../contact.html" class="hover:text-orange-600">Contact</a>
-              <!--       <a href="frontend/pages/about.html">About</a></li> -->
+            <div class="navButton">
+              <a href="./../contact.html">Contact</a>
             </div>
           </div>
         </div>
 
         <!-- Checkout Icon -->
-        <div class="place-self-end self-end flex-none px-6">
+        <div class="navButton place-self-end self-end flex-none px-6">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="w-8 h-8">
             <path stroke-linecap="round" stroke-linejoin="round"
               d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
           </svg>
         </div>
-
       </div>
     </nav>
   </header>
@@ -146,10 +141,16 @@
             </div>
 
             <!-- Video -->
+             <!-- TO DO: UPDATE SOURCE LINK -->
             <div class="mobileVideoContainer">
-              <iframe class="mobileVideo" src="N/A" title="YouTube video player" frameborder="0"
+              <iframe 
+                class="mobileVideo" 
+                src="N/A" 
+                title="YouTube video player" 
+                rameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+                allowfullscreen> 
+              </iframe>
             </div>
 
             <!-- Ingredients Section -->

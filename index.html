@@ -65,25 +65,25 @@
       <!-- the following Top Bar is for desktop-only views   -->
       <!-- --------------------------------------------   -->
       <div class="hidden md:flex md:justify-between">
-        <div class="flex items-end space-x-6 h-14">
+        <div class="flex items-end space-x-6 lg:space-x-10 h-14">
           <!--       Logo -->
-          <div class="place-self-start px-2">
+          <div class="navButton place-self-start px-2">
             <a href="/">
               <img class="object-cover h-14" src="./frontend/media/GenericImages/Logo.png" alt="">
             </a>
           </div>
 
           <!--       TopNav Menu Items -->
-          <div class="place-self-start self-end flex items-end space-x-6 px-6">
+          <div class="place-self-start self-end flex items-end space-x-6 lg:space-x-10">
             <!--           <a href="index.html" class="hover:text-orange-600">Home</a> -->
-            <div>
-              <a href="./frontend/pages/searchRecipes.html" class="hover:text-orange-600">Search Recipes</a>
+            <div class="navButton">
+              <a href="./frontend/pages/searchRecipes.html">Search Recipes</a>
             </div>
             <div>
-              <div class="dropdownButton">
-                <a href="#!" class="hover:text-orange-600">Recipes Categories</a>
+              <div class="dropdownButton navButton">
+                <a href="#!">Recipes Categories</a>
                 <!--  Dropdown Categories Menu on Hover -->
-                <div class="dropdownMenu z-50">
+                <div class="dropdownMenu">
                   <ul>
                     <li><a href="./frontend/pages/RecipeCategories/appetizers.html"> Appetizers </a></li>
                     <li><a href="./frontend/pages/RecipeCategories/recipeCategories.html"> Mains </a></li>
@@ -96,15 +96,15 @@
                 </div>
               </div>
             </div>
-            <div>
-              <a href="./frontend/pages/contact.html" class="hover:text-orange-600">Contact</a>
+            <div class="navButton">
+              <a href="./frontend/pages/contact.html">Contact</a>
               <!--       <a href="frontend/pages/about.html">About</a></li> -->
             </div>
           </div>
         </div>
 
         <!-- Checkout Icon -->
-        <div class="place-self-end self-end flex-none px-6">
+        <div class="navButton place-self-end self-end flex-none px-6">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="w-8 h-8">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -124,37 +124,31 @@
   <!--                                              -->
   <!-- -------------------------------------------  -->
   <main>
-    <div class="mx-auto px-6 bg-gray-100">
+    <div class="mx-auto px-6 bg-gray-50">
 
       <!-- -------------------------------------------  -->
-      <!--                                              -->
       <!-- Featured Recipe section                      -->
-      <!--                                              -->
       <!-- -------------------------------------------  -->
       <section id="featuredRecipe">
-        <div class="p-2">
-          <a href="./frontend/pages/Recipes/FluffyBlueberryMuffins.html">
-            <div class="relative">
-              <img class="object-cover w-full blur-xs opacity-90 max-h-80 2xl:max-h-112"
-                src="./frontend/media/GenericImages/FeaturedRecipeBackground.png">
-              <div class="absolute inset-2 grid grid-cols-3">
+        <div class="relative p-2">
+          <img class="object-cover w-full blur-xs opacity-90 max-h-80 2xl:max-h-112"
+            src="./frontend/media/GenericImages/FeaturedRecipeBackground.png"/>
+          <div class="absolute inset-2 grid grid-cols-3">
+            <div></div>
+            <div class="featuredRecipeCard">
+              <a href="./frontend/pages/Recipes/FluffyBlueberryMuffins.html">
                 <div>
+                  <img class="object-cover w-full max-h-56 xl:max-h-60 2xl: max-h-64"
+                    src="./frontend/media/foodImgs/Blueberry Muffins.png" alt="">
                 </div>
-                <div class="px-4 my-auto max-h-80">
-                  <div>
-                    <img class="object-cover w-full max-h-56 xl:max-h-60 2xl: max-h-64"
-                      src="./frontend/media/foodImgs/Blueberry Muffins.png" alt="">
-                  </div>
-                  <div class="bg-white p-1 md:p-2">
-                    <h3>Blueberry Muffins</h3>
-                    <h4><span class="numbOfViews">XXXXXX</span> plays<span></span></h4>
-                  </div>
+                <div class="bg-white p-1 md:p-2">
+                  <h3>Blueberry Muffins</h3>
+                  <h4><span class="numbOfViews">XXXXXX</span> plays<span></span></h4>
                 </div>
-                <div class="h-fit">
-                </div>
-              </div>
+              </a>
             </div>
-          </a>
+            <div class="h-fit"></div>
+          </div>
         </div>
       </section>
 

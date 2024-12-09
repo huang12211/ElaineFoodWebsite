@@ -925,6 +925,11 @@ video {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
 }
 
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
+}
+
 .bg-slate-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity, 1));
@@ -1083,6 +1088,92 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+body{
+  background-color: rgb(249 250 251);
+}
+
+header{
+  background-color: white;
+}
+
+.navButton:hover{
+  transition-property: all;
+  transition-duration: 150ms;
+  color: rgb(251 146 60);
+  transform: scale(1.1);
+  z-index: 999;
+}
+
+@media (min-width: 640px){
+  nav{
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main{
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 768px){
+  nav{
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main{
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1024px){
+  nav{
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main{
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1280px){
+  nav{
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main{
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1536px){
+  nav{
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main{
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 h1{
   font-size: x-large;
   font-weight: 800;
@@ -1119,40 +1210,13 @@ ol{
   font-size: small;
 }
 
-/* .featuredRecipeBg{
-  background-attachment: local;
-  justify-content: center;
-  height: 20 rem;
-  max-height: 60%;
-  margin-top: 0.5rem;
-  padding:1.5rem;
-  background-image: url('./media/GenericImages/FeaturedRecipeBackground.png'); 
-  background-position:center; 
-  background-size:cover;
-  backdrop-filter: blur(2px);
-  z-index: 0;
-}
-@media (min-width: 768px) {
-  .featuredRecipeBg{
-    background-attachment: local;
-    justify-content: center;
-    height: 24rem;
-    max-height: 25%;
-    margin-top: 0.5rem;
-    padding:1.5rem;
-    background-image: url(./media/GenericImages/FeaturedRecipeBackground.png'); 
-    background-position:center; 
-    background-size:cover;
-    backdrop-filter: blur(2px);
-    z-index: 0;
-  }
-} */
-
 .featuredRecipeCard{
-  -o-object-fit: cover;
-     object-fit: cover;
-  max-height: 18rem;
-  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  max-height: 20rem;
+  z-index: 1;
 }
 
 /*Desktop Recipe Category Cards*/
@@ -1197,11 +1261,12 @@ ol{
 
 .dropdownButton{
   position:relative;
+  /* z-index: 999; */
 }
 
 /*The dropdownMenu is hidden by default*/
 
-.dropdownButton .dropdownMenu{
+.dropdownMenu{
   display: hidden;
   position: absolute;
   top: 1.5rem;
@@ -1209,13 +1274,15 @@ ol{
   min-width: 9rem;
   padding-top: 0.5rem;
   background-color: white;
-  border-radius: 0.125rem;
-  z-index: 9;
+  border-radius: 0.375rem;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  z-index: 999;
 }
 
 .dropdownMenu li{
   display:none;
-  padding-left: 0.5rem;
+  position: relative;
+  padding-left: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -1227,11 +1294,13 @@ ol{
 }
 
 .dropdownButton:hover .dropdownMenu li{
-  display:block;
+  display: block;
+  color: black;
 }
 
 .dropdownMenu li:hover{
-  background-color: orange;
+  background-color: rgb(253 186 116);
+  border-radius: 0.375rem;
 }
 
 .mobileVideoContainer{
@@ -1384,6 +1453,14 @@ input[type=checkbox]:checked + label.strikethrough{
   .md\:drop-shadow {
     --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
     filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:space-x-10 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(2.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 }
 
