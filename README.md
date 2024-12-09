@@ -38,6 +38,7 @@ Current Step:
     - 
 
 Next steps:
+- Create routes to different recipes and navigation automatically 
 - Install validation and error handling of our API to ensure that the data we receive from clients is valid and that we provide meaningful error messages: (refer to source: https://dev.to/wizdomtek/typescript-express-building-robust-apis-with-nodejs-1fln)
 
 Bugs requiring further investigations:
