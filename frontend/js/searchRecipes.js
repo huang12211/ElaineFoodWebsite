@@ -4,7 +4,7 @@ import { getRequestedRecipes, getRecipeInfo } from "./api/recipe.js";
 const recipeSearchForm = document.getElementById("recipeSearchForm");
 
 function getRecipeLink (recipeTitle){
-    recipeTitle
+    // recipeTitle
     let linkpreffix = './pages/Recipes/'
     let link = recipeTitle.replaceAll(' ', '');
     let linksuffix = '.html';
