@@ -21,10 +21,16 @@ export async function seedDatabase() {
     // Insert recipes
     //------------------------------------------------//
     await db.insert(recipes).values([
-        {name: 'Fluffy Blueberry Muffins', image_src: './../../frontend/media/foodImgs/Blueberry Muffins.png', video: 'https:///asdjfkslfs', avg_rating: 0, numRatings: 0, directions:'Set to 375 degrees farenheit', tags: 'American, Dessert, Breakfast' }, 
-        {name: 'Onion Pancakes', image_src: './../../frontend/media/foodImgs/Onion Pancakes.png', video: 'https:///onionooons', avg_rating: 0, numRatings: 0, directions:'measure out 100g of flour' },
+        {name: 'Fluffy Blueberry Muffins', 
+            image_src: './../../frontend/media/foodImgs/Blueberry Muffins.png', 
+            video: 'https://www.youtube.com/embed/gN-orgrgvU8?si=5jMFJ-dtOeb76ETj', 
+            avg_rating: 0, 
+            numRatings: 0, 
+            directions: "Set to 375&deg;F.\n In a mixer, cream the butter and sugar until light.\n Add the eggs, vanilla and milk. Mix until well-combined.\n Add the flour, salt and baking powder. Mix until well-combined.\n Fold-in the blueberries.\n Grease a standard muffin tin and fill with batter.\n Bake at 375&deg;F for 30-35 mins.\n Remove muffins from tin and leave them to cool for at least 30 mins.\n Store the muffins uncovered or else the muffins will be too moist on the second day.", 
+            tags: 'American, Dessert, Breakfast'}, 
+        {name: 'Onion Pancakes', image_src: './../../frontend/media/foodImgs/Onion Pancakes.png', video: 'https:///onionooons', avg_rating: 0, numRatings: 0, directions:'measure out 100g of flour'},
         {name: 'Chocolate Chip Cookies', image_src: './../../frontend/media/foodImgs/Cocolate Chip Cookies.png', video: 'https://asflls', avg_rating: 0, numRatings: 0, directions: 'chocolate chips'},
-        {name: 'Chocolate Chip Muffins', image_src: './../../frontend/media/foodImgs/ChocolateMuffins.png', video: 'https:///asdjfkslfs', avg_rating: 0, numRatings: 0, directions:'Set to 375 degrees farenheit', tags: 'American, Dessert, Breakfast' }
+        {name: 'Chocolate Chip Muffins', image_src: './../../frontend/media/foodImgs/ChocolateMuffins.png', video: 'https:///asdjfkslfs', avg_rating: 0, numRatings: 0, directions:'Set to 375 degrees farenheit', tags: 'American, Dessert, Breakfast'}
     ]);
     
     //------------------------------------------------//

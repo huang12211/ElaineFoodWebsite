@@ -10,11 +10,15 @@ Database is controlled using:
 - Drizzle built on top of better-sqlite3 which is written in Typescript
 - https://dev.to/aaronksaunders/drizzle-orm-sqlite-and-nuxt-js-getting-started-374m Guide on how to run Drizzle & Drizzle Studio:
 - in Summary:
+    - ** npm run db:create ** //this generates, pushes and seeds the database (see below for more details on each of these individual steps)
     - npm run db:generate //this generates the script in SQL that once run, will create the Database
     - npm run db:push //this runs the script to create the Database that should appear as "sqlite.db"
     - npm run db:seed //this runs the script using tsx ( TypeScript Execute) which converts TypeScript to JS.
     - npm run db:studio //this generates a link to open in the browser that you can use to make sure you're seeding your database correctly/setup your database correctly without having to setup the server that will host the database
+    
     - sqlite3 sqlite.db // this can be used to test sql queries before going through a server. 
+
+    - ** npm run db:destroy ** //this removes the file to kill the database adn kills the database
     - rm sqlite.db //remove this file to kill the database
     - npm run db:drop // this kills the database
 
