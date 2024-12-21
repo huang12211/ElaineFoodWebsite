@@ -16,7 +16,7 @@ let recipeContent;
 (async () => {
   recipeContent = await getRecipeInfo(recipeName.replaceAll("-", " "));
   console.log('recipeContent is: ', recipeContent);
-  document.getElementsByTagName("title").innerHTML = recipeContent[0]['name'];
+  document.title = recipeContent[0]['name'];
   document.getElementById("recipeName").innerHTML = recipeContent[0]['name'];
   document.getElementById("numbOfViews").innerHTML = recipeContent[0]['numRatings'];
   videoSource.setAttribute('src', recipeContent[0]['video']);
