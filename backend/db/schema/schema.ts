@@ -25,6 +25,10 @@ export const recipes = sqliteTable('recipes', {
     numRatings: integer('numRatings'),
     directions: text('directions'),
     tags: text('tags'),
+    initialServing: integer('initialServing'),
+    minServing: integer('minServing'),
+    maxServing: integer('maxServing'),
+    servingIncrements: integer('servingIncrements'),
   });
 
 export type Recipe = typeof recipes.$inferSelect
@@ -44,6 +48,7 @@ export const measurementUnits = sqliteTable('mesurementUnits', {
 export type MeasurementUnits = typeof measurementUnits.$inferSelect
 export type InsertMeasurement = typeof measurementUnits.$inferInsert
 
+//We also want a table to list out all the ingredients used in each recipe
 export const recipe_ingredient_measUnit = sqliteTable('recipe_ingredient_measUnit', {
   id: integer('id').primaryKey(),
   recipe_id: text('recipe_id').references(() => recipes.name), 
@@ -51,6 +56,7 @@ export const recipe_ingredient_measUnit = sqliteTable('recipe_ingredient_measUni
   amount: text('amount'),
   measUnit_id: text('measUnit_id').references(() => measurementUnits.meas_unit), 
   ingredient_id: text('ingredient_id').references(() => ingredients.ingr),
+  min_amount: text('min_amount'),
 });
 
 

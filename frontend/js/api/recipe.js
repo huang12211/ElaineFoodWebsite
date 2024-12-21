@@ -219,3 +219,15 @@ export const getRecipeInfo = async (searchResultsRecipes) => {
 
     return lookedupRecipeInfo.data;
 };
+
+export const getRecipeInfoIngredients = async (recipeName) => {
+    console.log("recipeName", recipeName); //verify inputs to this function
+
+    //look up ingredients list by Recipe Name
+    const ingredients = await fetch(`${API_ENDPOINT}/recipes/${recipeName}`)
+    const ingredientsDetails = await ingredients.json();
+
+    console.log("ingredientsDetails", ingredientsDetails.data);
+
+    return ingredientsDetails.data;
+}
