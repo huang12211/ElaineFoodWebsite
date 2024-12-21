@@ -82,8 +82,11 @@ function reCalcServSize(event) {
   event.preventDefault();
 
   //clear the checkboxes
-  let checkboxes = document.getElementById("ingr");
-  checkboxes.checked = false;
+  let checkboxes = document.getElementsByName("ingr");
+  for (const element of checkboxes) {
+    element.checked = false;
+  }
+  
 
   desiredServing = document.getElementById("serving").value;
   console.log("the desired serving is " + desiredServing);

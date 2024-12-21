@@ -215,7 +215,7 @@ export const getRecipeInfo = async (searchResultsRecipes) => {
     //look up recipes by Recipe name 
     const lookupResponse = await fetch(`${API_ENDPOINT}/recipes/searchName?recipeName=${searchResultsRecipes}`);
     const lookedupRecipeInfo = await lookupResponse.json();
-    console.log("lookedupRecipeInfo ", lookedupRecipeInfo.data);
+    // console.log("lookedupRecipeInfo ", lookedupRecipeInfo.data);
 
     return lookedupRecipeInfo.data;
 };
@@ -227,7 +227,7 @@ export const getRecipeInfoIngredients = async (recipeName) => {
     const ingredients = await fetch(`${API_ENDPOINT}/recipes/${recipeName}`)
     const ingredientsDetails = await ingredients.json();
 
-    console.log("ingredientsDetails", ingredientsDetails.data);
+    // console.log("ingredientsDetails", ingredientsDetails.data);
 
     return ingredientsDetails.data;
 }

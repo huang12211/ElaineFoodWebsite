@@ -22,7 +22,7 @@ let recipeContent;
   videoSource.setAttribute('src', recipeContent[0]['video']);
 
   let directionsArray = recipeContent[0]['directions'].split("\n");
-  console.log('directionsArray', directionsArray);
+  // console.log('directionsArray', directionsArray);
   directionsList.innerHTML = ''; //clear the directions content before appending
   for (var i = 0; i < directionsArray.length; i++){
     var direction = document.createElement('li');
@@ -35,7 +35,7 @@ let recipeIngredientsList = document.getElementById("ingredientsList");
 
 (async () => {
   let listIngrToDisplay = await getRecipeInfoIngredients(recipeName);
-  console.log('listIngrToDisplay is: ', listIngrToDisplay);
+  // console.log('listIngrToDisplay is: ', listIngrToDisplay);
 
   recipeIngredientsList.innerHTML = ''; //clear the ingredients list before appending
   for (var i = 0; i < listIngrToDisplay.length; i++){
