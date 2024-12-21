@@ -1346,6 +1346,18 @@ input[type=checkbox]:checked + label.strikethrough{
   font-size: small;
 }
 
+.ingredientListItem div{
+  padding-left: 2rem;
+}
+
+label.strikethrough{
+  font-size: small;
+}
+
+.directionsContent li{
+  font-size: medium;
+}
+
 .checked\:bg-blue-500:checked {
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));

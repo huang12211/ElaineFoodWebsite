@@ -40,8 +40,9 @@ let recipeIngredientsList = document.getElementById("ingredientsList");
   recipeIngredientsList.innerHTML = ''; //clear the ingredients list before appending
   for (var i = 0; i < listIngrToDisplay.length; i++){
     var newDiv = document.createElement('div');
+    newDiv.className = "ingredientListItem";
     newDiv.innerHTML = `<input type="checkbox" name="ingr"/>
-      <label for="ingr3" class="strikethrough"><span class="quantity">${listIngrToDisplay[i]['amount']}</span><span class="measurementUnit"> ${listIngrToDisplay[i]['measUnit_id']}</span> ${listIngrToDisplay[i]['ingredient_id']}<span class="minQuantity hidden">${listIngrToDisplay[i]['min_amount']}</span></label>`
+      <label for="ingr" class="strikethrough"><span class="quantity">${listIngrToDisplay[i]['amount']}</span><span class="measurementUnit"> ${listIngrToDisplay[i]['measUnit_id']}</span> ${listIngrToDisplay[i]['ingredient_id']}<span class="minQuantity hidden">${listIngrToDisplay[i]['min_amount']}</span></label>`
     recipeIngredientsList.appendChild(newDiv);
   }
 })();

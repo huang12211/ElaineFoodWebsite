@@ -216,11 +216,11 @@ ol{
   }
 }
 
- .servingSize{
-   padding-left: 1rem;
-   padding-right: 1rem;
-   padding-bottom: 0.5rem;
- }
+.servingSize{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+}
 
 #serving{
   width: 3rem;
@@ -244,4 +244,12 @@ input[type=checkbox]:checked + label.strikethrough{
 .ingredientListItem{
   padding-left: 1rem;
   font-size: small;
+}
+
+label.strikethrough{
+  font-size: small;
+}
+
+.directionsContent li{
+  font-size: medium;
 }
