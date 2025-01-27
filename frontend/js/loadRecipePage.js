@@ -1,30 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+/////////////////////////////////////////////////////////////////////////////
+// This script makes the recipes cards selectable                          //
+// And navigates the user to the selected recipe page                      //
+// And navigates the user back to the page that contained the recipe cards //
+/////////////////////////////////////////////////////////////////////////////
 
-<head>
-  <!-- Optimize for Google Scrapper Bot-->
-  <title>Recipe Title</title> 
+import { loadRecipe } from "./recipePages.js";
+
+const templateHead = `<title>Recipe Title</title> 
   <meta description = "Recipe">
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../../dist/output.css" rel="stylesheet">
-  <script type="module" src="../../js/recipePages.js" defer></script>
-  <script type="text/javascript" src="../../js/servingSizes.js" defer></script>
-</head>
+  <link href="../../dist/output.css" rel="stylesheet">`;
 
-
-<body>
-  <header>
-    <!-- -------------------------------------------  -->
-    <!--                                              -->
-    <!-- Top Bar                                      -->
-    <!--                                              -->
-    <!-- -------------------------------------------  -->
+const templateBody = `<header>
     <nav class="mx-auto p-4">
-      <!-- -------------------------------------------  -->
-      <!-- Top Bar for Mobile                           -->
-      <!-- -------------------------------------------  -->
       <div class="grid grid-cols-3 justify-items-center items-end h-12 md:hidden">
         <!--Hamburger Menu to replace TopNav Menu Items -->
         <div class="flex justify-self-start justify-items-center items-end space-x-4 px-2">
@@ -35,7 +25,6 @@
             </svg>
           </div>
           <div class="flex-none w-10 h-10">
-            <!-- placeholder -->
           </div>
         </div>
         <!--       Logo -->
@@ -208,10 +197,10 @@
             <!-- ------------------ -->
             <!-- Body of the Recipe -->
             <!-- ------------------ -->
-            <div class="p-4 md:grid md:grid-cols-3 md:gap-4">
+            <div class="p-4 md:grid md:grid-cols-3 md:gap-4 md:items-start">
 
               <!-- Ingredients Section -->
-              <div class=" my-auto p-4 bg-slate-300 md:col-start-1 md:col-span-1">
+              <div class=" my-auto p-4 bg-slate-300 md:col-start-1 md:col-span-1 md:place-self-start">
                 <form action=# method=" GET" id="servingform">
                   <div>
                     <h2>Ingredients:</h2>
@@ -219,7 +208,7 @@
                   <!-- serving size section -->
                   <div class="servingSize">
                     <label>for</label>
-                    <input type="number" id="serving" name="servingSize" value="TBD" min="6" max="198" step="6" />
+                    <input type="number" id="serving" name="servingSize" value="-1" min="-100" max="0" step="1" />
                     <label for="serving">servings</label>
                     <input id="updateButton" type="submit" value="Update" class="hidden" />
                   </div>
@@ -233,7 +222,7 @@
 
 
               <!-- Directions Section -->
-              <div class="pl-4 pt-4 pb-4 md:row-start-1 md:row-span-1 md:col-start-2 md:col-span-2">
+              <div class="pl-4 pt-4 pb-4 md:row-start-1 md:row-span-1 md:col-start-2 md:col-span-2 md:place-self-start">
                 <div class="pb-2">
                   <h2>Directions:</h2>
                 </div>
@@ -250,7 +239,134 @@
       </div>
   </main>
   </div>
-  </section>
-</body>
+  </section>`;
 
-</html>
+var historyIndx = 0; //updated only after the content for the new page is updated. 
+const headHistory = [];
+const bodyHistory = [];
+
+//-------------------------------------------------------------------------------------//
+//Save the current page into the history & history arrays before any navigation occurs //
+//-------------------------------------------------------------------------------------//
+console.log("History before replace state: ", history);
+const initialState = {
+  page: 0,
+  pageName: "home"
+}
+history.replaceState(initialState, "", document.location.href);
+console.log("initial document.location.href: ", document.location.href);
+console.log("History after replace state: ", history);
+//Before updating the HTML, save the current HTML in memmory
+headHistory.push(document.head.innerHTML);
+bodyHistory.push(document.body.innerHTML);
+
+
+function refreshRecipePageScripts(){
+  var head= document.getElementsByTagName('head')[0];
+  //Reload script to control servingSizes of the Ingredients List. 
+  if (document.getElementById('servingSizesScript') != null){
+    var scriptToRemove = document.getElementById('servingSizesScript');
+    scriptToRemove.remove();
+    console.log("removed servingSizesScript")
+  }
+  var script= document.createElement('script');
+  script.id = "servingSizesScript";
+  script.type = "text/javascript";
+  script.src= '../../js/servingSizes.js';
+  script.defer = true;
+  head.appendChild(script);
+}
+
+function loadRecipePage(event){
+  //Update the recipe page url based on the recipe name displayed in the card
+  const recipeClicked = event.target.closest('.recipeCard').querySelector('h3').innerHTML;
+  // console.log("event triggered and the recipe card clicked is: ", recipeClicked);
+  const recipeHyphName = recipeClicked.trim().toLowerCase().replaceAll(" ", "-");
+
+  //Push to the history record 
+  history.pushState({page: historyIndx +1, newPage: recipeHyphName}, "", `/frontend/pages/recipes/${recipeHyphName}`);
+  console.log("History after push state: ", history);
+
+  //Update the HTML to the new URL's content 
+  document.head.innerHTML = templateHead;
+  document.body.innerHTML = templateBody;
+  globalThis.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  loadRecipe();
+  // refreshRecipePageScripts();
+
+
+  //Save the current HTML in memmory & update current history index. 
+  headHistory.push(document.head.innerHTML);
+  bodyHistory.push(document.body.innerHTML);
+  historyIndx = historyIndx +1;
+}
+
+//-----------------------------------------------//
+// Make all divs whose className is "recipeCard" //
+//-----------------------------------------------//
+const allRecipeCards = document.getElementsByClassName("recipeCard");
+for (const card of allRecipeCards){
+  card.addEventListener("click", loadRecipePage);
+}
+
+//--------------------------------------------------------------//
+// Clicking on the back button allows the previous page to load //
+//--------------------------------------------------------------//
+window.addEventListener('popstate', function(event) {
+  console.log("current event.state.page number: ", event.state.page);
+  //If the new page navigated to is the home page (a page that has a dedicated html file)
+  if (event.state.pageName == "home"){
+    const previousBodyContent = bodyHistory[event.state.page];
+    if (previousBodyContent) {
+      document.body.innerHTML = previousBodyContent;
+    }
+  
+    const previousHeadContent = headHistory[event.state.page];
+    if (previousHeadContent){
+      // console.log("this.window.location is:", this.window.location.href);
+      document.head.innerHTML = previousHeadContent;
+
+      // make the recipe cards clickable again
+      for (const card of allRecipeCards){
+        card.addEventListener("click", loadRecipePage);
+      }
+      console.log("History after back button pressed state: ", history);
+    }
+
+    //Update History Index
+    if (event.state.page < historyIndx){
+      historyIndx = historyIndx -1; 
+    }
+    else{
+      historyIndx = historyIndx +1; 
+    }
+    
+  }
+
+  //If the page that is loaded is a recipe page
+  else{
+    const nextBodyContent = bodyHistory[event.state.page];
+    if (nextBodyContent){
+      this.document.body.innerHTML = nextBodyContent;
+    }
+
+    const nextHeadContent = headHistory[event.state.page];
+    if(nextHeadContent){
+        this.document.head.innerHTML = nextHeadContent;
+    }
+    loadRecipe();
+    // refreshRecipePageScripts();
+
+    console.log("History after forward button pressed state: ", history);
+
+    //Update History Index
+    if (event.state.page < historyIndx){
+      historyIndx = historyIndx -1; 
+    }
+    else{
+      historyIndx = historyIndx +1; 
+    }
+  }
+
+});
+

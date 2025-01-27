@@ -801,8 +801,20 @@ video {
   place-content: center;
 }
 
+.place-content-start {
+  place-content: start;
+}
+
 .place-content-end {
   place-content: end;
+}
+
+.place-items-start {
+  place-items: start;
+}
+
+.content-start {
+  align-content: flex-start;
 }
 
 .items-start {
@@ -980,6 +992,11 @@ video {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-2 {
@@ -1346,10 +1363,6 @@ input[type=checkbox]:checked + label.strikethrough{
   font-size: small;
 }
 
-.ingredientListItem div{
-  padding-left: 2rem;
-}
-
 label.strikethrough{
   font-size: small;
 }
@@ -1403,6 +1416,10 @@ label.strikethrough{
     grid-row-start: 1;
   }
 
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
   .md\:block {
     display: block;
   }
@@ -1427,8 +1444,20 @@ label.strikethrough{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .md\:items-start {
+    align-items: flex-start;
+  }
+
+  .md\:justify-start {
+    justify-content: flex-start;
+  }
+
   .md\:justify-between {
     justify-content: space-between;
+  }
+
+  .md\:justify-items-start {
+    justify-items: start;
   }
 
   .md\:gap-4 {
@@ -1437,6 +1466,10 @@ label.strikethrough{
 
   .md\:p-2 {
     padding: 0.5rem;
+  }
+
+  .md\:pt-0 {
+    padding-top: 0px;
   }
 }
 

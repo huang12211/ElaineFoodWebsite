@@ -42,8 +42,8 @@ Current Step:
     - 
 
 Next steps:
-- populate recipe pages' content dynamically using content stored in the database (create your own Make() function) see example: https://github.com/glyphr-studio/Glyphr-Studio-2/blob/main/src%2Fcommon%2Fdom.js#L12 
-- Create routes to different recipes and navigation automatically 
+- DONE: populate recipe pages' content dynamically using content stored in the database (create your own Make() function) see example: https://github.com/glyphr-studio/Glyphr-Studio-2/blob/main/src%2Fcommon%2Fdom.js#L12 
+- Create routes to different recipes and navigation automatically without adding a framework: https://dev.to/pbouillon/virtual-url-navigation-using-vanilla-javascript-4o38 
 - Install validation and error handling of our API to ensure that the data we receive from clients is valid and that we provide meaningful error messages: (refer to source: https://dev.to/wizdomtek/typescript-express-building-robust-apis-with-nodejs-1fln)
 
 Bugs requiring further investigations:
