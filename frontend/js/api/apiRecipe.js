@@ -1,3 +1,7 @@
+//////////////////////////////////////////////////////////////////
+// This file lists all the API custom endpoints for the Recipes //
+//////////////////////////////////////////////////////////////////
+
 import { API_ENDPOINT } from "./apiGlobal.js";
 
 async function fetchKeywordsTagsAndIngredients(keywords, tags, ingredientList){

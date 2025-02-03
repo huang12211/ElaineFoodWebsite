@@ -1,6 +1,7 @@
 import { Router } from "express";
 
 //import createRecipe from "../controllers/users/createUser";
+// import loadRecipePageHTML from "../controllers/recipes/loadRecipePage";
 import getRecipes from "../controllers/recipes/getRecipes";
 import getRecipesByIngredient from "../controllers/recipes/getRecipesByIngredient";
 import getRecipesByKeyword from "../controllers/recipes/getRecipesByKeyword";
@@ -13,6 +14,7 @@ import getIngredientsForRecipe from "../controllers/recipes/getIngredientsForRec
 const recipesRouter = Router();
 
 //router.post("/", createUser);
+// recipesRouter.get("/", loadRecipePageHTML);
 recipesRouter.get("/all", getRecipes);
 recipesRouter.get("/searchIngr", getRecipesByIngredient);
 recipesRouter.get("/searchKeyword", getRecipesByKeyword);

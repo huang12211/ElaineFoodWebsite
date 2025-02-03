@@ -16,7 +16,8 @@ header{
   z-index: 999;
 }
 
-@media (min-width: 640px){
+/* sm */
+@media (min-width: 640px){ 
   nav{
     max-width: 640px;
     margin-left: auto;
@@ -28,6 +29,7 @@ header{
     margin-right: auto;
   }
 }
+/* md */
 @media (min-width: 768px){
   nav{
     max-width: 768px;
@@ -40,6 +42,7 @@ header{
     margin-right: auto;
   }
 }
+/* lg */
 @media (min-width: 1024px){
   nav{
     max-width: 1024px;
@@ -52,6 +55,7 @@ header{
     margin-right: auto;
   }
 }
+/* xl */
 @media (min-width: 1280px){
   nav{
     max-width: 1280px;
@@ -64,6 +68,7 @@ header{
     margin-right: auto;
   }
 }
+/* 2xl */
 @media (min-width: 1536px){
   nav{
     max-width: 1536px;
@@ -117,6 +122,10 @@ ol{
   z-index: 1;
 }
 
+.recipeCard:hover{
+  scale: 105% 105%;
+}
+
 
 /*Desktop Recipe Category Cards*/
 .desktopCategoryCard{
@@ -131,17 +140,27 @@ ol{
   max-height: 13rem;
 }
 
+
+.recipeName{ /* default size */
+  font-size: small;
+}
+@media (min-width: 768px){ /* size increase once md is reached */
+  .recipeName{
+    font-size: medium;
+  }
+}
+
+
 /*Mobile Recipe Category Cards*/
 .mobileCategoryCard img{
   object-fit: cover;
   width: 100%;
   height: 11rem;
 }
-.mobileCategoryCard h3{
-  text-align: center;
+/* .mobileCategoryCard h3{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
-}
+} */
 
 .roundButton{
   font-weight: bold;
@@ -207,6 +226,7 @@ ol{
   /* max-width: 35rem; */
   height: calc(100vw*0.56);
   /*padding-bottom: 56.25%;*/
+  background-color: gray;
 }
 
 @media (min-width: 768px) {

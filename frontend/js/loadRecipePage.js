@@ -197,36 +197,38 @@ const templateBody = `<header>
             <!-- ------------------ -->
             <!-- Body of the Recipe -->
             <!-- ------------------ -->
-            <div class="p-4 md:grid md:grid-cols-3 md:gap-4 md:items-start">
+            <div class="p-4 grid md:grid-cols-3 gap-4">
 
               <!-- Ingredients Section -->
-              <div class=" my-auto p-4 bg-slate-300 md:col-start-1 md:col-span-1 md:place-self-start">
-                <form action=# method=" GET" id="servingform">
-                  <div>
-                    <h2>Ingredients:</h2>
-                  </div>
-                  <!-- serving size section -->
-                  <div class="servingSize">
-                    <label>for</label>
-                    <input type="number" id="serving" name="servingSize" value="-1" min="-100" max="0" step="1" />
-                    <label for="serving">servings</label>
-                    <input id="updateButton" type="submit" value="Update" class="hidden" />
-                  </div>
+              <div>
+                <div class="my-auto p-4 bg-slate-300">
+                  <form action=# method=" GET" id="servingform">
+                    <div>
+                      <h2>Ingredients:</h2>
+                    </div>
+                    <!-- serving size section -->
+                    <div class="servingSize">
+                      <label>for</label>
+                      <input type="number" id="serving" name="servingSize" value="-1" min="-100" max="0" step="1" />
+                      <label for="serving">servings</label>
+                      <input id="updateButton" type="submit" value="Update" class="hidden" />
+                    </div>
 
-                  <!-- Ingredients List -->
-                  <div id="ingredientsList" class="px-2">
-                    <p>Loading...</p>
-                  </div>
-                </form>
+                    <!-- Ingredients List -->
+                    <div id="ingredientsList" class="px-2">
+                      <p>Loading...</p>
+                    </div>
+                  </form>
+                </div>
               </div>
 
 
               <!-- Directions Section -->
-              <div class="pl-4 pt-4 pb-4 md:row-start-1 md:row-span-1 md:col-start-2 md:col-span-2 md:place-self-start">
+              <div id="directionsContent" class="pl-4 py-4 md:col-span-2">
                 <div class="pb-2">
                   <h2>Directions:</h2>
                 </div>
-                <ol id="directionsContent">
+                <ol>
                   <li>Loading...</li>
                 </ol>
               </div>
@@ -369,4 +371,5 @@ window.addEventListener('popstate', function(event) {
   }
 
 });
+
 
