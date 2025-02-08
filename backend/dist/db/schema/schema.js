@@ -21,6 +21,10 @@ exports.recipes = (0, sqlite_core_1.sqliteTable)('recipes', {
     numRatings: (0, sqlite_core_1.integer)('numRatings'),
     directions: (0, sqlite_core_1.text)('directions'),
     tags: (0, sqlite_core_1.text)('tags'),
+    initialServing: (0, sqlite_core_1.integer)('initialServing'),
+    minServing: (0, sqlite_core_1.integer)('minServing'),
+    maxServing: (0, sqlite_core_1.integer)('maxServing'),
+    servingIncrements: (0, sqlite_core_1.integer)('servingIncrements'),
 });
 exports.ingredients = (0, sqlite_core_1.sqliteTable)('ingredients', {
     ingr: (0, sqlite_core_1.text)('ingr').primaryKey(),
@@ -28,6 +32,7 @@ exports.ingredients = (0, sqlite_core_1.sqliteTable)('ingredients', {
 exports.measurementUnits = (0, sqlite_core_1.sqliteTable)('mesurementUnits', {
     meas_unit: (0, sqlite_core_1.text)('meas_units').primaryKey(),
 });
+//We also want a table to list out all the ingredients used in each recipe
 exports.recipe_ingredient_measUnit = (0, sqlite_core_1.sqliteTable)('recipe_ingredient_measUnit', {
     id: (0, sqlite_core_1.integer)('id').primaryKey(),
     recipe_id: (0, sqlite_core_1.text)('recipe_id').references(() => exports.recipes.name),
@@ -35,6 +40,7 @@ exports.recipe_ingredient_measUnit = (0, sqlite_core_1.sqliteTable)('recipe_ingr
     amount: (0, sqlite_core_1.text)('amount'),
     measUnit_id: (0, sqlite_core_1.text)('measUnit_id').references(() => exports.measurementUnits.meas_unit),
     ingredient_id: (0, sqlite_core_1.text)('ingredient_id').references(() => exports.ingredients.ingr),
+    min_amount: (0, sqlite_core_1.text)('min_amount'),
 });
 // we also want a table that gives us users vs. ratings of each recipe.
 //So that we can later use this information to generate a Recommendation system
