@@ -2,8 +2,8 @@
   "version": 2,
   "rewrites": [
     {
-      "source": "/backend/dist/server/(.*)",
-      "destination": "/backend/dist/server"
+      "source": "/backend/dist/(.*)",
+      "destination": "/backend/dist"
     }
   ]
 }
