@@ -1,9 +1,9 @@
 {
   "version": 2,
-  "routes": [
+  "rewrites": [
     {
-      "src": "/backend/dist/server/(.*)",
-      "dest": "/backend/dist/server/index.js"
+      "source": "/backend/dist/server/(.*)",
+      "destination": "/backend/dist/server"
     }
   ]
 }

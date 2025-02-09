@@ -2,3 +2,4 @@ node_modules
 package-lock.json
 SQLtest.sql
 sqlite3.exe
+.env
