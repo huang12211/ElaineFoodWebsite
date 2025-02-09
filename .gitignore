@@ -1,6 +1,4 @@
-backend/db/drizzle
 node_modules
-sqlite.db
 package-lock.json
 SQLtest.sql
 sqlite3.exe
