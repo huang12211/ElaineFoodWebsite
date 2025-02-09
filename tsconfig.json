@@ -8,8 +8,7 @@
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
         "moduleResolution": "node",
-        "skipDefaultLibCheck": true,
-        "typeRoots": ["./node_modules/@types"]
+        "skipDefaultLibCheck": true
     },
     "include": [
         "backend/server/**/*.ts"
