@@ -7,7 +7,7 @@
 // import {RECIPE_API_URL} from './../../../.env';
 // dotenv.config()
 // const API_ENDPOINT = process.env.RECIPE_API_URL;
-const API_ENDPOINT = 'https://elainefoodwebsite.onrender.com/';
+const API_ENDPOINT = 'https://elainefoodwebsite.onrender.com';
 
 async function fetchKeywordsTagsAndIngredients(keywords, tags, ingredientList){
     const [keywordResponse, tagsResponse, ingrResponse] = await Promise.all([
