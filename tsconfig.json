@@ -7,8 +7,9 @@
         "esModuleInterop": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
-        "moduleResolution": "Node",
+        "moduleResolution": "node",
         "skipDefaultLibCheck": true,
+        "typeRoots": ["./node_modules/@types"]
     },
     "include": [
         "backend/server/**/*.ts"
