@@ -34,7 +34,6 @@
     "drizzle-orm": "^0.30.6",
     "express": "^4.19.2",
     "node": "^20.15.0",
-    "tailwind": "^4.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.2"
   }
