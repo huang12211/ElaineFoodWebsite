@@ -17,7 +17,9 @@
     "db:destroy": "npm run db:remove && npm run db:drop",
     "svr:start": "tsx backend/server/index.ts",
     "svr:build": "tsc",
-    "svr:serve": "node --experimental-specifier-resolution=node backend/dist/server/index.js"
+    "svr:serve": "node --experimental-specifier-resolution=node backend/dist/server/index.js",
+    "rebuild": "electron-rebuild -f -w better-sqlite3"
+    
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.10",
@@ -25,6 +27,7 @@
     "@types/node": "^20.14.9",
     "autoprefixer": "^10.4.19",
     "drizzle-kit": "^0.20.14",
+    "electron-rebuild": "^3.2.9",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.1",
     "tsx": "^4.16.2"
