@@ -31,7 +31,7 @@
     "tsx": "^4.16.2"
   },
   "dependencies": {
-    "better-sqlite3": "^11.8.1",
+    "better-sqlite3": "^9.6.0",
     "drizzle-orm": "^0.30.6",
     "express": "^4.19.2",
     "node": "^20.15.0",
