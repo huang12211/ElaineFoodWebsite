@@ -19,10 +19,8 @@
     "svr:build": "tsc",
     "svr:serve": "node --experimental-specifier-resolution=node backend/dist/server/index.js",
     "rebuild": "electron-rebuild -f -w better-sqlite3"
-    
   },
   "devDependencies": {
-    "@types/better-sqlite3": "^7.6.10",
     "@types/express": "^4.17.21",
     "@types/node": "^20.14.9",
     "autoprefixer": "^10.4.19",
@@ -33,7 +31,7 @@
     "tsx": "^4.16.2"
   },
   "dependencies": {
-    "better-sqlite3": "^9.6.0",
+    "better-sqlite3": "^11.8.1",
     "drizzle-orm": "^0.30.6",
     "express": "^4.19.2",
     "node": "^20.15.0",
