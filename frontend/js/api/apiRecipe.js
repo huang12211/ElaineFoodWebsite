@@ -1,13 +1,9 @@
 //////////////////////////////////////////////////////////////////
 // This file lists all the API custom endpoints for the Recipes //
 //////////////////////////////////////////////////////////////////
-
-// import { API_ENDPOINT } from "./apiGlobal.js";
-// import dotenv from './../../../node_modules/dotenv'
-// import {RECIPE_API_URL} from './../../../.env';
-// dotenv.config()
-// const API_ENDPOINT = process.env.RECIPE_API_URL;
-const API_ENDPOINT = 'https://elainefoodwebsite.onrender.com';
+const API_ENDPOINT = window.location.hostname === "localhost"
+    ? 'http://localhost:3000'
+    : 'https://elainefoodwebsite.onrender.com';
 
 async function fetchKeywordsTagsAndIngredients(keywords, tags, ingredientList){
     const [keywordResponse, tagsResponse, ingrResponse] = await Promise.all([
