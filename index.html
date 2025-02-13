@@ -137,18 +137,18 @@
         <div class="relative p-2">
           <img class="object-cover w-full blur-xs opacity-90 max-h-80 2xl:max-h-112"
             src="./frontend/media/GenericImages/FeaturedRecipeBackground.png"/>
-          <div class="absolute inset-2 grid grid-cols-4 justify-items-center items-center">
+          <div class="absolute inset-2 grid grid-cols-5 justify-items-center items-center">
             <div></div>
-            <div class="featuredRecipeCard recipeCard col-span-2 w-[90%] lg:w-[75%]">
+            <div class="featuredRecipeCard recipeCard col-span-3 w-[85%] md:w-[75%] lg:w-[75%]">
               <div class="shadow-2xl">
-                <img class="object-cover w-full max-h-56 xl:max-h-60 2xl: max-h-64" src="./frontend/media/foodImgs/Blueberry Muffins.png" alt="">
+                <img class="object-cover w-full max-h-40 sm:max-h-48 md:max-h-56 xl:max-h-60 2xl:max-h-64" src="./frontend/media/foodImgs/Apple Frangipane Tart.jpg" alt="">
                 <div class="bg-white p-1 md:p-2">
-                  <h3 class = "px-1 text-sm md:text-base">Fluffy Blueberry Muffins</h3>
-                  <h4 class="px-1 text-sm"><span class="numbOfViews">XXXXXX</span> plays</h4>
+                  <h3 class = "px-1 text-[10px] sm:text-sm md:text-base">Apple Frangipane Tart</h3>
+                  <h4 class="px-1 hidden md:block md:text-sm"><span class="numbOfViews">XXXXXX</span> plays</h4>
                 </div>
               </div>
             </div>
-            <div class="h-fit"></div>
+            <div></div>
           </div>
         </div>
       </section>
@@ -173,7 +173,7 @@
 
             <!-- Recipe A - Template to replace all other recipes -->
             <!-- TO DO: replace remaining recipes with this template -->
-            <div class="recipeCard flex-none inline-block w-64 h-68 p-2 rounded-lg shadow-md bg-amber-100">
+            <div class="recipeCard flex-none inline-block w-64 h-68 m-2 p-2 rounded-lg shadow-md bg-amber-100">
               <img class="object-cover w-full h-48 rounded-lg" src="./frontend/media/foodImgs/Onion Pancakes.png" alt="" />
               <div class="flex justify-between items-start space-x-2 py-2 h-20">
                 <h3 class="px-1"> Onion Pancakes</h3>
@@ -186,7 +186,7 @@
             </div>
 
             <!-- Recipe B -->
-            <div class="recipeCard flex-none inline-block w-64 h-68 p-2 rounded-lg shadow-md bg-amber-100">
+            <div class="recipeCard flex-none inline-block w-64 h-68 m-2 p-2 rounded-lg shadow-md bg-amber-100">
               <img class="object-cover w-full h-48 rounded-lg" src="./frontend/media/foodImgs/Chocolate Chip Cookies.png" alt="" />
               <div class="flex justify-between items-start space-x-2 py-2 h-20">
                 <h3 class="px-1">Chocolate Chip Cookies</h3>
@@ -199,7 +199,7 @@
             </div>
 
             <!-- Recipe C -->
-            <div class="recipeCard flex-none inline-block w-64 h-68 p-2 rounded-lg shadow-md bg-amber-100">
+            <div class="recipeCard flex-none inline-block w-64 h-68 m-2 p-2 rounded-lg shadow-md bg-amber-100">
               <img class="object-cover w-full h-48 rounded-lg" src="./frontend/media/foodImgs/Chocolate Raspberry Mousse Cake.jpg" alt="" />
               <div class="flex justify-between items-start space-x-2 py-2 h-20">
                 <h3 class="px-1">Chocolate Raspberry Mousse Cake</h3>
@@ -212,7 +212,7 @@
             </div>
 
             <!-- Recipe D -->
-            <div class="recipeCard flex-none inline-block w-64 h-68 p-2 rounded-lg shadow-md bg-amber-100">
+            <div class="recipeCard flex-none inline-block w-64 h-68 m-2 p-2 rounded-lg shadow-md bg-amber-100">
               <img class="object-cover w-full h-48 rounded-lg" src="./frontend/media/foodImgs/Apple Frangipane Tart.jpg" alt="" />
               <div class="flex justify-between items-start space-x-2 py-2 h-20">
                 <h3 class="px-1">Apple Frangipane Tart</h3>
@@ -225,7 +225,7 @@
             </div>
 
             <!-- Recipe E -->
-            <div class="recipeCard flex-none inline-block w-64 h-68 p-2 rounded-lg shadow-md bg-amber-100">
+            <div class="recipeCard flex-none inline-block w-64 h-68 m-2 p-2 rounded-lg shadow-md bg-amber-100">
               <img class="object-cover w-full h-48 rounded-lg" src="./frontend/media/foodImgs/rhubarbCreamCrumble.jpg" alt="" />
               <div class="flex justify-between items-start space-x-2 py-2 h-20">
                 <h3 class="px-1">Grammy Vint's Rhubarb Cream Crumble</h3>
@@ -238,7 +238,7 @@
             </div>
 
             <!-- Recipe F -->
-            <div class="recipeCard flex-none inline-block w-64 h-68 p-2 rounded-lg shadow-md bg-amber-100">
+            <div class="recipeCard flex-none inline-block w-64 h-68 m-2 p-2 rounded-lg shadow-md bg-amber-100">
               <img class="object-cover w-full h-48 rounded-lg" src="./frontend/media/foodImgs/bean salad.png" alt="" />
               <div class="flex justify-between items-start space-x-2 py-2 h-20">
                 <h3 class="px-1">Grammy Vint's Good Bean Salad</h3>
@@ -251,34 +251,28 @@
             </div>
 
             <!-- Recipe G -->
-
+            <div class="recipeCard flex-none inline-block w-64 h-68 m-2 p-2 rounded-lg shadow-md bg-amber-100">
+              <img class="object-cover w-full h-48 rounded-lg" src="./frontend/media/foodImgs/pavlova.jpg" alt="" />
+              <div class="flex justify-between items-start space-x-2 py-2 h-20">
+                <h3 class="px-1">Pavlova</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="flex-none w-6 h-6 mx-2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+                </svg>
+              </div>
+            </div>
 
             <!-- Recipe H -->
-            <div class="flex-none inline-block w-64 h-68 p-2 bg-amber-50">
-              <div class="flex-col">
-                <!-- Recipe Image -->
-                <div class="flex-none h-48">
-                  <a href="./frontend/pages/Recipes/ChocolateChipCookies.html">
-                    <img class="object-cover w-full h-48" src="./frontend/media/foodImgs/Chocolate Chip Cookies.png" alt="" />
-                  </a>
-                </div>
-
-                <div class="flex-none flex justify-between items-start space-x-2 py-2 h-20">
-                  <!-- Recipe Title -->
-                  <div>
-                    <a href="./frontend/pages/Recipes/ChocolateChipCookies.html">
-                      <h3 class="px-1">Chocolate Chip Cookies</h3>
-                    </a>
-                  </div>
-                  <!-- Book mark icon to add to Grocer List -->
-                  <div class="flex-none w-8 h-8 mx-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="w-6 h-6">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
-                    </svg>
-                  </div>
-                </div>
+            <div class="recipeCard flex-none inline-block w-64 h-68 m-2 p-2 rounded-lg shadow-md bg-amber-100">
+              <img class="object-cover w-full h-48 rounded-lg" src="./frontend/media/foodImgs/Blueberry Muffins.png" alt="" />
+              <div class="flex justify-between items-start space-x-2 py-2 h-20">
+                <h3 class="px-1">Fluffy Blueberry Muffins</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="flex-none w-6 h-6 mx-2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+                </svg>
               </div>
             </div>
 

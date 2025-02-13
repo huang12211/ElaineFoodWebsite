@@ -33,11 +33,12 @@ export async function seedDatabase() {
         {ingr: 'Margarine' }, { ingr: 'Milk' }, 
         {ingr: 'Olive Oil'},
         {ingr: 'Premade 9 inch Pie Crust'},
-        {ingr: 'Raspberries'}, {ingr: 'Red Onion, diced'}, {ingr: 'Red Wine Vinegar / Apple Cider Vinegar'},
+        {ingr: 'Quick Oats'},
+        {ingr: 'Raspberries'}, {ingr: 'Red Onion, diced'}, {ingr: 'Red Wine Vinegar / Apple Cider Vinegar'}, {ingr: 'Rhubarb, chopped'},
         {ingr: 'Salt' }, { ingr: 'Salted Butter' }, {ingr: 'Semisweet Chocolate Chips'}, {ingr: 'Sweet Red Pepper, diced'},
         {ingr: 'Unsalted Butter' }, 
         {ingr: 'Vanilla Extract' }, { ingr: 'Vegetable Oil'}, 
-        {ingr: 'Water'}, {ingr: 'White Vinegar'}, {ingr: 'White Wine Vinegar / Apple Cider Vinegar / Lemon Juice'},
+        {ingr: 'Walnuts (optional)'}, {ingr: 'Water'}, {ingr: 'White Vinegar'}, {ingr: 'White Wine Vinegar / Apple Cider Vinegar / Lemon Juice'},
         {ingr: 'Yeast'}
     ]);
 
@@ -337,7 +338,7 @@ export async function seedDatabase() {
         {recipe_id: 'Grammy Vint\'s Good Bean Salad', amount: '1/2', measUnit_id: 'cup(s)', ingredient_id: 'Fresh Parsley', min_amount: '1/2'}
     ]);
 
-     //-- Grammy Vint's Good Bean Salad --//
+     //-- Grammy Vint's Rhubarb Cream Crumble --//
      await db.insert(recipes).values([{
         //TO DO: Replace the following content. 
         name: 'Grammy Vint\'s Rhubarb Cream Crumble', 
@@ -345,7 +346,12 @@ export async function seedDatabase() {
         video: 'null', 
         avg_rating: 0, 
         numRatings: 0, 
-        directions: `To Fill in`,
+        directions: `Preheat over to 400&deg;F. Grease a 9" deep baking dish and set it aside.
+            Melt the butter. 
+            In a large bowl, mix the ingredients for the filling together until well-combined. Pour the mixture into the baking dish.
+            Cut the cold butter up into cubes using a knife and add it to the same large bowl. 
+            In the same large bowl, mix the ingredients for the crumble topping together until all ingredients are well-distributed.
+            Scatter the crumble mixture all over the top of the filling, and place the baking dish into the over for 40 to 45 minutes or until beautifully golden brown.`,
         tags: 'American, Dessert',
         initialServing: 12,
         minServing: 12,
@@ -353,8 +359,17 @@ export async function seedDatabase() {
         servingIncrements: 12,
     }]);
     await db.insert(recipe_ingredient_measUnit).values([
-        //TO DO: Replace the following content. 
-        {recipe_id: 'Grammy Vint\'s Good Bean Salad', amount: '1', measUnit_id: '19 oz can', ingredient_id: 'Chickpeas', min_amount: '1'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Filling:', amount: '3', measUnit_id: 'cup(s)', ingredient_id: 'Rhubarb, chopped', min_amount: '3'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Filling:', amount: '2', measUnit_id: ' ', ingredient_id: 'Egg(s)', min_amount: '2'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Filling:', amount: '2', measUnit_id: 'tbsp(s)', ingredient_id: 'Unsalted Butter', min_amount: '2'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Filling:', amount: '1', measUnit_id: 'cup(s)', ingredient_id: 'Granulated Sugar', min_amount: '1'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Filling:', amount: '3', measUnit_id: 'tbsp(s)', ingredient_id: 'Flour', min_amount: '3'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Crumble Topping:', amount: '1/2', measUnit_id: 'cup(s)', ingredient_id: 'Flour', min_amount: '1/2'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Crumble Topping:', amount: '3/4', measUnit_id: 'cup(s)', ingredient_id: 'Quick Oats', min_amount: '3/4'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Crumble Topping:', amount: '3/4', measUnit_id: 'cup(s)', ingredient_id: 'Brown Sugar', min_amount: '3/4'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Crumble Topping:', amount: '1', measUnit_id: 'tsp(s)', ingredient_id: 'Baking Powder', min_amount: '1'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Crumble Topping:', amount: '1/3', measUnit_id: 'cup(s)', ingredient_id: 'Unsalted Butter', min_amount: '1/3'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Crumble Topping:', amount: '1/4', measUnit_id: 'cup(s)', ingredient_id: 'Walnuts (optional)', min_amount: '1/4'}
     ]);
 
     //-- Onion Pancakes --//
@@ -389,7 +404,7 @@ export async function seedDatabase() {
     //-- Pavlova --//
     await db.insert(recipes).values([{
         name: 'Pavlova', 
-        image_src: './../../frontend/media/foodImgs/Blueberry Muffins.png', 
+        image_src: './../../frontend/media/foodImgs/pavlova.jpg', 
         video: 'null', 
         avg_rating: 0, 
         numRatings: 0, 

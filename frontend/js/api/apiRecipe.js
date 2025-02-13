@@ -1,7 +1,8 @@
 //////////////////////////////////////////////////////////////////
 // This file lists all the API custom endpoints for the Recipes //
 //////////////////////////////////////////////////////////////////
-const API_ENDPOINT = window.location.hostname === "localhost"
+// console.log("pathisLocal", window.location.port.toString());
+const API_ENDPOINT = window.location.port.toString().includes("5500")
     ? 'http://localhost:3000'
     : 'https://elainefoodwebsite.onrender.com';
 

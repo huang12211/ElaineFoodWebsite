@@ -116,8 +116,8 @@ ol{
 .featuredRecipeCard{
   padding-left: 1rem;
   padding-right: 1rem;
-  margin-top: auto;
-  margin-bottom: auto;
+  /* margin-top: auto;
+  margin-bottom: auto; */
   max-height: 20rem;
   z-index: 1;
 }
