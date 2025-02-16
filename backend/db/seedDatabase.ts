@@ -15,6 +15,7 @@ export async function seedDatabase() {
         {email: 'eric@gmail.com'},
         {email: 'charlene@gmail.com'}
     ]);
+    console.log('Included users...')
 
     //------------------------------------------------//
     // Insert ingredients in Alphabetical Order       //
@@ -32,7 +33,7 @@ export async function seedDatabase() {
         {ingr: 'Lemon Juice'},
         {ingr: 'Margarine' }, { ingr: 'Milk' }, 
         {ingr: 'Olive Oil'},
-        {ingr: 'Premade 9 inch Pie Crust'},
+        {ingr: 'Peaches'}, {ingr: 'Premade 9 inch Pie Crust'},
         {ingr: 'Quick Oats'},
         {ingr: 'Raspberries'}, {ingr: 'Red Onion, diced'}, {ingr: 'Red Wine Vinegar / Apple Cider Vinegar'}, {ingr: 'Rhubarb, chopped'},
         {ingr: 'Salt' }, { ingr: 'Salted Butter' }, {ingr: 'Semisweet Chocolate Chips'}, {ingr: 'Sweet Red Pepper, diced'},
@@ -41,6 +42,7 @@ export async function seedDatabase() {
         {ingr: 'Walnuts (optional)'}, {ingr: 'Water'}, {ingr: 'White Vinegar'}, {ingr: 'White Wine Vinegar / Apple Cider Vinegar / Lemon Juice'},
         {ingr: 'Yeast'}
     ]);
+    console.log('Seeded ingredients...')
 
     //------------------------------------------------//
     // Insert measurementsUnits                       //
@@ -49,6 +51,7 @@ export async function seedDatabase() {
         {meas_unit: ' '}, {meas_unit: '12 oz can'}, {meas_unit: '15 oz can'}, {meas_unit: '19 oz can'}, 
         {meas_unit: 'clove(s) of'}, { meas_unit: 'cup(s)'}, {meas_unit: 'g'}, { meas_unit: 'tbsp(s)'}, {meas_unit: 'tsp(s)'}
     ]);
+    console.log('Seeded measurement units...')
 
     //------------------------------------------------//
     // Insert recipes titles in Alphabetical Order    //
@@ -428,7 +431,7 @@ export async function seedDatabase() {
         servingIncrements: 8,
     }]);
     await db.insert(recipe_ingredient_measUnit).values([
-        {recipe_id: 'Pavlova', component: 'Meringe Base', amount: '3', measUnit_id: ' ', ingredient_id: 'Egg Whites', min_amount: '3'},
+        {recipe_id: 'Pavlova', component: 'Meringe Base', amount: '3', measUnit_id: ' ', ingredient_id: 'Egg White(s)', min_amount: '3'},
         {recipe_id: 'Pavlova', component: 'Meringe Base', amount: '2', measUnit_id: 'tsp(s)', ingredient_id: 'White Wine Vinegar / Apple Cider Vinegar / Lemon Juice', min_amount: '2'},
         {recipe_id: 'Pavlova', component: 'Meringe Base', amount: '1', measUnit_id: 'tsp(s)', ingredient_id: 'Cornstarch', min_amount: '1'},
         {recipe_id: 'Pavlova', component: 'Meringe Base', amount: '1/8', measUnit_id: 'tsp(s)', ingredient_id: 'Salt', min_amount: '1/8'},
@@ -439,6 +442,41 @@ export async function seedDatabase() {
         {recipe_id: 'Pavlova', component: 'Toppings', amount: '1', measUnit_id: 'tsp(s)', ingredient_id: 'Vanilla Extract', min_amount: '1'},
         {recipe_id: 'Pavlova', component: 'Toppings', amount: '2', measUnit_id: 'cup(s)', ingredient_id: 'Fresh Fruit', min_amount: '2'},
     ]);
+
+    //-- Peach Crisp --//
+    await db.insert(recipes).values([{
+        name: 'Peach Crisp', 
+        image_src: './../../frontend/media/foodImgs/peachCrisp.jpg', 
+        video: 'null', 
+        avg_rating: 0, 
+        numRatings: 0, 
+        directions: `Preheat oven to 375&deg;F.
+            In a bowl, mix together the sliced peaches, brown sugar and flour until combined.
+            In a separate bowl, mix together the ingredients for the topping until well-combined.
+            Grease a 9" pie plate and pour in the filling.
+            Spoon the topping over the filling.
+            Bake at 375&deg;F for 30-35mins. 
+            Remove from oven and leave to cool for at least 30 mins.`, 
+        tags: 'American, Dessert',
+        initialServing: 8,
+        minServing: 8,
+        maxServing: 160,
+        servingIncrements: 8,
+    }]);
+    await db.insert(recipe_ingredient_measUnit).values([
+        {recipe_id: 'Peach Crisp', component: 'Filling', amount: '10', measUnit_id: ' ', ingredient_id: 'Peaches', min_amount: '10'},
+        {recipe_id: 'Peach Crisp', component: 'Filling', amount: '1/4', measUnit_id: 'cup(s)', ingredient_id: 'Brown Sugar', min_amount: '1/4'},
+        {recipe_id: 'Peach Crisp', component: 'Filling', amount: '2', measUnit_id: 'tbsp(s)', ingredient_id: 'Flour', min_amount: '2'},
+        {recipe_id: 'Peach Crisp', component: 'Topping', amount: '1', measUnit_id: 'cup(s)', ingredient_id: 'Quick Oats', min_amount: '1'},
+        {recipe_id: 'Peach Crisp', component: 'Topping', amount: '1/2', measUnit_id: 'cup(s)', ingredient_id: 'Flour', min_amount: '1/2'},
+        {recipe_id: 'Peach Crisp', component: 'Topping', amount: '1/3', measUnit_id: 'cup(s)', ingredient_id: 'Brown Sugar', min_amount: '1/3'},
+        {recipe_id: 'Peach Crisp', component: 'Topping', amount: '1/2', measUnit_id: 'tsp(s)', ingredient_id: 'Ground Cinnamon', min_amount: '1/2'},
+        {recipe_id: 'Peach Crisp', component: 'Topping', amount: '1/4', measUnit_id: 'tsp(s)', ingredient_id: 'Salt', min_amount: '1/4'},
+        {recipe_id: 'Peach Crisp', component: 'Topping', amount: '1/2', measUnit_id: 'tsp(s)', ingredient_id: 'Baking Powder', min_amount: '1/2'},
+        {recipe_id: 'Peach Crisp', component: 'Topping', amount: '1/2', measUnit_id: 'cup(s)', ingredient_id: 'Unsalted Butter', min_amount: '1/2'},
+        {recipe_id: 'Peach Crisp', component: 'Topping', amount: '1/4', measUnit_id: 'cup(s)', ingredient_id: 'Walnuts (optional)', min_amount: '1/4'},
+    ]);
+    console.log('Seeded recipes...')
 
     //------------------------------------------------//
     //Insert users_recipe_reviews                     //

@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "sqlite",
-  "id": "dbef05d5-ad75-4f1a-a303-e237cd775f75",
+  "id": "5ce8ad2d-5dfc-4025-8cb8-1c24ee311d11",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "ingredients": {
@@ -44,7 +44,7 @@
           "type": "integer",
           "primaryKey": true,
           "notNull": true,
-          "autoincrement": false
+          "autoincrement": true
         },
         "recipe_id": {
           "name": "recipe_id",

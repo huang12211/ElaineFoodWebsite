@@ -137,12 +137,12 @@
         <div class="relative p-2">
           <img class="object-cover w-full blur-xs opacity-90 max-h-80 2xl:max-h-112"
             src="./frontend/media/GenericImages/FeaturedRecipeBackground.png"/>
-          <div class="absolute inset-2 grid grid-cols-5 justify-items-center items-center">
+          <div class="absolute inset-2 grid grid-cols-4 justify-items-center items-center overflow-hidden">
             <div></div>
-            <div class="featuredRecipeCard recipeCard col-span-3 w-[85%] md:w-[75%] lg:w-[75%]">
-              <div class="shadow-2xl">
-                <img class="object-cover w-full max-h-40 sm:max-h-48 md:max-h-56 xl:max-h-60 2xl:max-h-64" src="./frontend/media/foodImgs/Apple Frangipane Tart.jpg" alt="">
-                <div class="bg-white p-1 md:p-2">
+            <div class="featuredRecipeCard recipeCard col-span-2 p-4 content-center w-[85%] xl:w-[75%]">
+              <div class="-mt-1 2xl:-mt-6">
+                <img class="object-cover w-full max-h-36 sm:max-h-48 md:max-h-52 xl:max-h-56 2xl:max-h-72 rounded-t-xl" src="./frontend/media/foodImgs/Apple Frangipane Tart.jpg" alt=""/>
+                <div class="bg-white rounded-b-xl shadow-2xl p-1 md:p-2">
                   <h3 class = "px-1 text-[10px] sm:text-sm md:text-base">Apple Frangipane Tart</h3>
                   <h4 class="px-1 hidden md:block md:text-sm"><span class="numbOfViews">XXXXXX</span> plays</h4>
                 </div>
@@ -224,7 +224,7 @@
               </div>
             </div>
 
-            <!-- Recipe E -->
+            <!-- Newest Recipe E -->
             <div class="recipeCard flex-none inline-block w-64 h-68 m-2 p-2 rounded-lg shadow-md bg-amber-100">
               <img class="object-cover w-full h-48 rounded-lg" src="./frontend/media/foodImgs/rhubarbCreamCrumble.jpg" alt="" />
               <div class="flex justify-between items-start space-x-2 py-2 h-20">
@@ -237,7 +237,7 @@
               </div>
             </div>
 
-            <!-- Recipe F -->
+            <!-- Newest Recipe F -->
             <div class="recipeCard flex-none inline-block w-64 h-68 m-2 p-2 rounded-lg shadow-md bg-amber-100">
               <img class="object-cover w-full h-48 rounded-lg" src="./frontend/media/foodImgs/bean salad.png" alt="" />
               <div class="flex justify-between items-start space-x-2 py-2 h-20">
@@ -250,7 +250,7 @@
               </div>
             </div>
 
-            <!-- Recipe G -->
+            <!-- Newest Recipe G -->
             <div class="recipeCard flex-none inline-block w-64 h-68 m-2 p-2 rounded-lg shadow-md bg-amber-100">
               <img class="object-cover w-full h-48 rounded-lg" src="./frontend/media/foodImgs/pavlova.jpg" alt="" />
               <div class="flex justify-between items-start space-x-2 py-2 h-20">
@@ -263,7 +263,7 @@
               </div>
             </div>
 
-            <!-- Recipe H -->
+            <!-- Newest Recipe H -->
             <div class="recipeCard flex-none inline-block w-64 h-68 m-2 p-2 rounded-lg shadow-md bg-amber-100">
               <img class="object-cover w-full h-48 rounded-lg" src="./frontend/media/foodImgs/Blueberry Muffins.png" alt="" />
               <div class="flex justify-between items-start space-x-2 py-2 h-20">
@@ -356,241 +356,84 @@
         <div class="hidden md:block md:not-prose">
           <div class="overflow-x-auto overflow-y-hidden flex flex-nowrap pb-2 px-4 space-x-4">
 
-            <!-- Recipe A -->
-            <div class="flex-none inline-block w-64 h-68 p-2 bg-freshGreen">
-              <!-- <div class="grid grid-rows-2 grid-cols-1 gap-2 auto-rows-min"> -->
-              <div class="flex-col">
-                <!-- Recipe Image -->
-                <div class="flex-none h-48">
-                  <a href=" ./frontend/pages/Recipes/OnionPancakes.html">
-                    <img class="object-cover w-full h-48" src="./frontend/media/foodImgs/Onion Pancakes.png" alt="" />
-                  </a>
-                </div>
-
-                <div class="flex-none flex justify-between items-start space-x-2 py-2 h-20">
-                  <!-- Recipe Title -->
-                  <div>
-                    <a href=" ./frontend/pages/Recipes/OnionPancakes.html">
-                      <h3 class="px-1"> Onion Pancakes</h3>
-                    </a>
-                  </div>
-                  <!-- Book mark icon to add to Grocer List -->
-                  <div class="flex-none w-8 h-8 mx-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="w-6 h-6">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
-                    </svg>
-                  </div>
-                </div>
-
+            <!-- Popular Recipe A -->
+            <div class="recipeCard flex-none inline-block w-64 h-68 m-2 p-2 rounded-lg shadow-md bg-green-100">
+              <img class="object-cover w-full h-48 rounded-lg" src="./frontend/media/foodImgs/peachCrisp.jpg" alt="" />
+              <div class="flex justify-between items-start space-x-2 py-2 h-20">
+                <h3 class="px-1"> Peach Crisp</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="flex-none w-6 h-6 mx-2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+                </svg>
               </div>
             </div>
 
-            <!-- Recipe B -->
-            <div class="flex-none inline-block w-64 h-68 p-2 bg-freshGreen">
-              <div class="flex-col">
-                <!-- Recipe Image -->
-                <div class="flex-none h-48">
-                  <a href="./frontend/pages/Recipes/ChocolateChipCookies.html">
-                    <img class="object-cover w-full h-48" src="./frontend/media/foodImgs/Chocolate Chip Cookies.png" alt="" />
-                  </a>
-                </div>
 
-                <div class="flex-none flex justify-between items-start space-x-2 py-2 h-20">
-                  <!-- Recipe Title -->
-                  <div>
-                    <a href="./frontend/pages/Recipes/ChocolateChipCookies.html">
-                      <h3 class="px-1">Chocolate Chip Cookies</h3>
-                    </a>
-                  </div>
-                  <!-- Book mark icon to add to Grocer List -->
-                  <div class="flex-none w-8 h-8 mx-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="w-6 h-6">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
-                    </svg>
-                  </div>
-                </div>
+            <!-- Popular Recipe B -->
+            <div class="recipeCard flex-none inline-block w-64 h-68 m-2 p-2 rounded-lg shadow-md bg-green-100">
+              <img class="object-cover w-full h-48 rounded-lg" src="./frontend/media/foodImgs/BlackSesameSwirl.jpg" alt="" />
+              <div class="flex justify-between items-start space-x-2 py-2 h-20">
+                <h3 class="px-1">Black Sesame Swirl Buns</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="flex-none w-6 h-6 mx-2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+                </svg>
               </div>
             </div>
 
-            <!-- Recipe C -->
-            <div class="flex-none inline-block w-64 h-68 p-2 bg-freshGreen">
-              <div class="flex-col">
-                <!-- Recipe Image -->
-                <div class="flex-none h-48">
-                  <a href="./frontend/pages/Recipes/ChocolateRaspberryMousseCake.html">
-                    <img class="object-cover w-full h-48" src="./frontend/media/foodImgs/Chocolate Raspberry Mousse Cake.jpg"
-                      alt="" />
-                  </a>
-                </div>
-
-                <div class="flex-none flex justify-between items-start space-x-2 py-2 h-20">
-                  <!-- Recipe Title -->
-                  <div>
-                    <a href="./frontend/pages/Recipes/ChocolateRaspberryMousseCake.html">
-                      <h3 class="px-1"> Chocolate Raspberry Mousse Cake</h3>
-                    </a>
-                  </div>
-                  <!-- Book mark icon to add to Grocer List -->
-                  <div class="flex-none w-8 h-8 mx-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="w-6 h-6">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
-                    </svg>
-                  </div>
-                </div>
+            <!-- Popular Recipe C -->
+            <div class="recipeCard flex-none inline-block w-64 h-68 m-2 p-2 rounded-lg shadow-md bg-green-100">
+              <img class="object-cover w-full h-48 rounded-lg" src="./frontend/media/foodImgs/pavlova.jpg" alt="" />
+              <div class="flex justify-between items-start space-x-2 py-2 h-20">
+                <h3 class="px-1">Pavlova</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="flex-none w-6 h-6 mx-2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+                </svg>
               </div>
             </div>
 
-            <!-- Recipe D -->
-            <div class="flex-none inline-block w-64 h-68 p-2 bg-freshGreen">
-              <div class="flex-col">
-                <!-- Recipe Image -->
-                <div class="flex-none h-48">
-                  <a href="./frontend/pages/Recipes/AppleFrangipaneTart.html">
-                    <img class="object-cover w-full h-48" src="./frontend/media/foodImgs/Apple Frangipane Tart.jpg" alt="" />
-                  </a>
-                </div>
 
-                <div class="flex-none flex justify-between items-start space-x-2 py-2 h-20">
-                  <!-- Recipe Title -->
-                  <div>
-                    <a href="./frontend/pages/Recipes/AppleFrangipaneTart.html">
-                      <h3 class="px-1"> Apple Frangipane Tart</h3>
-                    </a>
-                  </div>
-                  <!-- Book mark icon to add to Grocer List -->
-                  <div class="flex-none w-8 h-8 mx-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="w-6 h-6">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
-                    </svg>
-                  </div>
-                </div>
+            <!-- Popular Recipe D -->
+            <div class="recipeCard flex-none inline-block w-64 h-68 m-2 p-2 rounded-lg shadow-md bg-green-100">
+              <img class="object-cover w-full h-48 rounded-lg" src="./frontend/media/foodImgs/rhubarbCreamCrumble.jpg" alt="" />
+              <div class="flex justify-between items-start space-x-2 py-2 h-20">
+                <h3 class="px-1">Grammy Vint's Rhubarb Cream Crumble</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="flex-none w-6 h-6 mx-2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+                </svg>
               </div>
             </div>
 
-            <!-- Recipe E -->
-            <div class="flex-none inline-block w-64 h-68 p-2 bg-freshGreen">
-              <div class="flex-col">
-                <!-- Recipe Image -->
-                <div class="flex-none h-48">
-                  <a href="./frontend/pages/Recipes/RhubarbCreamCrumble.html">
-                    <img class="object-cover w-full h-48" src="./frontend/media/foodImgs/rhubarbCreamCrumble.jpg" alt="" />
-                  </a>
-                </div>
 
-                <div class="flex-none flex justify-between items-start space-x-2 py-2 h-20">
-                  <!-- Recipe Title -->
-                  <div>
-                    <a href="./frontend/pages/Recipes/RhubarbCreamCrumble.html">
-                      <h3 class="px-1">Grammy Vint's Rhubarb Crumble</h3>
-                    </a>
-                  </div>
-                  <!-- Bookmark icon to add to Grocer List -->
-                  <div class="flex-none w-8 h-8 mx-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="w-6 h-6">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
-                    </svg>
-                  </div>
-                </div>
+            <!-- Popular Recipe E -->
+            <div class="recipeCard flex-none inline-block w-64 h-68 m-2 p-2 rounded-lg shadow-md bg-green-100">
+              <img class="object-cover w-full h-48 rounded-lg" src="./frontend/media/foodImgs/Blueberry Muffins.png" alt="" />
+              <div class="flex justify-between items-start space-x-2 py-2 h-20">
+                <h3 class="px-1">Fluffy Blueberry Muffins</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="flex-none w-6 h-6 mx-2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+                </svg>
               </div>
             </div>
 
-            <!-- Recipe F -->
-            <div class="flex-none inline-block w-64 h-68 p-2 bg-freshGreen">
-              <div class="flex-col">
-                <!-- Recipe Image -->
-                <div class="flex-none h-48">
-                  <a href="./frontend/pages/Recipes/FruitCrisp.html">
-                    <img class="object-cover w-full h-48" src="./frontend/media/foodImgs/peachCrisp.jpg" alt="" />
-                  </a>
-                </div>
+            <!-- Popular Recipe F -->
 
-                <div class="flex-none flex justify-between items-start space-x-2 py-2 h-20">
-                  <!-- Recipe Title -->
-                  <div>
-                    <a href="./frontend/pages/Recipes/FruitCrisp.html">
-                      <h3 class="px-1">Peach Crisp</h3>
-                    </a>
-                  </div>
-                  <!-- Book mark icon to add to Grocer List -->
-                  <div class="flex-none w-8 h-8 mx-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="w-6 h-6">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <!-- Recipe G -->
-            <div class="flex-none inline-block w-64 h-68 p-2 bg-freshGreen">
-              <div class="flex-col">
-                <!-- Recipe Image -->
-                <div class="flex-none h-48">
-                  <a href="./frontend/pages/Recipes/BlackSesameSwirl.html">
-                    <img class="object-cover w-full h-48" src="./frontend/media/foodImgs/BlackSesameSwirl.jpg" alt="" />
-                  </a>
-                </div>
+            <!-- Popular Recipe G -->
 
-                <div class="flex-none flex justify-between items-start space-x-2 py-2 h-20">
-                  <!-- Recipe Title -->
-                  <div>
-                    <a href="./frontend/pages/Recipes/BlackSesameSwirl.html">
-                      <h3 class="px-1">Black Sesame Swirl</h3>
-                    </a>
-                  </div>
-                  <!-- Book mark icon to add to Grocer List -->
-                  <div class="flex-none w-8 h-8 mx-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="w-6 h-6">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <!-- Recipe H -->
-            <div class="flex-none inline-block w-64 h-68 p-2 bg-freshGreen">
-              <div class="flex-col">
-                <!-- Recipe Image -->
-                <div class="flex-none h-48">
-                  <a href="./frontend/pages/Recipes/ChocolateChipCookies.html">
-                    <img class="object-cover w-full h-48" src="./frontend/media/foodImgs/Chocolate Chip Cookies.png" alt="" />
-                  </a>
-                </div>
+            <!-- Popular Recipe H -->
 
-                <div class="flex-none flex justify-between items-start space-x-2 py-2 h-20">
-                  <!-- Recipe Title -->
-                  <div>
-                    <a href="./frontend/pages/Recipes/ChocolateChipCookies.html">
-                      <h3 class="px-1">Chocolate Chip Cookies</h3>
-                    </a>
-                  </div>
-                  <!-- Book mark icon to add to Grocer List -->
-                  <div class="flex-none w-8 h-8 mx-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="w-6 h-6">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
 
+            <!-- END OF POPULAR RECIPES DESKTOP SECTION -->
           </div>
         </div>
 
