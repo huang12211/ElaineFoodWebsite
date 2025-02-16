@@ -44,8 +44,16 @@ function loadRecipe(){
       var parent = document.getElementsByClassName("mobileVideoContainer")[0];
       // console.log("parent", parent);
       var noVideo = document.createElement('div');
-      noVideo.innerText = `Video is Coming Soon...`;
-      noVideo.className = "mobileVideo flex items-center justify-center border";
+      noVideo.className = "relative mobileVideo flex items-center justify-center border overflow-hidden";
+      var imageOfRecipe = document.createElement('img');
+      imageOfRecipe.src = "./../../.." + recipeContent[0]['image_src'];
+      imageOfRecipe.alt = " ";
+      imageOfRecipe.className = "object-cover w-full blur-xs opacity-50 z-0";
+      var text = document.createElement('div');
+      text.innerText = `Video is Coming Soon...`;
+      text.className = "absolute m-auto z-1 font-bold text-white"
+      noVideo.appendChild(imageOfRecipe);
+      noVideo.appendChild(text);
       parent.appendChild(noVideo);
       videoSource.remove();
       

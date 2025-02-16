@@ -59,7 +59,7 @@ export async function seedDatabase() {
     //-- Apple Frangipane Tart --//
     await db.insert(recipes).values([{
         name: 'Apple Frangipane Tart',
-        image_src: './../../frontend/media/foodImgs/Apple Frangipane Tart.jpg',
+        image_src: '/frontend/media/foodImgs/Apple Frangipane Tart.jpg',
         video: 'null',
         avg_rating: 0, 
         numRatings: 0, 
@@ -92,7 +92,7 @@ export async function seedDatabase() {
     //-- Black Sesame Swirl Buns --//
     await db.insert(recipes).values([{
         name: 'Black Sesame Swirl Buns', 
-        image_src: './../../frontend/media/foodImgs/BlackSesameSwirl.jpg', 
+        image_src: '/frontend/media/foodImgs/BlackSesameSwirl.jpg', 
         video: 'null', 
         avg_rating: 0, 
         numRatings: 0, 
@@ -135,7 +135,7 @@ export async function seedDatabase() {
     //-- Chocolate Chip Cookies --//
     await db.insert(recipes).values([{
         name: 'Chocolate Chip Cookies', 
-        image_src: './../../frontend/media/foodImgs/Chocolate Chip Cookies.png', 
+        image_src: '/frontend/media/foodImgs/Chocolate Chip Cookies.png', 
         video: 'null', 
         avg_rating: 0, 
         numRatings: 0, 
@@ -172,7 +172,7 @@ export async function seedDatabase() {
     //-- Chocolate Chip Muffins --//
     await db.insert(recipes).values([{
         name: 'Chocolate Chip Muffins', 
-        image_src: './../../frontend/media/foodImgs/ChocolateMuffins.png', 
+        image_src: '/frontend/media/foodImgs/ChocolateMuffins.png', 
         video: 'null', 
         avg_rating: 0, 
         numRatings: 0, 
@@ -207,7 +207,7 @@ export async function seedDatabase() {
     //-- Chocolate Raspberry Mousse Cake --//
     await db.insert(recipes).values([{
         name: 'Chocolate Raspberry Mousse Cake',
-        image_src: './../../frontend/media/foodImgs/Chocolate Raspberry Mousse Cake.jpg',
+        image_src: '/frontend/media/foodImgs/Chocolate Raspberry Mousse Cake.jpg',
         video: 'null',
         avg_rating: 0,
         numRatings: 0, 
@@ -272,7 +272,7 @@ export async function seedDatabase() {
     //-- Fluffy BlueBerry Muffins --//
     await db.insert(recipes).values([{
         name: 'Fluffy Blueberry Muffins', 
-        image_src: './../../frontend/media/foodImgs/Blueberry Muffins.png', 
+        image_src: '/frontend/media/foodImgs/Blueberry Muffins.png', 
         video: 'https://www.youtube.com/embed/gN-orgrgvU8?si=5jMFJ-dtOeb76ETj', 
         avg_rating: 0, 
         numRatings: 0, 
@@ -307,7 +307,7 @@ export async function seedDatabase() {
     //-- Grammy Vint's Good Bean Salad --//
     await db.insert(recipes).values([{
         name: 'Grammy Vint\'s Good Bean Salad', 
-        image_src: './../../frontend/media/foodImgs/bean salad.png', 
+        image_src: '/frontend/media/foodImgs/bean salad.png', 
         video: 'null', 
         avg_rating: 0, 
         numRatings: 0, 
@@ -345,7 +345,7 @@ export async function seedDatabase() {
      await db.insert(recipes).values([{
         //TO DO: Replace the following content. 
         name: 'Grammy Vint\'s Rhubarb Cream Crumble', 
-        image_src: './../../frontend/media/foodImgs/rhubarbCreamCrumble.jpg', 
+        image_src: '/frontend/media/foodImgs/rhubarbCreamCrumble.jpg', 
         video: 'null', 
         avg_rating: 0, 
         numRatings: 0, 
@@ -378,7 +378,7 @@ export async function seedDatabase() {
     //-- Onion Pancakes --//
     await db.insert(recipes).values([{
         name: 'Onion Pancakes', 
-        image_src: './../../frontend/media/foodImgs/Onion Pancakes.png', 
+        image_src: '/frontend/media/foodImgs/Onion Pancakes.png', 
         video: 'null', 
         avg_rating: 0, 
         numRatings: 0, 
@@ -407,7 +407,7 @@ export async function seedDatabase() {
     //-- Pavlova --//
     await db.insert(recipes).values([{
         name: 'Pavlova', 
-        image_src: './../../frontend/media/foodImgs/pavlova.jpg', 
+        image_src: '/frontend/media/foodImgs/pavlova.jpg', 
         video: 'null', 
         avg_rating: 0, 
         numRatings: 0, 
@@ -446,7 +446,7 @@ export async function seedDatabase() {
     //-- Peach Crisp --//
     await db.insert(recipes).values([{
         name: 'Peach Crisp', 
-        image_src: './../../frontend/media/foodImgs/peachCrisp.jpg', 
+        image_src: '/frontend/media/foodImgs/peachCrisp.jpg', 
         video: 'null', 
         avg_rating: 0, 
         numRatings: 0, 
