@@ -15,6 +15,7 @@ export async function seedDatabase() {
         {email: 'eric@gmail.com'},
         {email: 'charlene@gmail.com'}
     ]);
+    console.log('Included users...')
 
     //------------------------------------------------//
     // Insert ingredients in Alphabetical Order       //
@@ -32,14 +33,16 @@ export async function seedDatabase() {
         {ingr: 'Lemon Juice'},
         {ingr: 'Margarine' }, { ingr: 'Milk' }, 
         {ingr: 'Olive Oil'},
-        {ingr: 'Premade 9 inch Pie Crust'},
-        {ingr: 'Raspberries'}, {ingr: 'Red Onion, diced'}, {ingr: 'Red Wine Vinegar / Apple Cider Vinegar'},
+        {ingr: 'Peaches'}, {ingr: 'Premade 9 inch Pie Crust'},
+        {ingr: 'Quick Oats'},
+        {ingr: 'Raspberries'}, {ingr: 'Red Onion, diced'}, {ingr: 'Red Wine Vinegar / Apple Cider Vinegar'}, {ingr: 'Rhubarb, chopped'},
         {ingr: 'Salt' }, { ingr: 'Salted Butter' }, {ingr: 'Semisweet Chocolate Chips'}, {ingr: 'Sweet Red Pepper, diced'},
         {ingr: 'Unsalted Butter' }, 
         {ingr: 'Vanilla Extract' }, { ingr: 'Vegetable Oil'}, 
-        {ingr: 'Water'}, {ingr: 'White Vinegar'}, {ingr: 'White Wine Vinegar / Apple Cider Vinegar / Lemon Juice'},
+        {ingr: 'Walnuts (optional)'}, {ingr: 'Water'}, {ingr: 'White Vinegar'}, {ingr: 'White Wine Vinegar / Apple Cider Vinegar / Lemon Juice'},
         {ingr: 'Yeast'}
     ]);
+    console.log('Seeded ingredients...')
 
     //------------------------------------------------//
     // Insert measurementsUnits                       //
@@ -48,6 +51,7 @@ export async function seedDatabase() {
         {meas_unit: ' '}, {meas_unit: '12 oz can'}, {meas_unit: '15 oz can'}, {meas_unit: '19 oz can'}, 
         {meas_unit: 'clove(s) of'}, { meas_unit: 'cup(s)'}, {meas_unit: 'g'}, { meas_unit: 'tbsp(s)'}, {meas_unit: 'tsp(s)'}
     ]);
+    console.log('Seeded measurement units...')
 
     //------------------------------------------------//
     // Insert recipes titles in Alphabetical Order    //
@@ -55,7 +59,7 @@ export async function seedDatabase() {
     //-- Apple Frangipane Tart --//
     await db.insert(recipes).values([{
         name: 'Apple Frangipane Tart',
-        image_src: './../../frontend/media/foodImgs/Apple Frangipane Tart.jpg',
+        image_src: '/frontend/media/foodImgs/Apple Frangipane Tart.jpg',
         video: 'null',
         avg_rating: 0, 
         numRatings: 0, 
@@ -88,7 +92,7 @@ export async function seedDatabase() {
     //-- Black Sesame Swirl Buns --//
     await db.insert(recipes).values([{
         name: 'Black Sesame Swirl Buns', 
-        image_src: './../../frontend/media/foodImgs/BlackSesameSwirl.jpg', 
+        image_src: '/frontend/media/foodImgs/BlackSesameSwirl.jpg', 
         video: 'null', 
         avg_rating: 0, 
         numRatings: 0, 
@@ -131,7 +135,7 @@ export async function seedDatabase() {
     //-- Chocolate Chip Cookies --//
     await db.insert(recipes).values([{
         name: 'Chocolate Chip Cookies', 
-        image_src: './../../frontend/media/foodImgs/Chocolate Chip Cookies.png', 
+        image_src: '/frontend/media/foodImgs/Chocolate Chip Cookies.png', 
         video: 'null', 
         avg_rating: 0, 
         numRatings: 0, 
@@ -168,7 +172,7 @@ export async function seedDatabase() {
     //-- Chocolate Chip Muffins --//
     await db.insert(recipes).values([{
         name: 'Chocolate Chip Muffins', 
-        image_src: './../../frontend/media/foodImgs/ChocolateMuffins.png', 
+        image_src: '/frontend/media/foodImgs/ChocolateMuffins.png', 
         video: 'null', 
         avg_rating: 0, 
         numRatings: 0, 
@@ -203,7 +207,7 @@ export async function seedDatabase() {
     //-- Chocolate Raspberry Mousse Cake --//
     await db.insert(recipes).values([{
         name: 'Chocolate Raspberry Mousse Cake',
-        image_src: './../../frontend/media/foodImgs/Chocolate Raspberry Mousse Cake.jpg',
+        image_src: '/frontend/media/foodImgs/Chocolate Raspberry Mousse Cake.jpg',
         video: 'null',
         avg_rating: 0,
         numRatings: 0, 
@@ -268,7 +272,7 @@ export async function seedDatabase() {
     //-- Fluffy BlueBerry Muffins --//
     await db.insert(recipes).values([{
         name: 'Fluffy Blueberry Muffins', 
-        image_src: './../../frontend/media/foodImgs/Blueberry Muffins.png', 
+        image_src: '/frontend/media/foodImgs/Blueberry Muffins.png', 
         video: 'https://www.youtube.com/embed/gN-orgrgvU8?si=5jMFJ-dtOeb76ETj', 
         avg_rating: 0, 
         numRatings: 0, 
@@ -303,7 +307,7 @@ export async function seedDatabase() {
     //-- Grammy Vint's Good Bean Salad --//
     await db.insert(recipes).values([{
         name: 'Grammy Vint\'s Good Bean Salad', 
-        image_src: './../../frontend/media/foodImgs/bean salad.png', 
+        image_src: '/frontend/media/foodImgs/bean salad.png', 
         video: 'null', 
         avg_rating: 0, 
         numRatings: 0, 
@@ -337,15 +341,20 @@ export async function seedDatabase() {
         {recipe_id: 'Grammy Vint\'s Good Bean Salad', amount: '1/2', measUnit_id: 'cup(s)', ingredient_id: 'Fresh Parsley', min_amount: '1/2'}
     ]);
 
-     //-- Grammy Vint's Good Bean Salad --//
+     //-- Grammy Vint's Rhubarb Cream Crumble --//
      await db.insert(recipes).values([{
         //TO DO: Replace the following content. 
         name: 'Grammy Vint\'s Rhubarb Cream Crumble', 
-        image_src: './../../frontend/media/foodImgs/rhubarbCreamCrumble.jpg', 
+        image_src: '/frontend/media/foodImgs/rhubarbCreamCrumble.jpg', 
         video: 'null', 
         avg_rating: 0, 
         numRatings: 0, 
-        directions: `To Fill in`,
+        directions: `Preheat over to 400&deg;F. Grease a 9" deep baking dish and set it aside.
+            Melt the butter. 
+            In a large bowl, mix the ingredients for the filling together until well-combined. Pour the mixture into the baking dish.
+            Cut the cold butter up into cubes using a knife and add it to the same large bowl. 
+            In the same large bowl, mix the ingredients for the crumble topping together until all ingredients are well-distributed.
+            Scatter the crumble mixture all over the top of the filling, and place the baking dish into the over for 40 to 45 minutes or until beautifully golden brown.`,
         tags: 'American, Dessert',
         initialServing: 12,
         minServing: 12,
@@ -353,14 +362,23 @@ export async function seedDatabase() {
         servingIncrements: 12,
     }]);
     await db.insert(recipe_ingredient_measUnit).values([
-        //TO DO: Replace the following content. 
-        {recipe_id: 'Grammy Vint\'s Good Bean Salad', amount: '1', measUnit_id: '19 oz can', ingredient_id: 'Chickpeas', min_amount: '1'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Filling:', amount: '3', measUnit_id: 'cup(s)', ingredient_id: 'Rhubarb, chopped', min_amount: '3'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Filling:', amount: '2', measUnit_id: ' ', ingredient_id: 'Egg(s)', min_amount: '2'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Filling:', amount: '2', measUnit_id: 'tbsp(s)', ingredient_id: 'Unsalted Butter', min_amount: '2'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Filling:', amount: '1', measUnit_id: 'cup(s)', ingredient_id: 'Granulated Sugar', min_amount: '1'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Filling:', amount: '3', measUnit_id: 'tbsp(s)', ingredient_id: 'Flour', min_amount: '3'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Crumble Topping:', amount: '1/2', measUnit_id: 'cup(s)', ingredient_id: 'Flour', min_amount: '1/2'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Crumble Topping:', amount: '3/4', measUnit_id: 'cup(s)', ingredient_id: 'Quick Oats', min_amount: '3/4'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Crumble Topping:', amount: '3/4', measUnit_id: 'cup(s)', ingredient_id: 'Brown Sugar', min_amount: '3/4'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Crumble Topping:', amount: '1', measUnit_id: 'tsp(s)', ingredient_id: 'Baking Powder', min_amount: '1'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Crumble Topping:', amount: '1/3', measUnit_id: 'cup(s)', ingredient_id: 'Unsalted Butter', min_amount: '1/3'},
+        {recipe_id: 'Grammy Vint\'s Rhubarb Cream Crumble', component: 'Crumble Topping:', amount: '1/4', measUnit_id: 'cup(s)', ingredient_id: 'Walnuts (optional)', min_amount: '1/4'}
     ]);
 
     //-- Onion Pancakes --//
     await db.insert(recipes).values([{
         name: 'Onion Pancakes', 
-        image_src: './../../frontend/media/foodImgs/Onion Pancakes.png', 
+        image_src: '/frontend/media/foodImgs/Onion Pancakes.png', 
         video: 'null', 
         avg_rating: 0, 
         numRatings: 0, 
@@ -389,7 +407,7 @@ export async function seedDatabase() {
     //-- Pavlova --//
     await db.insert(recipes).values([{
         name: 'Pavlova', 
-        image_src: './../../frontend/media/foodImgs/Blueberry Muffins.png', 
+        image_src: '/frontend/media/foodImgs/pavlova.jpg', 
         video: 'null', 
         avg_rating: 0, 
         numRatings: 0, 
@@ -413,7 +431,7 @@ export async function seedDatabase() {
         servingIncrements: 8,
     }]);
     await db.insert(recipe_ingredient_measUnit).values([
-        {recipe_id: 'Pavlova', component: 'Meringe Base', amount: '3', measUnit_id: ' ', ingredient_id: 'Egg Whites', min_amount: '3'},
+        {recipe_id: 'Pavlova', component: 'Meringe Base', amount: '3', measUnit_id: ' ', ingredient_id: 'Egg White(s)', min_amount: '3'},
         {recipe_id: 'Pavlova', component: 'Meringe Base', amount: '2', measUnit_id: 'tsp(s)', ingredient_id: 'White Wine Vinegar / Apple Cider Vinegar / Lemon Juice', min_amount: '2'},
         {recipe_id: 'Pavlova', component: 'Meringe Base', amount: '1', measUnit_id: 'tsp(s)', ingredient_id: 'Cornstarch', min_amount: '1'},
         {recipe_id: 'Pavlova', component: 'Meringe Base', amount: '1/8', measUnit_id: 'tsp(s)', ingredient_id: 'Salt', min_amount: '1/8'},
@@ -424,6 +442,41 @@ export async function seedDatabase() {
         {recipe_id: 'Pavlova', component: 'Toppings', amount: '1', measUnit_id: 'tsp(s)', ingredient_id: 'Vanilla Extract', min_amount: '1'},
         {recipe_id: 'Pavlova', component: 'Toppings', amount: '2', measUnit_id: 'cup(s)', ingredient_id: 'Fresh Fruit', min_amount: '2'},
     ]);
+
+    //-- Peach Crisp --//
+    await db.insert(recipes).values([{
+        name: 'Peach Crisp', 
+        image_src: '/frontend/media/foodImgs/peachCrisp.jpg', 
+        video: 'null', 
+        avg_rating: 0, 
+        numRatings: 0, 
+        directions: `Preheat oven to 375&deg;F.
+            In a bowl, mix together the sliced peaches, brown sugar and flour until combined.
+            In a separate bowl, mix together the ingredients for the topping until well-combined.
+            Grease a 9" pie plate and pour in the filling.
+            Spoon the topping over the filling.
+            Bake at 375&deg;F for 30-35mins. 
+            Remove from oven and leave to cool for at least 30 mins.`, 
+        tags: 'American, Dessert',
+        initialServing: 8,
+        minServing: 8,
+        maxServing: 160,
+        servingIncrements: 8,
+    }]);
+    await db.insert(recipe_ingredient_measUnit).values([
+        {recipe_id: 'Peach Crisp', component: 'Filling', amount: '10', measUnit_id: ' ', ingredient_id: 'Peaches', min_amount: '10'},
+        {recipe_id: 'Peach Crisp', component: 'Filling', amount: '1/4', measUnit_id: 'cup(s)', ingredient_id: 'Brown Sugar', min_amount: '1/4'},
+        {recipe_id: 'Peach Crisp', component: 'Filling', amount: '2', measUnit_id: 'tbsp(s)', ingredient_id: 'Flour', min_amount: '2'},
+        {recipe_id: 'Peach Crisp', component: 'Topping', amount: '1', measUnit_id: 'cup(s)', ingredient_id: 'Quick Oats', min_amount: '1'},
+        {recipe_id: 'Peach Crisp', component: 'Topping', amount: '1/2', measUnit_id: 'cup(s)', ingredient_id: 'Flour', min_amount: '1/2'},
+        {recipe_id: 'Peach Crisp', component: 'Topping', amount: '1/3', measUnit_id: 'cup(s)', ingredient_id: 'Brown Sugar', min_amount: '1/3'},
+        {recipe_id: 'Peach Crisp', component: 'Topping', amount: '1/2', measUnit_id: 'tsp(s)', ingredient_id: 'Ground Cinnamon', min_amount: '1/2'},
+        {recipe_id: 'Peach Crisp', component: 'Topping', amount: '1/4', measUnit_id: 'tsp(s)', ingredient_id: 'Salt', min_amount: '1/4'},
+        {recipe_id: 'Peach Crisp', component: 'Topping', amount: '1/2', measUnit_id: 'tsp(s)', ingredient_id: 'Baking Powder', min_amount: '1/2'},
+        {recipe_id: 'Peach Crisp', component: 'Topping', amount: '1/2', measUnit_id: 'cup(s)', ingredient_id: 'Unsalted Butter', min_amount: '1/2'},
+        {recipe_id: 'Peach Crisp', component: 'Topping', amount: '1/4', measUnit_id: 'cup(s)', ingredient_id: 'Walnuts (optional)', min_amount: '1/4'},
+    ]);
+    console.log('Seeded recipes...')
 
     //------------------------------------------------//
     //Insert users_recipe_reviews                     //

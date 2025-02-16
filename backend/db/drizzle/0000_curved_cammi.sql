@@ -7,7 +7,7 @@ CREATE TABLE `mesurementUnits` (
 );
 --> statement-breakpoint
 CREATE TABLE `recipe_ingredient_measUnit` (
-	`id` integer PRIMARY KEY NOT NULL,
+	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
 	`recipe_id` text,
 	`component` text,
 	`amount` text,

@@ -50,7 +50,7 @@ export type InsertMeasurement = typeof measurementUnits.$inferInsert
 
 //We also want a table to list out all the ingredients used in each recipe
 export const recipe_ingredient_measUnit = sqliteTable('recipe_ingredient_measUnit', {
-  id: integer('id').primaryKey(),
+  id: integer('id', { mode: 'number' }).primaryKey({ autoIncrement: true }),
   recipe_id: text('recipe_id').references(() => recipes.name), 
   component: text('component'),
   amount: text('amount'),
