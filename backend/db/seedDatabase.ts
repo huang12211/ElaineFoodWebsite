@@ -172,7 +172,7 @@ export async function seedDatabase() {
     //-- Chocolate Chip Muffins --//
     await db.insert(recipes).values([{
         name: 'Chocolate Chip Muffins', 
-        image_src: '/frontend/media/foodImgs/ChocolateMuffins.png', 
+        image_src: '/frontend/media/foodImgs/ChocolateChipMuffins.jpg', 
         video: 'null', 
         avg_rating: 0, 
         numRatings: 0, 

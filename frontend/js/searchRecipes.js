@@ -1,40 +1,46 @@
-import { desktopRecipeCard } from "./components/recipeCard.js";
-import { getRequestedRecipes, getRecipeInfo } from "./api/recipe.js";
+// import { desktopRecipeCard } from "./components/recipeCard.js";
+import { getRequestedRecipes, getRecipeInfo } from "./api/apiRecipe.js";
 
 const recipeSearchForm = document.getElementById("recipeSearchForm");
 
-function getRecipeLink (recipeTitle){
-    // recipeTitle
-    let linkpreffix = './pages/Recipes/'
-    let link = recipeTitle.replaceAll(' ', '');
-    let linksuffix = '.html';
-    let completeLink = linkpreffix.concat(link, linksuffix);
-    console.log('completeLink is:', completeLink)
-    return completeLink;
-}
+// function getRecipeLink (recipeTitle){
+//     // recipeTitle
+//     let linkpreffix = './pages/Recipes/'
+//     let link = recipeTitle.replaceAll(' ', '');
+//     let linksuffix = '.html';
+//     let completeLink = linkpreffix.concat(link, linksuffix);
+//     console.log('completeLink is:', completeLink)
+//     return completeLink;
+// }
 
 //takes in the array of recipes to return as part of the results 
-function genDesktopRecipeCardList (recipeList) {
+function genRecipeCardList (recipeList) {
     console.log('input to genDesktopRecipeCardList function\'s recipe list is:', recipeList);
 
-    let recipeCardListId = document.querySelector('#recipeCardList');
+    let recipeCardListId = document.getElementById('recipeCardList');
 
-    //create a placeholder to hold all the new HTML content to add to the DOM 
-    let recipeCardListLit = '';
+    //wipe all the previous results
+    recipeCardListId.innerHTML = '';
 
+    // go through the array of returned recipes info
     for (let i = 0; i < recipeList.length; i++){
-        let recipe_link = getRecipeLink(recipeList[i].name);
+        // let bookmarked = false; //Todo: update once bookmarks are implemented
 
-        //Todo: update once bookmarks are implemented
-        let bookmarked = false;
-
-        let bg_color = 'white';
-        newRecipeHTMLObject = new desktopRecipeCard(recipeList[i].name, recipe_link, recipeList[i].image_src, bookmarked, bg_color)
-        recipeCardListLit = recipeCardListLit.concat(newRecipeHTMLObject.innerHTML);
+        var recipeCardDiv = document.createElement("div");
+        recipeCardDiv.className = "recipeCardResult w-full bg-green-100";
+        recipeCardDiv.innerHTML =`<img src="${recipeList[i].image_src}" alt="" />
+        <div class="flex justify-between items-start space-x-2 py-2 h-20">
+            <h3 class="px-1">${recipeList[i].name}</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="flex-none w-6 h-6 mx-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+            </svg>
+        </div>`;
+        
+        // console.log("recipeCardDiv: ", recipeCardDiv);
+        // console.log("recipeCardListId children:", recipeCardListId.children);
+        recipeCardListId.appendChild(recipeCardDiv);
     }
     
-    console.log('newHTML code with RecipeCards', recipeCardListLit);
-    recipeCardListId.innerHTML = recipeCardListLit; //update the innerHTML to the new HTML code
 }
 
 function searchForRecipes(event){
@@ -55,7 +61,9 @@ function searchForRecipes(event){
         let searchResultsArray = await getRecipeInfo(searchResultsRecipes);
 
         //take in JSON objects and generate HTML recipe cards
-        genDesktopRecipeCardList(searchResultsArray);
+        var resultsHeader = document.getElementById("Results");
+        resultsHeader.className = "mx-4 mt-8"
+        genRecipeCardList(searchResultsArray);
     })();
 
     

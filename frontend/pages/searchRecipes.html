@@ -135,7 +135,7 @@
           <div class="absolute top-0 z-index-20 py-2 px-4">
             <h1>Search Recipes</h1>
           </div>
-          <div class="absolute left-0 top-14 z-index-20 w-screen px-4">
+          <div class="absolute left-0 top-24 z-index-20 w-full">
             <div class="grid grid-cols-3">
               <div class="flex-col justify-center space-y-6 px-6">
                 <h3 class="text-right"> Keywords:</h3>
@@ -192,20 +192,61 @@
       <!-- Search Recipes Results                       -->
       <!-- -------------------------------------------  -->
       <section id="Search Recipes Results">
-        <div class="p-6">
-          <h2> Results: </h2>
-        </div>
+        <h2 id="Results" class="hidden mx-4 mt-8"> Results: </h2>
 
-        <!-- Desktop-only views-->
-        <div class="hidden md:block md:not-prose">
-          <div class="overflow-x-auto overflow-y-hidden flex flex-nowrap pb-2 px-4 space-x-4" id="recipeCardList">
+        <!-- <div id="recipeCardList" class="flex justify-start"> -->
+        <div id="recipeCardList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-items-center">
+
+          <div class="recipeCardResult bg-amber-100">
+            <img src="./../media/foodImgs/Onion Pancakes.png" alt="" />
+            <div class="flex justify-between items-start space-x-2 py-2 h-20">
+              <h3 class="px-1"> Onion Pancakes</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="flex-none w-6 h-6 mx-2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+              </svg>
+            </div>
           </div>
+
+          <div class="recipeCardResult bg-amber-100">
+            <img src="./../media/foodImgs/Onion Pancakes.png" alt="" />
+            <div class="flex justify-between items-start space-x-2 py-2 h-20">
+              <h3 class="px-1"> Onion Pancakes</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="flex-none w-6 h-6 mx-2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="recipeCardResult bg-amber-100">
+            <img src="./../media/foodImgs/Onion Pancakes.png" alt="" />
+            <div class="flex justify-between items-start space-x-2 py-2 h-20">
+              <h3 class="px-1"> Onion Pancakes</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="flex-none w-6 h-6 mx-2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="recipeCardResult bg-amber-100">
+            <img src="./../media/foodImgs/Onion Pancakes.png" alt="" />
+            <div class="flex justify-between items-start space-x-2 py-2 h-20">
+              <h3 class="px-1"> Onion Pancakes</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="flex-none w-6 h-6 mx-2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+              </svg>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Mobile -only views -->
-        <div class="grid grid-cols-2 items-start gap-6 m-2 md:hidden" id="recipeCardList">
-
-        </div>
       </section>
     </div>
   </main>
